@@ -49,7 +49,7 @@ export default function Banner1(){
                 <Box sx={{height:'20px'}}></Box>
                 <Grid container  >
                 
-                 <Grid item lg={1.5} md={2} sm={3.5} xs={3.5}>
+                 <Grid item lg={1.5} md={2} sm={3} xs={3}>
                     <Box sx={circleStyle}>
                         <Typography sx={{fontWeight:'bold',fontSize:'15px'}}>
                             23
@@ -59,7 +59,7 @@ export default function Banner1(){
                         </Typography>
                     </Box>
                  </Grid>
-                 <Grid item lg={1.5} md={2} sm={3.5} xs={3.5}>
+                 <Grid item lg={1.5} md={2} sm={3} xs={3}>
                  <Box sx={circleStyle}>
                     
                         <Typography sx={{fontWeight:'bold',fontSize:'15px'}}>
@@ -70,7 +70,7 @@ export default function Banner1(){
                         </Typography>
                     </Box>
                  </Grid>
-                 <Grid item lg={1.5} md={2} sm={3.5} xs={3.5}>
+                 <Grid item lg={1.5} md={2} sm={3} xs={3}>
                  <Box sx={circleStyle}>
                         <Typography sx={{fontWeight:'bold',fontSize:'15px'}}>
                             23
@@ -80,7 +80,7 @@ export default function Banner1(){
                         </Typography>
                     </Box>
                  </Grid>
-                 <Grid item lg={1.5} md={2} sm={3.5} xs={3.5}>
+                 <Grid  item lg={1.5} md={2} sm={3} xs={3}>
                  <Box sx={circleStyle} >
                         <Typography sx={{fontWeight:'bold',fontSize:'15px'}}>
                             23
@@ -102,7 +102,7 @@ export default function Banner1(){
             </Box>  
         </Grid>
         <Grid item lg={4} md={4} sm={12} xs={12}>
-            <Box sx={{padding:'20px'}}>
+            <Box sx={{padding:{lg:'20px',md:'20px',sm:'0px',xs:'0px'}}}>
                 <img id='headphoneImg' src={headphone} alt="" srcset="" />
             </Box>
         </Grid>

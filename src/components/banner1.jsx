@@ -29,8 +29,8 @@ export default function Banner1(){
     return (
         <Box sx={{ backgroundImage: 'linear-gradient(to left,#2B2B2B, #040406)',
         //  backgroundColor: '#666666',
-            Height:'400px',
-            paddingX:'50px',
+        width:"100%",
+            paddingX:{lg:'40px',md:'30px',sm:'20px',xs:'10px'},
             borderRadius:'10px',boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'
             // paddingY:'30px',
             }}>
@@ -43,13 +43,13 @@ export default function Banner1(){
                <Typography sx={{color:"#00FF66",fontWeight:'bold',fontSize:{lg:'40px',md:'28px',sm:'23px',xs:'18px'}}}>
                 Categories
                 </Typography> 
-                <Typography sx={{color:"white",fontWeight:'bold',fontSize:{lg:'55px',md:'40px',sm:'35px',xs:'30px'}}}>
+                <Typography sx={{color:"white",fontWeight:'bold',fontSize:{lg:'55px',md:'40px',sm:'35px',xs:'25px'}}}>
                 Enhance Your Music Experience With Dealsorb.
                 </Typography> 
                 <Box sx={{height:'20px'}}></Box>
-                <Grid sx={{backgroundColor:'red'}} container  >
+                <Grid container  >
                 
-                 <Grid sx={{backgroundColor:'blue'}} item lg={1.5} md={2} sm={3.5} xs={3.5}>
+                 <Grid item lg={1.5} md={2} sm={3.5} xs={3.5}>
                     <Box sx={circleStyle}>
                         <Typography sx={{fontWeight:'bold',fontSize:'15px'}}>
                             23
@@ -95,7 +95,7 @@ export default function Banner1(){
                 
                 </Grid>
                 <Button sx={{backgroundColor:'#00FF66', marginY:'20px'}}>
-                <Typography sx={{fontWeight:'normal',fontSize:'15px',color:'white',paddingX:{lg:'30px',md:'50px',sm:'55px',xs:'60px'},paddingY:'10px'}}>
+                <Typography sx={{fontWeight:'normal',fontSize:'15px',color:'white',paddingX:{lg:'30px',md:'50px',sm:'55px',xs:'40px'},paddingY:'10px'}}>
                             Buy Now!
                         </Typography>
                 </Button>

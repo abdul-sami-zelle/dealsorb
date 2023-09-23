@@ -36,17 +36,21 @@ function ResponsiveAppBar({ activePage }) {
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
+
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
+
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+    console.log("handleCloseNavMenu");
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+    
   };
   const dispatch = useDispatch();
 
@@ -112,9 +116,22 @@ function ResponsiveAppBar({ activePage }) {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+               <Button
+               key={page}
+               onClick={handleCloseNavMenu}
+               component={Link} // Use the Link component for routing
+               to={`/${tabToRoute[page]}`} // Use the mapped route name
+               sx={{
+                 my: { md: 0 },
+                 fontSize: { md: 12, lg: 14 },
+                 color: activePage === page ? "primary.main" : "black",
+                 
+                 display: "block",
+                 fontWeight:'bold'
+               }}
+             >
+               {page}
+             </Button>
               ))}
             </Menu>
           </Box>

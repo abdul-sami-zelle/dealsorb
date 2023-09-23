@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-
+import './foooter.css'
 import SearchIcon from '@mui/icons-material/Search';
 import DirectionsIcon from '@mui/icons-material/Directions';
 
@@ -237,7 +237,7 @@ export default function Footer() {
                     </Grid>
                     <Grid lg={0.5}></Grid>
                     <Grid lg={4}>
-                    <Button sx={{
+                    <Button className='footerSubscribeBtn' sx={{
                                 
                                     height:'30px',
                                     fontSize: '8px',
@@ -247,7 +247,7 @@ export default function Footer() {
                                     borderWidth:'2px',
                                     marginTop:{lg:'0px',md:'10px'},
                                     marginBottom:{sm:'10px',xs:'10px'},
-                                    marginLeft:{sm:'10px',xs:'10px'},
+                                    marginLeft:{sm:'10px',xs:'3px'},
                                     '&:hover': {
                                         backgroundColor: '#DB4444', // Set the hover color here
                                         color: 'white',

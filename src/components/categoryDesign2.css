@@ -1,0 +1,15 @@
+@media screen and (max-width: 850px) {
+    .mainCategoryContainer{
+        height: 200px !important;
+        width: 150px !important;
+    }
+    .hoveredCategorySubContainer{
+        height: 40px !important;
+        width: 140px !important;
+        margin: 5px !important;
+    }
+    .hoveredCategorySubContainer:hover{
+        height: 100px !important;
+        width: 140px !important;
+    }
+  }

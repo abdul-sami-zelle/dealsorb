@@ -1,0 +1,275 @@
+.main3dCarouselBg{
+  width: 100%;
+  height: 530px;
+  background-image:linear-gradient(90deg, rgba(16,80,126,1) 5%, rgba(26,155,247,1) 46%, rgba(16,80,126,1) 97%);
+  padding-top: 20px;
+}   
+ 
+ 
+ .mainClassPage3dSlider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #content3dSlider{
+    width: 40%;
+    height: 100%;
+    /* background-color: white; */
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+    top: 55px;
+
+  }
+
+
+[type="radio"] {
+  display: none;
+}
+
+#carousel {
+  height: 20vw;
+  width: 60%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  margin-top: 20px;
+
+  width: 55%;
+}
+.colum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+}
+
+#carousel label {
+  margin: auto;
+  width: 70%;
+  /* aspect-ratio: 2/1; */
+  /* height: 40%; */
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#carousel label img {
+  width: 100%;
+  aspect-ratio: 1.8/1.3;
+}
+
+.lastSlide {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(-30%, 0, -200px);
+}
+
+.secLastSlide {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+}
+.currentSlide {
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+  transform: translate3d(0, 0, 0);
+}
+
+.secSlide {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  transform: translate3d(15%, 0, -100px);
+}
+
+.firstSlide {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(30%, 0, -200px);
+}
+#responsive-content3dSlider {
+  display: none;
+}
+.mobileViewText{
+  display: none;
+}
+
+
+@media screen and (max-width: 1100px) {
+  .mainClassPage3dSlider h1 {
+    font-size: 28px !important;
+    font-weight: normal;
+  }
+  .mainClassPage3dSlider p {
+    font-size: 14px !important;
+    font-weight: normal;
+  }
+  .main3dCarouselBg{
+    height: 400px;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .mainClassPage3dSlider h1 {
+    font-size: 26px !important;
+    font-weight: normal;
+  }
+  .mainClassPage3dSlider p {
+    font-size: 12px !important;
+    font-weight: normal;
+  }
+  .main3dCarouselBg{
+    height: 370px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  #content3dSlider{
+    width: 100%;
+    height: 100%;
+    /* background-color: white; */
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: none !important;
+    position: relative !important;
+    top: 90px !important;
+
+  }
+
+
+  #content3dSlider p{
+    display: none !important;
+  }
+  #content3dSlider h1{
+    font-weight: bolder !important;
+    font-size: 18px !important;
+    text-align: center !important;
+  }
+  #content3dSlider button{
+    display: none !important;
+
+  }
+
+  .colum {
+    padding: 1px !important;
+    
+  }
+    .mainClassPage3dSlider {
+      flex-direction: column-reverse;
+    
+    }
+    #carousel {
+      height: 22vh !important;
+      width: 80% !important;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      margin-top:-10px !important;
+    }
+    #carousel label img {
+      width: 100%;
+      aspect-ratio: 1.5/1.1;
+    }
+      .main3dCarouselBg{
+        height: 340px;
+      }
+
+      .mobileViewText{
+        display: block;
+        text-align: center;
+        font-size: 14px !important;
+        font-weight: bold !important;
+
+      }
+      
+ 
+
+  } 
+
+
+  @media (max-width: 650px) {
+    #content3dSlider{
+      top: 55px !important;
+  
+    }
+    .main3dCarouselBg{
+      height: 300px;
+    }
+
+  }
+  
+  @media (max-width: 550px) {
+    #content3dSlider{
+      top: 50px !important;
+  
+    }
+    .main3dCarouselBg{
+      height: 290px;
+    }
+    #carousel {
+      height: 22vh !important;
+      width: 85% !important;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      margin-top:-10px !important;
+    }
+
+  }
+
+  @media (max-width: 500px) {
+    #content3dSlider{
+      top: 20px !important;
+  
+    }
+    .main3dCarouselBg{
+      height: 260px;
+    }
+    #carousel {
+      height: 22vh !important;
+      width: 90% !important;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      margin-top:-10px !important;
+    }
+
+  }
+
+
+  
+  @media (max-width: 400px) {
+    #content3dSlider{
+      top: 18px !important;
+  
+    }
+    .main3dCarouselBg{
+      height: 250px;
+    }
+    #carousel {
+      height: 22vh !important;
+      width: 95% !important;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      margin-top:-10px !important;
+    }
+
+  }
+  @media (max-width: 381px) {
+    #content3dSlider{
+      top: 40px !important;
+  
+    }
+  }
+
+
+  @media (max-width: 361px) {
+    #content3dSlider{
+      top: 30px !important;
+  
+    }
+  }
+  

@@ -26,7 +26,7 @@ export default function BasicGrid() {
             <Grid container spacing={4}>
                
                 <Grid item lg={1} md={1} xs={0}></Grid>
-                <Grid  data-aos="fade-right" item lg={5} md={5} xs={12}>
+                <Grid  item lg={5} md={5} xs={12}>
                     <Box sx={{
                         position: 'relative',
                         backgroundSize: 'cover',
@@ -72,7 +72,7 @@ export default function BasicGrid() {
                     </Box>
                 </Grid>
 
-                <Grid  data-aos="fade-left" item lg={5} md={5} xs={12}>
+                <Grid   item lg={5} md={5} xs={12}>
 
                     <Grid container spacing={4}>
 

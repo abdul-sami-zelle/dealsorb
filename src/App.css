@@ -274,3 +274,18 @@ body{
 .cartt.visible {
   right: 0; /* Show the container by translating it back to the viewport */
 }
+
+
+
+.mobiViewCategories{
+  display: none;
+}
+
+@media screen and (max-width: 660px) {
+  .mobiViewCategories{
+    display: flex;
+  }
+  .webViewCategories{
+    display: none;
+  }
+}

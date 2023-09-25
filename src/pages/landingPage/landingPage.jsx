@@ -28,6 +28,8 @@ import { propTypes } from 'react-bootstrap/esm/Image';
 import CategoryBanner from '../../3dSliderLandingPage/3dSilderLandingPage';
 import FloatingButton from '../../components/cartUi/floatingButton';
 import WhatsAppFloatingButton from '../../components/whatsappFloatingbutton';
+import MobileViewCategories from '../../components/mobileViewCategories/mobileViewCategories';
+import MobileViewProductsDesign from '../../components/mobileViewProductCard/MobileViewProductCard';
 
 
 
@@ -118,21 +120,30 @@ function MainLandingPage() {
    {/* <ControlledCarousel/> */}
    
    <CategoryBanner/>
+
+   {/* <div className="mobiViewCategories"> */}
+   <MobileViewCategories/>
+   {/* </div> */}
+
+   <MobileViewProductsDesign dataList={bestSelling} />
+ 
    {/* <CarouselSlider22/> */}
          {/* <MainCouponLandingPage/>  */}
         {/* <MainStorePage/> */}
        
         <Box sx={{marginX:'30px'}}>
-        <div style={{height:'30px'}}></div>
-        <CatName categoryHeading="Categories" productHeading="Popular Categories"/>
-        <div style={{height:'30px'}}></div>
-        <Carousel  responsive={responsive}>
-          {product}
-        </Carousel>
+        <div className="webViewCategories">
+          <div style={{height:'30px'}}></div>
+          <CatName categoryHeading="Categories" productHeading="Popular Categories"/>
+          <div style={{height:'30px'}}></div>
+          <Carousel  responsive={responsive}>
+            {product}
+          </Carousel>
+        </div>
        
         <div style={{height:'60px'}}></div>
         <CatName categoryHeading="Featured" productHeading="New Arrivals"/>
-        <div style={{height:'30px'}}></div>
+        <div style={{height:'10px'}}></div>
         <BasicGrid/>
         <div style={{height:'60px'}}></div>
         <CatName categoryHeading="Categories" productHeading="Best Selling Products"/>
@@ -149,7 +160,7 @@ function MainLandingPage() {
         <div style={{height:'60px'}}></div>
         <Box sx={{display:'flex',alignItems:'',justifyContent:'space-between'}}>
          <CatName categoryHeading="This Month" productHeading="Clearance Sale"/>
-         <Button sx={{height:'40px',backgroundColor:'#DB4444',paddingX:'50px'}}>
+         <Button sx={{height:'40px',backgroundColor:'#DB4444',paddingX:{lg:'50px',md:'40px',sm:'30px',xs:'20px'}}}>
           <Box sx={{color:'white',fontWeight:'bold'}}>
            See All
           </Box>

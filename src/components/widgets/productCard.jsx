@@ -50,8 +50,8 @@ export default function ProductCard1(props) {
     return (
         <Box
             sx={{
-                height: '300px',
-                width: '250px',
+                height:{lg: '300px',md: '300px',sm: '200px',xs: '170px'},
+                width: {lg: '250px',md: '250px',sm: '150px',xs: '120px'},
                 borderRadius: '5px',
                 backgroundColor: '#F5F5F5',
                 position: 'relative',
@@ -63,8 +63,9 @@ export default function ProductCard1(props) {
         >  
             <Box
                 sx={{
-                    height: '220px',
-                    width: '250px',
+                    height:{lg: '220px',md: '300px',sm: '200px',xs: '170px'},
+                width: {lg: '250px',md: '250px',sm: '150px',xs: '120px'},
+                   
                     borderRadius: '5px',
                     
                     backgroundColor: 'red',
@@ -77,8 +78,8 @@ export default function ProductCard1(props) {
             >
                 <Box
                     sx={{
-                        height: '220px',
-                        width: '250px',
+                        height:{lg: '220px',md: '300px',sm: '200px',xs: '170px'},
+                        width: {lg: '250px',md: '250px',sm: '150px',xs: '120px'},
                         backgroundColor: 'blue',
                         position: 'relative',
                         backgroundSize: 'cover',
@@ -95,36 +96,6 @@ export default function ProductCard1(props) {
                 </Box>
 
             </Box>
-
-            {/* <Button sx={{
-                position: 'relative',
-                paddingX: '20px',
-                paddingY: '10px',
-                fontSize: '12px',
-                fontWeight: 'bold',
-                color: 'white',
-                backgroundColor: 'transparent',
-                border: '1px solid white',
-                overflow: 'hidden',
-                '&::before': {
-                    content: '""',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '0',
-                    backgroundColor: 'white', // Set the hover color here
-                    transition: 'height 0.3s ease',
-                    zIndex: -1,
-                },
-                '&:hover:before': {
-                    height: '100%',
-                },
-                '&:hover': {
-                    color: 'black', // Change text color on hover
-                },
-            }} variant="outlined">Shop Now</Button> */}
-            
                 <IconButton sx={{
                 position: 'absolute',
                 paddingX: '5px',

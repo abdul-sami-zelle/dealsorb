@@ -24,9 +24,9 @@ function CatName({ categoryHeading, productHeading }) {
           {categoryHeading}
         </Typography>
       </Box>
-      <div style={{ height: '7px' }}></div>
+      <div style={{ height: '3px' }}></div>
       <Typography sx={{
-        fontSize: {lg:'36px',md:'32px',sm:'26px',xs:'22px'},
+        fontSize: {lg:'32px',md:'28px',sm:'22px',xs:'18px'},
         fontWeight: 'bold',
         color: 'black'
       }}>

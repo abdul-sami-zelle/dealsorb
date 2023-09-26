@@ -30,7 +30,7 @@ import FloatingButton from '../../components/cartUi/floatingButton';
 import WhatsAppFloatingButton from '../../components/whatsappFloatingbutton';
 import MobileViewCategories from '../../components/mobileViewCategories/mobileViewCategories';
 import ProductCardResponsive2 from '../../components/ProductCardResponsive2/productCardResponsive';
-import MobileViewProductsDesign1 from '../../components/mobileViewProductCard/MobileViewProductCard';
+import MobileViewProductsDesign1 from '../../components/mobileViewProductCard/mobileViewProductCard1';
 
 
 

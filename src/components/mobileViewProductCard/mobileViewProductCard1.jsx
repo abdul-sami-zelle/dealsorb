@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import './mobileViewProduct.css'
+import './mobileViewProduct1.css'
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import CatName from '../catName';

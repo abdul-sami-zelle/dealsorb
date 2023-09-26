@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import CatName from '../catName';
 
 
-export default function MobileViewProductsDesign({dataList}) {
+export default function MobileViewProductsDesign1({dataList}) {
     return(
         <>
         <div style={{height:'60px'}}></div>

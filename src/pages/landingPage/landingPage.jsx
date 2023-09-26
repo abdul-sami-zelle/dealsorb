@@ -29,8 +29,8 @@ import CategoryBanner from '../../3dSliderLandingPage/3dSilderLandingPage';
 import FloatingButton from '../../components/cartUi/floatingButton';
 import WhatsAppFloatingButton from '../../components/whatsappFloatingbutton';
 import MobileViewCategories from '../../components/mobileViewCategories/mobileViewCategories';
-import MobileViewProductsDesign from '../../components/mobileViewProductCard/MobileViewProductCard';
 import ProductCardResponsive2 from '../../components/ProductCardResponsive2/productCardResponsive';
+import MobileViewProductsDesign1 from '../../components/mobileViewProductCard/MobileViewProductCard';
 
 
 
@@ -127,7 +127,7 @@ function MainLandingPage() {
    <MobileViewCategories/>
    {/* </div> */}
 
-   <MobileViewProductsDesign dataList={bestSelling} />
+   <MobileViewProductsDesign1 dataList={bestSelling} />
  
    {/* <CarouselSlider22/> */}
          {/* <MainCouponLandingPage/>  */}

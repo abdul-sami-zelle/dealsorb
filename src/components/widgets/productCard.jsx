@@ -50,21 +50,21 @@ export default function ProductCard1(props) {
     return (
         <Box
             sx={{
-                height:{lg: '300px',md: '300px',sm: '200px',xs: '170px'},
-                width: {lg: '250px',md: '250px',sm: '150px',xs: '120px'},
+                height:{xl:'250px',lg: '280px',md:'250px',sm:'250px',xs:'220px'},
+                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
                 borderRadius: '5px',
                 backgroundColor: '#F5F5F5',
                 position: 'relative',
                 // boxShadow: '0 4px 8px black',
-                marginY:"20px",
+                marginY:{xl:'15px',lg: '20px',md:'15px',sm:'15px',xs:'12px'},
                 boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"
                 
             }}
         >  
             <Box
                 sx={{
-                    height:{lg: '220px',md: '300px',sm: '200px',xs: '170px'},
-                width: {lg: '250px',md: '250px',sm: '150px',xs: '120px'},
+                    height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'160px'},
+                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
                    
                     borderRadius: '5px',
                     
@@ -78,8 +78,8 @@ export default function ProductCard1(props) {
             >
                 <Box
                     sx={{
-                        height:{lg: '220px',md: '300px',sm: '200px',xs: '170px'},
-                        width: {lg: '250px',md: '250px',sm: '150px',xs: '120px'},
+                        height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'160px'},
+                        width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
                         backgroundColor: 'blue',
                         position: 'relative',
                         backgroundSize: 'cover',
@@ -98,17 +98,17 @@ export default function ProductCard1(props) {
             </Box>
                 <IconButton sx={{
                 position: 'absolute',
-                paddingX: '5px',
-                paddingY: '5px',
+                paddingX:{xl:'5px',lg:'5px',md:'5px',sm:'3px',xs:'2px'},
+                paddingY:{xl:'5px',lg:'5px',md:'5px',sm:'3px',xs:'2px'},
                 backgroundColor:'white',
-                right:'20px',
-                bottom:'22%',
+                right:{xl:'12px',lg:'20px',md:'12px',sm:'12px',xs:'8px'},
+                bottom:{xl:'21%',lg:'22%',md:'21%',sm:'21%',xs:'24%'},
                 boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px',
                 '&:hover': {
                     backgroundColor:'white',
                 },
             }}>
-      <FavoriteIcon />
+      <FavoriteIcon sx={{height:{xl:'15px',lg:'25px',md:'25px',sm:'22px',xs:'20px'}, width:{xl:'15px',lg:'25px',md:'25px',sm:'22px',xs:'20px'},}} />
     </IconButton>
     <IconButton sx={{
                 position: 'absolute',
@@ -122,8 +122,8 @@ export default function ProductCard1(props) {
                     backgroundColor:'white',
                 },
             }}>
-      <Looks />
-    </IconButton>
+      <Looks sx={{height:{xl:'15px',lg:'25px',md:'25px',sm:'22px',xs:'20px'}, width:{xl:'15px',lg:'25px',md:'25px',sm:'22px',xs:'20px'},}} />
+    </IconButton >
     <Box sx={{
                 position: 'absolute',
                 paddingX: '5px',
@@ -151,11 +151,11 @@ export default function ProductCard1(props) {
     </Box>
   
    <Box sx={{margin:"10px"}}>
-   <Typography sx={{ fontSize: '15px', fontWeight: 'bold', color: '#4C9BF7' }}>
+   <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'13px'}, fontWeight: 'bold', color: '#4C9BF7' }}>
    {props.name}
                             </Typography>
                             
-                            <Typography sx={{ fontSize: '12px', fontWeight: 'normal', color: 'black'}}>
+                            <Typography sx={{ fontSize:{xl:'8px',lg:'12px',sm:'0px',xs:'0px'}, fontWeight: 'normal', color: 'black'}}>
                             {props.description}
                             </Typography>
                            <Box sx={{display:"flex",
@@ -166,7 +166,7 @@ export default function ProductCard1(props) {
                 justifyContent:'center',}}>
                           
                             <img height={'20px'}  width={'20px'} src="https://cdn3d.iconscout.com/3d/premium/thumb/dollar-symbol-6863354-5628240.png" alt="" srcset="" />
-                            <Typography sx={{ fontSize: '15px', fontWeight: 'bold', color: 'black' }}>
+                            <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'13px'}, fontWeight: {lg:'bold',md:'600',sm:'600',xs:'600'}, color: 'black' }}>
                             {props.price}
                             </Typography>
                            </Box>

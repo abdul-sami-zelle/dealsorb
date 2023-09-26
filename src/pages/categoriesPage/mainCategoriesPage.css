@@ -177,3 +177,97 @@
 .categories_section_b{
     margin-left: 20px;
 }
+
+.mobileViewCategories{
+    background-color: white;
+    display: none;
+    width: auto;
+    border-radius: 10px;
+
+}
+
+.closeModalBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+ .closeModalBtn h1{
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+ }
+
+ .tabs-wrapper.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    margin-bottom: -20px !important;
+  }
+
+  .tabs-wrapper{
+    display: none;
+  }
+  
+
+
+@media screen and (max-width: 830px) {
+    .tabsMainCategory_icon img{
+        height: 35px;
+        width: 35px;
+    }
+    .rfq_content h1{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .rts_content h1{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .ls_content h1{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .sub_heading{
+        font-size: 16px;
+    }
+    .categoryImg img{
+        padding: 3px;
+        height:30px;
+        width:30px;    
+    }
+    .categoryHeadingView h2{
+        font-size: 12px;
+        font-weight: 500;
+        color: black;
+        padding-top: 8px;
+        margin-left: 10px;
+    }
+    .forward_icon_cat img{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.webViewCategorySec1{
+    display: block;
+}
+
+@media screen and (max-width: 660px) {
+    .webViewCategorySec1{
+        display: none;
+    }
+    .categories_section{
+        display: none;
+    }
+    .tabs-wrapper{
+        display: block;
+    }
+    .mobileViewCategories{
+        display: block;
+    }
+      
+}

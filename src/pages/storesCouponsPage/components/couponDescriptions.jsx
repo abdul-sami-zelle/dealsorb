@@ -159,8 +159,8 @@ export default function CouponDescriptionStores({offer,title, description,code})
                    </div>
                    <div style={{height:'20px'}}></div>
                    <div on className="lastSectionCouponPage">
-                        <div style={{display:'flex'}}>
-                                <img src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/link.png?alt=media&token=947cc9b5-d8f7-4206-82dd-45a5b2c36efc" alt="" srcset="" />
+                        <div  style={{display:'flex'}}>
+                                <img style={{backgroundColor:'red'}} src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/link.png?alt=media&token=947cc9b5-d8f7-4206-82dd-45a5b2c36efc" alt="" srcset="" />
                             <div style={{width:'5px'}}></div>
                             <div className="tab1">
                                     <h1>
@@ -193,6 +193,63 @@ export default function CouponDescriptionStores({offer,title, description,code})
                         {isDivVisible? <img src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/add.png?alt=media&token=c6a651b1-5c13-4012-8c6c-ab21cbb3bf75" alt="" />: <div><img src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/minus.png?alt=media&token=13124ee7-6a2f-49bb-b574-8b4180b56fd3" alt="" srcset="" /></div>}
                         </div>           
                    </div>
+
+
+
+                   <div on className="lastSectionCouponPageMobile">
+                        <div className='' >
+                                <div style={{display:'flex' ,marginTop:"5px"}}>
+                                <img style={{ height:'15px',width:'15px'}} src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/link.png?alt=media&token=947cc9b5-d8f7-4206-82dd-45a5b2c36efc" alt="" srcset="" />
+                            <div style={{width:'5px'}}></div>
+                            <div className="tab1">
+                                    <h1>
+                                        340
+                                    </h1>  
+                                    <h2>
+                                            uses daily
+                                    </h2> 
+                                </div>
+                                </div> 
+                               <div style={{display:'flex',marginTop:"5px"}}>
+                               
+                                <div className="tab1">
+                                    <h1>
+                                        2 hours 
+                                    </h1>  
+                                    <h2>
+                                            ago Last Used
+                                    </h2> 
+                                </div> 
+                                
+                               </div>
+                                <div style={{display:'flex',marginTop:"5px"}}>
+                                <div className="tab1">
+                                    <h1>
+                                        38.3 Dirmham
+                                    </h1>  
+                                    <h2>
+                                            Last Saved
+                                    </h2> 
+                                </div>  
+                                </div>
+                        </div>
+                        <div style={{display:'flex', alignItems:'center',justifyContent:'space-between',marginTop:"5px"}}>
+                        <div>
+
+                        </div>
+                        <div onClick={() => setIsDivVisible(!isDivVisible)} className="tab1">
+                        {isDivVisible? <img src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/add.png?alt=media&token=c6a651b1-5c13-4012-8c6c-ab21cbb3bf75" alt="" />: <div><img src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/minus.png?alt=media&token=13124ee7-6a2f-49bb-b574-8b4180b56fd3" alt="" srcset="" /></div>}
+                        </div> 
+                        </div>          
+                   </div>
+
+
+
+
+
+
+
+
                 </div>
            </div>
            {!isDivVisible &&

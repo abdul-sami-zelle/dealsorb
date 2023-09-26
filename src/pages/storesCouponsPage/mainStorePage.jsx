@@ -136,16 +136,16 @@ const couponData = [
 export default function MainStorePage() {
     return (
         <Grid container >
-            <Grid item lg={12}>
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12}>
             <ResponsiveAppBar activePage={'All Stores'} />
             </Grid>
-            <Grid item lg={1}>
+            <Grid item xl={1} lg={1} md={1}>
 
             </Grid>
-            <Grid item lg={10} >
+            <Grid item xl={10} lg={10} md={10}>
                 <div className="banner"></div>
                 <Grid container>
-                    <Grid lg={8}>
+                    <Grid lg={8} md={8}>
                         <div>
                         <div style={{ height: '15px' }}></div>
                             <div className="storeNameHeading">
@@ -171,6 +171,16 @@ export default function MainStorePage() {
                             <MajorDiscountOffer/>
                             <div style={{ height: '30px' }}></div>
                             <PopularPromoCodes/>
+                            <div className="mobViewContentRightSide">
+                              <Grid container>
+
+                               <Grid item lg={4} md={4} sm={12}>
+                                    
+                               </Grid>
+                              </Grid>
+                        </div>
+
+
                             <div style={{ height: '30px' }}></div>
                             <ReviewsArticles/>
                             <div style={{ height: '30px' }}></div>
@@ -192,7 +202,8 @@ export default function MainStorePage() {
 
                         </div>
                     </Grid>
-                    <Grid lg={4} sx={{}}>
+                    <Grid xl={4} lg={4} md={4} sx={{}}>
+                        <div className="webViewContentRightSide">
                         <div style={{
                             display:'flex',
                             flexDirection:'column',
@@ -471,13 +482,14 @@ export default function MainStorePage() {
                                 </div>
                                 <div style={{ height: '30px' }}></div>
                         </div>
+                        </div>
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item lg={1}>
+            <Grid item xl={1} lg={1} md={1}>
 
             </Grid>
-            <Grid item lg={12}>
+            <Grid item xl={12} lg={12} md={12}>
             <Footer />
             
             </Grid>

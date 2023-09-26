@@ -684,3 +684,33 @@
     text-align: center;
     margin-right: 10px;
 }
+.webViewContentRightSide{
+    display: block;
+  }
+  .mobViewContentRightSide{
+    display: none;
+}
+.lastSectionCouponPageMobile{
+    display: none !important;
+}
+
+@media screen and (max-width: 1050px) {
+    .lastSectionCouponPage{
+        display: none;
+    }
+    
+
+  .lastSectionCouponPageMobile{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .linkCouponCode h6{
+    font-size: 10px;
+    font-weight: 400;
+    color: #2D5377;
+    text-align: center;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+  }

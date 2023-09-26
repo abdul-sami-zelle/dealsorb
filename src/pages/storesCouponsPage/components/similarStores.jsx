@@ -73,7 +73,7 @@ export default function SimilarStores(){
             <Grid item lg={12}>
             <Grid container spacing={4}  sx={{ marginX: '' }}>
       {couponsData.map((item, index) => (
-        <Grid item key={index} xs={6} sm={3} md={2} lg={3}>
+        <Grid item key={index} xs={6} sm={3} md={3} lg={3}>
            <div className='mainShopCard'>
             <div className='shopCard'>
                 <div className='brandLogo'>

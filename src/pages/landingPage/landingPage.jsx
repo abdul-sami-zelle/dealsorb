@@ -121,13 +121,15 @@ function MainLandingPage() {
    {/* <ControlledCarousel/> */}
    
    <CategoryBanner/>
-   <ProductCardResponsive2/>
+
 
    {/* <div className="mobiViewCategories"> */}
    <MobileViewCategories/>
    {/* </div> */}
 
+   <Box sx={{backgroundColor:'white'}}>
    <MobileViewProductsDesign1 dataList={bestSelling} />
+   </Box>
  
    {/* <CarouselSlider22/> */}
          {/* <MainCouponLandingPage/>  */}

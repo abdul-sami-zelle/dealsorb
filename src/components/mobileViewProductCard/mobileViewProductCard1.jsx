@@ -8,13 +8,17 @@ import CatName from '../catName';
 export default function MobileViewProductsDesign1({dataList}) {
     return(
         <>
-        <div style={{height:'60px'}}></div>
+        <div style={{height:'30px'}}></div>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center', marginLeft:'15px',marginRight:'15px'}}>
         <CatName categoryHeading="Categories" productHeading="Best Selling Products"/>
         <div style={{height:'15px'}}></div>
         <Button className='seeAllBtnMobilePr'>
            See All
         </Button>
-         <Grid container spacing={2}>
+        </div>
+        <div style={{height:'12px'}}></div>
+         <div style={{marginLeft:'15px',marginRight:'15px'}}>
+         <Grid container  spacing={2}>
       {dataList.map((data, index) => (
         <Grid item key={index} xs={6} sm={4} md={2} lg={1.7}>
               <div className="mainMobileProduct">
@@ -43,6 +47,7 @@ export default function MobileViewProductsDesign1({dataList}) {
         </Grid>
       ))}
     </Grid>
+         </div>
       
         </>
     )

@@ -20,8 +20,8 @@ export default  function MobileViewCategories(){
     const scrollAmountM = 150;
     return(
         <div className='mobview' style={{backgroundColor:'white'}}>
-        <div style={{height:'15px'}}></div>
-       <div style={{display:'flex',justifyContent:'space-between',alignItems:'center', marginLeft:'5px',marginRight:'5px'}}>
+        <div style={{height:'30px'}}></div>
+       <div style={{display:'flex',justifyContent:'space-between',alignItems:'center', marginLeft:'15px',marginRight:'15px'}}>
        <CatName categoryHeading="Categories" productHeading="Popular Categories"/>
        <div style={{display:'flex'}}>
        <div

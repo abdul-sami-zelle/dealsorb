@@ -51,7 +51,7 @@ export default function ProductCard1(props) {
         <Box
             sx={{
                 height:{xl:'250px',lg: '280px',md:'250px',sm:'250px',xs:'220px'},
-                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
+                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'160px'},
                 borderRadius: '5px',
                 backgroundColor: '#F5F5F5',
                 position: 'relative',
@@ -63,8 +63,8 @@ export default function ProductCard1(props) {
         >  
             <Box
                 sx={{
-                    height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'160px'},
-                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
+                    height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'165px'},
+                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'160px'},
                    
                     borderRadius: '5px',
                     
@@ -78,7 +78,7 @@ export default function ProductCard1(props) {
             >
                 <Box
                     sx={{
-                        height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'160px'},
+                        height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'165px'},
                         width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
                         backgroundColor: 'blue',
                         position: 'relative',
@@ -151,7 +151,7 @@ export default function ProductCard1(props) {
     </Box>
   
    <Box sx={{margin:"10px"}}>
-   <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'13px'}, fontWeight: 'bold', color: '#4C9BF7' }}>
+   <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'11px'}, fontWeight: 'bold', color: '#4C9BF7' }}>
    {props.name}
                             </Typography>
                             
@@ -163,7 +163,9 @@ export default function ProductCard1(props) {
                 justifyContent:'space-between',}}>
                            <Box sx={{display:"flex",
                 alignItems: 'center',
-                justifyContent:'center',}}>
+                justifyContent:'center',
+
+                }}>
                           
                             <img height={'20px'}  width={'20px'} src="https://cdn3d.iconscout.com/3d/premium/thumb/dollar-symbol-6863354-5628240.png" alt="" srcset="" />
                             <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'13px'}, fontWeight: {lg:'bold',md:'600',sm:'600',xs:'600'}, color: 'black' }}>

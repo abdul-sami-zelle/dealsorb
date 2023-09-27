@@ -87,7 +87,11 @@ export default function MainCouponLandingPage() {
     return(
         <>
         
-<ResponsiveAppBar activePage={'Deals & Coupons'} />
+<Grid container>
+      <Grid item xl={12} lg={12} md={12} sm={12} xs={12} >
+      <ResponsiveAppBar activePage={'Deals & Coupons'} />
+      </Grid>
+</Grid>
 <Grid container sx={{
    backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/banner1.jpg?alt=media&token=e3b1b3ba-799b-4c46-88c5-27d037ffcb68')`,
    backgroundSize: 'cover',
@@ -101,7 +105,7 @@ export default function MainCouponLandingPage() {
   <Grid item lg={8} md={12} sm={12} xs={12}  sx={{ display:'block'}}>
   <SliderCouponMain images={saleBanners}/>
   </Grid>
-  <Grid item lg={4} sx={{md:{display:'none'}}}  >
+  <Grid item lg={4} sx={{md:{display:'none'},sm:{display:'none'},xs:{display:'none'}}}  >
   <Option2 images={brands} />
   </Grid>
 </Grid>

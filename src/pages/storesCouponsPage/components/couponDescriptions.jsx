@@ -44,8 +44,8 @@ export default function CouponDescriptionStores({offer,title, description,code})
                    </div>
                    <div style={{height:'20px'}}></div>
                    <div className="section2B">
-                        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-                           <div style={{display:'flex'}}>
+                        <div className='section2BCouponeDescriptionCode' style={{display:'flex',alignItems:'center',justifyContent:'space-between', }}>
+                           <div style={{display:'flex',}}>
                            <div className="linkCouponCode">
                                 <div className='circleStyle'>
                                     <div className='subcircleStyle'>
@@ -80,7 +80,10 @@ export default function CouponDescriptionStores({offer,title, description,code})
                     onClick={() => {
                         handleCopyButtonClick()
                        }}
-                    sx={{height:'37px',width:'46px',border: '1px solid #AD0000',
+                    sx={{
+                        height:'37px',
+                        width:'46px',
+                        border: '1px solid #AD0000',
                     background:' #FFF', color: '#AD0000',
                     fontsize: '11px',
                     fontweight: '700',

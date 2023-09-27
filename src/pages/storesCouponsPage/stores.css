@@ -384,6 +384,7 @@
 }
 .linkCouponCode{
     display: flex;
+    align-items: center;
 }
 
 .linkCouponCode h6{
@@ -714,3 +715,141 @@
     padding-left: 2px;
 }
   }
+
+
+@media screen and (max-width:899px) {
+    .webViewContentRightSide1{
+        align-items:center !important;
+    }
+    .storeNameHeading{
+        font-size: 25px;
+        font-weight: 500;
+        color: black;
+    }
+   
+}
+
+
+@media screen and (max-width:767px) {
+    .section1{
+        width: 100%;
+        /* height: 200px; */
+        background-color: white;
+        border-top: 0.5px solid #BFBFBF;
+        border-left: 0.5px solid #BFBFBF;
+        border-bottom: 0.5px solid #BFBFBF;
+        border-right: 0.5px solid #BFBFBF;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .couponCardStorePage{
+        width: 100%;
+        /* height: 200px; */
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+       
+    }
+    .section2{
+        padding: 10px;
+        width: 100%;
+        /* height: 200px; */
+        background-color: white;
+        border-top: 0.5px solid #BFBFBF;
+        border-right: 0.5px solid #BFBFBF;
+        border-bottom: 0.5px solid #BFBFBF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .couponsCardOffer{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .couponTag{
+
+        font-size: 14px;
+
+    }
+    .couponMainHeading{
+        font-size: 18px;
+    }
+    .majorDiscountOfferMain{
+        display: flex;
+        flex-direction: column !important;
+    }
+    .majorDiscountOfferMainSection1{
+        width: 100%;
+    }
+    .majorDiscountOfferMainSection2{
+        width: 100%;
+    }
+    .banner{
+        height: 30vh;
+        width: 100%;
+        background-image: url("https://static.vecteezy.com/system/resources/previews/007/808/308/non_2x/coupon-sale-banner-template-design-for-web-or-social-media-vector.jpg");
+        background-color: #cccccc;
+        background-size:cover;
+        background-repeat: no-repeat;
+        
+    }
+}
+
+@media screen and (max-width:500px) {
+    .section2BCouponeDescriptionCode{
+        display: flex;
+        flex-direction: column !important;
+    }
+    .linkCouponCode{
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .couponsCardOffer{
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .couponTag{
+
+        font-size: 10px;
+
+    }
+    .couponMainHeading{
+        font-size: 16px;
+    }
+    .shopNow{
+        width: 100%;
+    }
+    .contact{
+        width: 100%;
+    }
+    .aboutShoppingStore{
+        width: 100%;
+    }
+    .topStores{
+        width: 100%;
+    }
+    .couponImageType{
+        width: 100%;
+    }
+    .storeFeatures{
+        width: 100%;
+    }
+    .storeFeatures{
+        width: 100%;
+    }
+    .banner{
+        height: 20vh;
+        width: 100%;
+        background-image: url("https://static.vecteezy.com/system/resources/previews/007/808/308/non_2x/coupon-sale-banner-template-design-for-web-or-social-media-vector.jpg");
+        background-color: #cccccc;
+        background-size:cover;
+        background-repeat: no-repeat;
+        
+    }
+}

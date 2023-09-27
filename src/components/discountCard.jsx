@@ -14,8 +14,8 @@ export default function DiscountCard1(props) {
     return (
         <Box
             sx={{
-                height: '300px',
-                width: '250px',
+              height:{xl:'320px',lg: '280px',md:'250px',sm:'250px',xs:'220px'},
+              width: {xl:'250px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
                 borderRadius: '5px',
                 backgroundColor: '#F5F5F5',
                 boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"   ,
@@ -25,8 +25,8 @@ export default function DiscountCard1(props) {
         >  
           <Box
            sx={{
-            margin:'10px',
-            flexGrow:'10',
+            margin:{xl:'10px',lg: '10px',md:'8px',sm:'6px',xs:'4px'},
+            flexGrow:{xl:'10',lg: '10',md:'12',sm:'12',xs:'20'},
             backgroundColor:'red',
             borderRadius: '5px',
             backgroundColor: 'blue',
@@ -47,8 +47,8 @@ export default function DiscountCard1(props) {
                 position:'absolute',
                 top:'0px',
                 left:'0px',
-                height:'25px',
-                width:'50px',
+                height:{xl:'25px',lg: '25px',md:'23px',sm:'21px',xs:'21px'},
+                width:{xl:'50px',lg: '50px',md:'44px',sm:'41px',xs:'41px'},
                 backgroundColor:'#DB4444',
                 borderRadius: '5px',
                 display:'flex',
@@ -71,19 +71,20 @@ export default function DiscountCard1(props) {
           }}
           >
         <Box sx={{}}>
-        <Typography sx={{color:"#DB4444",fontSize:'15px',fontWeight:'bold'}}>
+        <Typography sx={{color:"#DB4444",fontSize:{xl:'15px',lg: '15px',md:'13px',sm:'12px',xs:'10px'},fontWeight:'bold'}}>
           {props.name}
         </Typography>
-        <Rating name="read-only" value={props.rating} readOnly />
+        <Rating name="read-only" size='2px' value={props.rating} readOnly />
         </Box>
         <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-evenly'}}>
             <Button sx={{
-                                width:'100px',
-                                fontSize: '8px',
+                                width:{xl:'100px',lg: '90px',md:'80px',sm:'70px',xs:'65px'},
+                                fontSize: {xl:'8px',lg: '8px',md:'8px',sm:'7px',xs:'7px'},
                                 fontWeight: 'bold',
                                 color: '#DB4444',
                                 borderColor: '#DB4444',
                                 borderWidth:'2px',
+                                padding:{xl:'10px',lg: '10px',md:'10px',sm:'6px',xs:'6px'},
                                 '&:hover': {
                                     backgroundColor: '#DB4444', // Set the hover color here
                                     color: 'white',
@@ -95,9 +96,10 @@ export default function DiscountCard1(props) {
             <Button sx={{
                                 // paddingX:'20px',
                                 // paddingY:'0px',
-                                width:'100px',
+                                padding:{xl:'10px',lg: '10px',md:'10px',sm:'6px',xs:'6px'},
                                 backgroundColor:'#DB4444',
-                                fontSize: '8px',
+                                width:{xl:'100px',lg: '90px',md:'80px',sm:'70px',xs:'65px'},
+                                fontSize: {xl:'8px',lg: '8px',md:'8px',sm:'7px',xs:'7px'},
                                 fontWeight: 'bold',
                                 color: 'white',
                                 borderWidth:'2px',

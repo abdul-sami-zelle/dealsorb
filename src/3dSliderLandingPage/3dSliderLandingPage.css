@@ -5,7 +5,9 @@
   padding-top: 20px;
 }   
  
- 
+#content3dSlider h2{
+  display: none !important;
+}
  .mainClassPage3dSlider{
     display: flex;
     align-items: center;
@@ -97,6 +99,8 @@
 }
 
 
+
+
 @media screen and (max-width: 1100px) {
   .mainClassPage3dSlider h1 {
     font-size: 28px !important;
@@ -147,13 +151,19 @@
     display: none !important;
   }
   #content3dSlider h1{
-    font-weight: bolder !important;
-    font-size: 18px !important;
-    text-align: center !important;
+    display: none !important;
   }
   #content3dSlider button{
     display: none !important;
 
+  }
+  #content3dSlider h2{
+    display: block !important;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
   }
 
   .colum {
@@ -184,7 +194,7 @@
         text-align: center;
         font-size: 14px !important;
         font-weight: bold !important;
-
+        color:'red';
       }
       
  
@@ -236,7 +246,15 @@
       transform-style: preserve-3d;
       margin-top:-10px !important;
     }
-
+    #content3dSlider h2{
+      display: block !important;
+      font-size: 10px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-top: 35px;
+    }
+  
   }
 
 
@@ -256,19 +274,37 @@
       transform-style: preserve-3d;
       margin-top:-10px !important;
     }
+    #content3dSlider h2{
+      display: block !important;
+      font-size: 10px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-top: 30px;
+    }
+  
 
   }
   @media (max-width: 381px) {
     #content3dSlider{
-      top: 40px !important;
+ 
   
     }
+    #content3dSlider h2{
+      display: block !important;
+      font-size: 10px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-top: 27px;
+    }
+  
   }
 
 
   @media (max-width: 361px) {
     #content3dSlider{
-      top: 30px !important;
+      
   
     }
   }

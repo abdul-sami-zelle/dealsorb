@@ -31,6 +31,54 @@ import WhatsAppFloatingButton from '../../components/whatsappFloatingbutton';
 import MobileViewCategories from '../../components/mobileViewCategories/mobileViewCategories';
 import ProductCardResponsive2 from '../../components/ProductCardResponsive2/productCardResponsive';
 import MobileViewProductsDesign1 from '../../components/mobileViewProductCard/mobileViewProductCard1';
+import MobileViewCategoriesAnBestSale from '../../components/mobileViewCategoriesAndBestSale/mobileViewCategoriesAndBestSale';
+import ExploreOurProducts from '../../components/exploreOurProducts/exploreOurProducts';
+
+
+
+const products = [
+  {
+      id: 1,
+      photo:
+        "https://www.idealancy.pk/images/product_gallery/md_1695211691_wollar_storage_bag_7.jpg",
+      name: "Furhaven Orthopedic",
+      price: "19.99",
+      description: "Some text about the product..",
+      rating:"5.0",
+      brandLogo:"https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png"
+    },
+    {
+      id: 2,
+      photo:
+        "https://www.idealancy.pk/images/product_gallery/md_1695119619_egg_pen_holder_1.jpg",
+      name: "WATER BOTTLES",
+      price: "21.99",
+      description: "Some text about the product..",
+      rating:"5.0",
+      brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
+    },
+    {
+      id: 3,
+      photo:
+        "https://www.idealancy.pk/images/product_gallery/md_1695037198_sink_faucet_1.jpg",
+      name: "KITCHEN ACCESSORIES",
+      price: "99.99",
+      description: "Some text about the product..",
+      rating:"5.0",
+      brandLogo:"https://companieslogo.com/img/orig/600690.SS_BIG-07f22d57.png?t=1664511268"
+    },
+    {
+      id: 4,
+      photo:
+        "https://www.idealancy.pk/images/product_gallery/md_1695113061_picnic_mat_1.jpg",
+      name: "HOME IMPROVEMENT",
+      price: "14.99",
+      description: "Some text about the product..",
+      rating:"5.0",
+      brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
+    },
+];
+
 
 
 
@@ -127,10 +175,16 @@ function MainLandingPage() {
    <MobileViewCategories/>
    {/* </div> */}
 
-   <Box sx={{backgroundColor:'white'}}>
-   <MobileViewProductsDesign1 dataList={bestSelling} />
+   <Box >
+   <MobileViewProductsDesign1 dataList={products} />
    </Box>
- 
+   <Box >
+   <MobileViewCategoriesAnBestSale dataList={products} />
+   </Box>
+   <Box >
+   <ExploreOurProducts dataList={products} />
+   </Box>
+   
    {/* <CarouselSlider22/> */}
          {/* <MainCouponLandingPage/>  */}
         {/* <MainStorePage/> */}
@@ -145,22 +199,28 @@ function MainLandingPage() {
           </Carousel>
         </div>
        
+        <div className="webViewCategories">
         <div style={{height:'60px'}}></div>
         <CatName categoryHeading="Featured" productHeading="New Arrivals"/>
         <div style={{height:'10px'}}></div>
         <BasicGrid/>
         <div style={{height:'60px'}}></div>
+       
         <CatName categoryHeading="Categories" productHeading="Best Selling Products"/>
         <div style={{height:'30px'}}></div>
         <Carousel  responsive={responsive2}>
           {product22}
         </Carousel>
         <div style={{height:'60px'}}></div>
+
         <CatName categoryHeading="Our Products" productHeading="Deals & Coupons"/>
         <div style={{height:'30px'}}></div>
         {/* <CouponProviders/> */}
+        
+        </div>
         <div style={{height:'40px'}}></div>
         <Banner1/>
+        <div className="webViewCategories">
         <div style={{height:'60px'}}></div>
         <Box sx={{display:'flex',alignItems:'',justifyContent:'space-between'}}>
          <CatName categoryHeading="This Month" productHeading="Clearance Sale"/>
@@ -190,6 +250,7 @@ function MainLandingPage() {
             
           </Grid>
         </Grid> 
+        </div>
        
   
   

@@ -19,7 +19,7 @@ export default  function MobileViewCategories(){
     const sliderRefM = useRef(null);
     const scrollAmountM = 150;
     return(
-        <div className='mobview' style={{backgroundColor:'white'}}>
+        <div className='mobview'>
         <div style={{height:'30px'}}></div>
        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center', marginLeft:'15px',marginRight:'15px'}}>
        <CatName categoryHeading="Categories" productHeading="Popular Categories"/>
@@ -50,14 +50,14 @@ export default  function MobileViewCategories(){
 
        
        
-        <Box ref={sliderRefM}  sx={{backgroundColor:'white' ,paddingTop:'',overflowX:'auto',width:'100%', scrollbarWidth: 'none','&::-webkit-scrollbar': {
+        <Box ref={sliderRefM}  sx={{paddingTop:'',overflowX:'auto',width:'100%', scrollbarWidth: 'none','&::-webkit-scrollbar': {
             width: '0.4em', // Adjust the width as needed
           },
           '&::-webkit-scrollbar-thumb': {
             backgroundColor: 'transparent', // Hide thumb in webkit-based browsers
           },}}>
          
-                      <div className="mainCategoryRow" style={{marginTop:'25px'}}>
+                      <div className="mainCategoryRow" style={{marginTop:'35px'}}>
          
          <div className="mainCategoryCircle" style={{backgroundColor:'#F7D8BA'}}>
            <img src={mat} alt=""  height='60px' width='80px' srcset=""/>

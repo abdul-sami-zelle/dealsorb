@@ -56,7 +56,7 @@ export default function ProductCard1(props) {
                 backgroundColor: '#F5F5F5',
                 position: 'relative',
                 // boxShadow: '0 4px 8px black',
-                marginY:{xl:'15px',lg: '20px',md:'15px',sm:'15px',xs:'12px'},
+                // marginY:{xl:'15px',lg: '20px',md:'15px',sm:'15px',xs:'12px'},
                 boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"
                 
             }}

@@ -10,7 +10,7 @@ export default function MobileViewProductsDesign1({dataList}) {
         <>
         <div style={{height:'30px'}}></div>
         <div style={{display:'flex',justifyContent:'space-between',alignItems:'center', marginLeft:'15px',marginRight:'15px'}}>
-        <CatName categoryHeading="Categories" productHeading="Best Selling Products"/>
+        <CatName categoryHeading="This Month" productHeading="Clearance Sale"/>
         <div style={{height:'15px'}}></div>
         <Button className='seeAllBtnMobilePr'>
            See All

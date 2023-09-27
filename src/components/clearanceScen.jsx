@@ -6,7 +6,7 @@ const products = [
     {
         id: 1,
         imageurl:
-          "https://dealsorb.com/wp-content/uploads/2022/02/71jFHRn1kL._AC_SL1500_-1.jpg",
+          "https://www.idealancy.pk/images/product_gallery/md_1695211691_wollar_storage_bag_7.jpg",
         name: "Furhaven Orthopedic",
         price: "19.99",
         description: "Some text about the product..",
@@ -16,7 +16,7 @@ const products = [
       {
         id: 2,
         imageurl:
-          "https://dealsorb.com/wp-content/uploads/2022/03/Graco-TurboBooster-Highback-Booster-Seat.png",
+          "https://www.idealancy.pk/images/product_gallery/md_1695119619_egg_pen_holder_1.jpg",
         name: "WATER BOTTLES",
         price: "21.99",
         description: "Some text about the product..",
@@ -26,7 +26,7 @@ const products = [
       {
         id: 3,
         imageurl:
-          "https://dealsorb.com/wp-content/uploads/2022/03/Fire-TV-Stick-Lite-with-latest-Alexa-Voice-Remote-Lite-no-TV-controls-HD-streaming-device.png",
+          "https://www.idealancy.pk/images/product_gallery/md_1695037198_sink_faucet_1.jpg",
         name: "KITCHEN ACCESSORIES",
         price: "99.99",
         description: "Some text about the product..",
@@ -36,7 +36,7 @@ const products = [
       {
         id: 4,
         imageurl:
-          "https://dealsorb.com/wp-content/uploads/2022/02/awesome-t-shirt-designs-41b.jpg",
+          "https://www.idealancy.pk/images/product_gallery/md_1695113061_picnic_mat_1.jpg",
         name: "HOME IMPROVEMENT",
         price: "14.99",
         description: "Some text about the product..",
@@ -49,7 +49,7 @@ const ClearanceList = () => {
   return (
     <Grid container spacing={2}  sx={{ marginX: '10px' }}>
       {products.map((item, index) => (
-        <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+        <Grid item key={index} xs={6} sm={3} md={2} lg={2}>
           <ProductCard1
             name={item.name}
             url={item.imageurl}

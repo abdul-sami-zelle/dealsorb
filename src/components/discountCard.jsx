@@ -15,7 +15,7 @@ export default function DiscountCard1(props) {
         <Box
             sx={{
               height:{xl:'320px',lg: '280px',md:'250px',sm:'250px',xs:'220px'},
-              width: {xl:'250px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
+              width: {xl:'250px',lg: '210px',md:'200px',sm:'200px',xs:'160px'},
                 borderRadius: '5px',
                 backgroundColor: '#F5F5F5',
                 boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"   ,

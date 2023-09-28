@@ -9,9 +9,6 @@ import { couponeData1 } from './couponGrid'; // Import the coupon data array
 const App222 = () => {
   const [dotPosition, setDotPosition] = useState(undefined);
 
-  const handlePositionChange = (e) => {
-    setDotPosition(e.target.value);
-  };
 
   return (
     <Box >

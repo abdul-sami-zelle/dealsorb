@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 
 
 const Card = styled('div')({
-  width: '350px',
+  maxWidth: '350px',
   height: '100px',
   borderRadius: '5px',
   boxShadow: '0 4px 6px 0 rgba(0, 0, 0, 0.2)',

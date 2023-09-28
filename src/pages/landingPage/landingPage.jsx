@@ -33,6 +33,9 @@ import ProductCardResponsive2 from '../../components/ProductCardResponsive2/prod
 import MobileViewProductsDesign1 from '../../components/mobileViewProductCard/mobileViewProductCard1';
 import MobileViewCategoriesAnBestSale from '../../components/mobileViewCategoriesAndBestSale/mobileViewCategoriesAndBestSale';
 import ExploreOurProducts from '../../components/exploreOurProducts/exploreOurProducts';
+import CouponCard from '../../components/coupon1';
+import App222 from '../../components/coupon22';
+import MobileCoupon from '../../components/couponUi/mobileCoupon';
 
 
 
@@ -167,9 +170,17 @@ function MainLandingPage() {
        <ResponsiveAppBar activePage="Home" />
       <CartItems/>
    {/* <ControlledCarousel/> */}
-   
    <CategoryBanner/>
+   <MobileCoupon/>
 
+   <div style={{height:'150px'}}></div>
+   {/* <CouponCard
+            brandImg={"https://www.bata.co.za/file/BATA_logo_since1925.png"}
+            name={"kjgjgk"}
+            percent={"10"}
+            validity={"coupon.validity"}
+          />
+   */}
 
    {/* <div className="mobiViewCategories"> */}
    <MobileViewCategories/>

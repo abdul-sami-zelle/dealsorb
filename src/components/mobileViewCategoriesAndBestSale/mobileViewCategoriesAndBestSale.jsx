@@ -19,7 +19,7 @@ export default function MobileViewCategoriesAnBestSale({dataList}) {
         </div>
         <div style={{height:'12px'}}></div>
          <div style={{marginLeft:'15px',marginRight:'15px'}}>
-         <Grid container  spacing={1} rowSpacing={0}>
+         <Grid container  spacing={1} rowSpacing={1.5}>
       {dataList.map((data, index) => (
         <Grid item key={index} xs={6} sm={4} md={2} lg={1.7}>
             <ProductCard1

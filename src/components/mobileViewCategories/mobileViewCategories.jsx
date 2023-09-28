@@ -59,7 +59,7 @@ export default  function MobileViewCategories(){
          
                       <div className="mainCategoryRow" style={{marginTop:'35px'}}>
          
-         <div className="mainCategoryCircle" style={{backgroundColor:'#F7D8BA'}}>
+         <div className="mainCategoryCircle" style={{backgroundColor:'#ACDDDE'}}>
            <img src={mat} alt=""  height='60px' width='80px' srcset=""/>
            <p>Bathroom Mats</p>
          </div>
@@ -71,25 +71,25 @@ export default  function MobileViewCategories(){
            <img src={cleaning} alt="" srcset="" height='80px' width='80px' />
            <p>Cleaning Items</p>
          </div>
-         <div className="mainCategoryCircle" style={{backgroundColor:'#CDD3FF'}}>
+         <div className="mainCategoryCircle" style={{backgroundColor:'#ACDDDE'}}>
          <div style={{width:'80px',height:'80px'}}>
            <img src={menacc} alt="" srcset="" height='60px' width='60px' />
            </div>
            <p>Cleaning Items</p>
          </div>
-         <div className="mainCategoryCircle" style={{backgroundColor:'#E1F8DC'}}>
+         <div className="mainCategoryCircle" style={{backgroundColor:'#ACDDDE'}}>
          <div style={{width:'80px',height:'80px'}}>
            <img src={shirts} alt="" srcset="" height='60px' width='60px' />
            </div>
            <p>Cleaning Items</p>
          </div>
-         <div className="mainCategoryCircle" style={{backgroundColor:'#FEF8DD'}}>
+         <div className="mainCategoryCircle" style={{backgroundColor:'#ACDDDE'}}>
          <div style={{width:'80px',height:'80px'}}>
            <img src={toys} alt="" srcset="" height='60px' width='70px' />
            </div>
            <p>Cleaning Items</p>
          </div>
-         <div className="mainCategoryCircle" style={{backgroundColor:'#FFE7C7'}}>
+         <div className="mainCategoryCircle" style={{backgroundColor:'#ACDDDE'}}>
            <div style={{width:'80px',height:'80px'}}>
               <img src={water} alt="" srcset="" height='60px' width='30px' />
            </div>

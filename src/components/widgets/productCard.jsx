@@ -150,8 +150,8 @@ export default function ProductCard1(props) {
            
     </Box>
   
-   <Box sx={{margin:"10px"}}>
-   <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'11px'}, fontWeight: 'bold', color: '#4C9BF7' }}>
+   <Box sx={{margin:{xl:'10px',lg:'10px',md:'10px',sm:'9px',xs:'6px'}}}>
+   <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'11px'}, marginBottom:{xl:'0px',lg:'0px',md:'0px',sm:'5px',xs:'3px'}, fontWeight: 'bold', color: '#4C9BF7' }}>
    {props.name}
                             </Typography>
                             
@@ -174,9 +174,11 @@ export default function ProductCard1(props) {
                            </Box>
                           
                             <Button onClick={handleProductDetailsClick} sx={{
-                                paddingX:'20px',
-                                paddingY:'0px',
-                                fontSize: '12px',
+                                paddingX:'0px',
+                                // paddingY:'0px',
+                                height: '25px',
+    width: '80px',
+                                fontSize: '10px',
                                 fontWeight: 'bold',
                                 color: 'black',
                                 borderColor: 'black', // Set the border color here
@@ -185,7 +187,7 @@ export default function ProductCard1(props) {
                                     color: 'white',
                                     borderColor: 'black',
                                 },
-                            }} variant="outlined">Add</Button>
+                            }} variant="outlined">Add to cart</Button>
                            
                            </Box>
    </Box>

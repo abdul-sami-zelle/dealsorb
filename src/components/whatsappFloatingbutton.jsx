@@ -24,6 +24,7 @@ function WhatsAppFloatingButton() {
       backgroundImage: `url("https://cdn-icons-png.flaticon.com/128/3670/3670051.png")`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'contain',
+      zIndex:'9999'
     }} className="floating-button-what" onClick={handleButtonClick}>
     </button>
   );

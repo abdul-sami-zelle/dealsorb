@@ -1,0 +1,23 @@
+  
+  .mySwiper224 {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .mySwiper222 {
+    text-align: center;
+    font-size: 18px;
+    background: #ECECEC;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mySwiper222 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

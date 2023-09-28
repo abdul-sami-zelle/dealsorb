@@ -36,6 +36,7 @@ import ExploreOurProducts from '../../components/exploreOurProducts/exploreOurPr
 import CouponCard from '../../components/coupon1';
 import App222 from '../../components/coupon22';
 import MobileCoupon from '../../components/couponUi/mobileCoupon';
+import MobileCouponSlider from '../../components/mobileCouponSlider/mobileCouponSlider';
 
 
 
@@ -81,6 +82,74 @@ const products = [
       brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
     },
 ];
+
+
+const couponsMobileData = [
+  {
+      id: 1,
+      url:
+        "https://static.wixstatic.com/media/183fc9_108f894092ad4114ae0826d90d17e7eb~mv2.png/v1/crop/x_0,y_98,w_500,h_348/fill/w_172,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/zm-bata-logo.png",
+      percent: "20",
+      brand: "Bata Footwear",
+      validTill: "October 2023",
+    },
+    {
+      id: 2,
+      url:
+        "https://www.servis.pk/cdn/shop/files/shoebox-removebg-preview.png?height=628&pad_color=fff&v=1647339496&width=1200",
+      percent: "30",
+      brand: "Servis Footwear",
+      validTill: "November 2023",
+    },
+    {
+      id: 3,
+      url:
+        "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
+      percent: "40",
+      brand: "McDonald's",
+      validTill: "December 2023",
+    },
+    {
+      id: 4,
+      url:
+        "https://www.freepnglogos.com/uploads/kfc-png-logo/camera-kfc-png-logo-0.png",
+      percent: "40",
+      brand: "KFC",
+      validTill: "December 2023",
+    },
+    {
+      id: 5,
+      url:
+        "https://assets.indolj.io/images/1682661619-logo.webp",
+      percent: "40",
+      brand: "Zameer Ansari",
+      validTill: "December 2023",
+    },
+    {
+      id: 6,
+      url:
+        "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
+      percent: "40",
+      brand: "McDonald's",
+      validTill: "December 2023",
+    },
+    {
+      id: 7,
+      url:
+        "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
+      percent: "40",
+      brand: "McDonald's",
+      validTill: "December 2023",
+    },
+    {
+      id: 8,
+      url:
+        "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
+      percent: "40",
+      brand: "McDonald's",
+      validTill: "December 2023",
+    },
+  ]
 
 
 
@@ -171,9 +240,8 @@ function MainLandingPage() {
       <CartItems/>
    {/* <ControlledCarousel/> */}
    <CategoryBanner/>
-   <MobileCoupon/>
-
-   <div style={{height:'150px'}}></div>
+ 
+  
    {/* <CouponCard
             brandImg={"https://www.bata.co.za/file/BATA_logo_since1925.png"}
             name={"kjgjgk"}
@@ -188,6 +256,9 @@ function MainLandingPage() {
 
    <Box >
    <MobileViewProductsDesign1 dataList={products} />
+   </Box>
+   <Box>
+   <MobileCouponSlider couponDataMobile={couponsMobileData}/>
    </Box>
    <Box >
    <MobileViewCategoriesAnBestSale dataList={products} />

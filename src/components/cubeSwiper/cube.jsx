@@ -24,6 +24,7 @@ export default function Cube() {
            See All
         </Button>
         </div>
+        <div style={{height:'30px'}}></div>
       <Swiper
         effect={'cube'}
         grabCursor={true}

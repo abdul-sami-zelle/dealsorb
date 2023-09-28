@@ -324,9 +324,10 @@ function MainLandingPage() {
         <Carousel  responsive={discountProdctsResponsive}>
           {product23}
         </Carousel>
-        <div style={{height:'120px'}}></div>
+        <div style={{height:'60px'}}></div>
        
         </div>
+        <div style={{height:'60px'}}></div>
         <Grid container >
           <Grid item lg={1}>
             

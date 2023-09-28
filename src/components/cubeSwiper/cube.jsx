@@ -8,13 +8,22 @@ import 'swiper/css/effect-cube';
 import 'swiper/css/pagination';
 
 import './cube.css';
-
+import CatName from '../catName';
+import Button from '@mui/material/Button';
 // import required modules
 import {Autoplay, EffectCube, Pagination } from 'swiper/modules';
 
 export default function Cube() {
   return (
     <>
+    <div style={{height:'30px'}}></div>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center', marginLeft:'15px',marginRight:'15px'}}>
+        <CatName categoryHeading="Ocassions" productHeading="Best Ocassion Deals"/>
+        <div style={{height:'15px'}}></div>
+        <Button className='seeAllBtnMobilePr'>
+           See All
+        </Button>
+        </div>
       <Swiper
         effect={'cube'}
         grabCursor={true}

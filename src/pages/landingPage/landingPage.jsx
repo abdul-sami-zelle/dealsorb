@@ -325,6 +325,8 @@ function MainLandingPage() {
           {product23}
         </Carousel>
         <div style={{height:'120px'}}></div>
+       
+        </div>
         <Grid container >
           <Grid item lg={1}>
             
@@ -336,7 +338,6 @@ function MainLandingPage() {
             
           </Grid>
         </Grid> 
-        </div>
        
        <Box>
        <Cube/>

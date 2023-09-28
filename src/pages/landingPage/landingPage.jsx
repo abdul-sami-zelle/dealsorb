@@ -341,10 +341,10 @@ function MainLandingPage() {
         </Grid> 
        
        <Box>
-       <Cube/>
+      
        </Box>
-   
-  
+       <div style={{height:'30px'}}></div> 
+       <Cube/>
      
   {/* <ShowableProductDetails/> */}
        

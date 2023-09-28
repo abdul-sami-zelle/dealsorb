@@ -344,12 +344,13 @@ function MainLandingPage() {
       
        </Box>
        <div style={{height:'30px'}}></div> 
-       <Cube/>
+      
      
   {/* <ShowableProductDetails/> */}
        
       
         </Box>
+        <Cube/>
         <div style={{height:'30px'}}></div>
         <Footer/>
         <FloatingButton/>

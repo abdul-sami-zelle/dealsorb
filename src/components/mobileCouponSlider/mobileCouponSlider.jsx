@@ -11,6 +11,8 @@ import './mobileCouponSlider.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import CatName from '../catName';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import MobileCoupon2 from '../couponUi/mobileCoupon2';
 
 export default function MobileCouponSlider({couponDataMobile}) {
   return (
@@ -23,7 +25,7 @@ export default function MobileCouponSlider({couponDataMobile}) {
            See All
         </Button>
         </div>
-        <div style={{height:'12px'}}></div>
+        <div style={{height:'30px'}}></div>
       <Swiper
          autoplay={{
             delay: 2500,
@@ -42,6 +44,32 @@ export default function MobileCouponSlider({couponDataMobile}) {
             </SwiperSlide>
       ))}
       </Swiper>
+      <Swiper
+         autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+        className="mySwiper225"
+        customClass={{
+            navigationButtonPrev: 'swiper-button-prev',
+            navigationButtonNext: 'swiper-button-next',
+          }}
+          modules={[Autoplay]}
+      >
+         {couponDataMobile.map((item, index) => (
+           <SwiperSlide className="mySwiper2225">
+            <MobileCoupon url={item.url} percent={item.percent} brand={item.brand} validTill={item.validTill} />
+            </SwiperSlide>
+      ))}
+      </Swiper>
+      <Grid container  spacing={1} rowSpacing={1.5}>
+      {couponDataMobile.map((item, index) => (
+        <Grid  item key={index}  sx={{display:"flex",justifyContent:"center",alignItems:"center"}} xs={6} sm={4} md={2} lg={1.7}>
+           <MobileCoupon2 url={item.url} percent={item.percent} brand={item.brand} validTill={item.validTill} />
+         
+        </Grid>
+      ))}
+    </Grid>
     </>
   );
 }

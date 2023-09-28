@@ -38,6 +38,8 @@ import App222 from '../../components/coupon22';
 import MobileCoupon from '../../components/couponUi/mobileCoupon';
 import MobileCouponSlider from '../../components/mobileCouponSlider/mobileCouponSlider';
 import Cube from '../../components/cubeSwiper/cube';
+import MobileCoupon2 from '../../components/couponUi/mobileCoupon2';
+
 
 
 
@@ -284,7 +286,8 @@ function MainLandingPage() {
           </Carousel>
           
         </div>
-       
+        <div style={{height:'30px'}}></div> 
+       <MobileCoupon2/>
         <div className="webViewCategories">
         <div style={{height:'60px'}}></div>
         <CatName categoryHeading="Featured" productHeading="New Arrivals"/>
@@ -344,13 +347,14 @@ function MainLandingPage() {
       
        </Box>
        <div style={{height:'30px'}}></div> 
-      
+     
      
   {/* <ShowableProductDetails/> */}
        
       
         </Box>
         <Cube/>
+      
         <div style={{height:'30px'}}></div>
         <Footer/>
         <FloatingButton/>

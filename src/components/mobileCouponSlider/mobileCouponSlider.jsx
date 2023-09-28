@@ -62,7 +62,8 @@ export default function MobileCouponSlider({couponDataMobile}) {
             </SwiperSlide>
       ))}
       </Swiper>
-      <Grid container  spacing={1} rowSpacing={1.5}>
+      <div style={{marginLeft:'20px',marginRight:"20px"}}> 
+      <Grid container  spacing={0} rowSpacing={2}>
       {couponDataMobile.map((item, index) => (
         <Grid  item key={index}  sx={{display:"flex",justifyContent:"center",alignItems:"center"}} xs={6} sm={4} md={2} lg={1.7}>
            <MobileCoupon2 url={item.url} percent={item.percent} brand={item.brand} validTill={item.validTill} />
@@ -70,6 +71,7 @@ export default function MobileCouponSlider({couponDataMobile}) {
         </Grid>
       ))}
     </Grid>
+      </div>
     </>
   );
 }

@@ -416,7 +416,7 @@ function MainCategories() {
                         </Button>
                      </div>
                         <div className="mobileViewCategories">
-                        <Grid container columnSpacing={0}>
+                        <Grid container columnSpacing={0} rowSpacing={1.5}>
                                             {currentItems.map((item) => (
                                                 <Grid item sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} key={item.id} xl={3} xs={6} sm={4} md={4} lg={4}>
                                                     <ProductCard1  
@@ -475,7 +475,7 @@ function MainCategories() {
                                 </Grid>
                                 <Grid items lg={9} md={9} sm={9}>
                                     <div className="categories_section_b">
-                                        <Grid container spacing={0}>
+                                        <Grid container spacing={0} rowSpacing={3}>
                                             {currentItems.map((item) => (
                                                 <Grid item key={item.id} xl={3} xs={12} sm={6} md={4} lg={4}>
                                                     <ProductCard1  

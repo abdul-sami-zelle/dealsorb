@@ -37,6 +37,7 @@ import CouponCard from '../../components/coupon1';
 import App222 from '../../components/coupon22';
 import MobileCoupon from '../../components/couponUi/mobileCoupon';
 import MobileCouponSlider from '../../components/mobileCouponSlider/mobileCouponSlider';
+import Cube from '../../components/cubeSwiper/cube';
 
 
 
@@ -266,12 +267,14 @@ function MainLandingPage() {
    <Box >
    <ExploreOurProducts dataList={products} />
    </Box>
-   
+
+ 
    {/* <CarouselSlider22/> */}
          {/* <MainCouponLandingPage/>  */}
         {/* <MainStorePage/> */}
        
         <Box sx={{marginX:'30px'}}>
+          
         <div className="webViewCategories">
           <div style={{height:'30px'}}></div>
           <CatName categoryHeading="Categories" productHeading="Popular Categories"/>
@@ -279,6 +282,7 @@ function MainLandingPage() {
           <Carousel  responsive={responsive}>
             {product}
           </Carousel>
+          
         </div>
        
         <div className="webViewCategories">
@@ -334,7 +338,10 @@ function MainLandingPage() {
         </Grid> 
         </div>
        
-  
+       <Box>
+       <Cube/>
+       </Box>
+   
   
      
   {/* <ShowableProductDetails/> */}

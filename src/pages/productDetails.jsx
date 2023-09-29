@@ -343,7 +343,7 @@ const ImageSwitcher = ({productData }) => {
                     <Box sx={{ overflow: 'hidden' }} id="imageContainer">
                    
                     <PrismaZoom>
-                    <ImageMagnifier  src={bigImageSrc}  /></PrismaZoom>
+                    <ImageMagnifier   src={bigImageSrc}  /></PrismaZoom>
                     </Box>
                   </Grid>
                   <Grid item lg={12} md={12} sm={12} xs={12} sx={{marginY:'30px'}}>

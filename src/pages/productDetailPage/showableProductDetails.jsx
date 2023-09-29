@@ -39,14 +39,18 @@ export default function ShowableProductDetails(props) {
     // console.log(props.images);
     return(
       <Box sx={{backgroundColor:'white '}}>
-      <ResponsiveAppBar activePage={'Deal & Coupons'} />
+     <Grid container>
+      <Grid item lg={12} md={12} sm={12} xs={12}>
+          <ResponsiveAppBar activePage={'Deal & Coupons'} />
+      </Grid>
+     </Grid>
 
       
       <Grid container>
-        <Grid item lg={0.5}>
+        <Grid item lg={0.5} md={12} sm={12} xs={12}>
 
         </Grid>
-        <Grid item lg={11}>
+        <Grid item lg={11} md={12} sm={12} xs={12}>
           <div style={{height:'30px'}}></div>
           <div className="App">
             <ImageSwitcher
@@ -63,7 +67,7 @@ export default function ShowableProductDetails(props) {
           <CatName categoryHeading="Today's" productHeading="Related Products"/>
           <div style={{height:'30px'}}></div>
         </Grid>
-        <Grid item lg={0.5}>
+        <Grid item lg={0.5} md={12} sm={12} xs={12}>
 
         </Grid>
       </Grid>

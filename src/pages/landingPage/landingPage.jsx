@@ -91,7 +91,7 @@ const couponsMobileData = [
   {
       id: 1,
       url:
-        "https://static.wixstatic.com/media/183fc9_108f894092ad4114ae0826d90d17e7eb~mv2.png/v1/crop/x_0,y_98,w_500,h_348/fill/w_172,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/zm-bata-logo.png",
+        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
       percent: "20",
       brand: "Bata Footwear",
       validTill: "October 2023",
@@ -99,7 +99,7 @@ const couponsMobileData = [
     {
       id: 2,
       url:
-        "https://www.servis.pk/cdn/shop/files/shoebox-removebg-preview.png?height=628&pad_color=fff&v=1647339496&width=1200",
+        "https://icms-image.slatic.net/images/ims-web/fb7adc81-c369-4fe8-b62e-7595b09c7741.png",
       percent: "30",
       brand: "Servis Footwear",
       validTill: "November 2023",
@@ -107,7 +107,7 @@ const couponsMobileData = [
     {
       id: 3,
       url:
-        "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
+        "https://play-lh.googleusercontent.com/NCra9cWctHUO_Ti5abE3xkGol2QaYfPTmjauc6CL2szSX3A8tAPNKZBRZoptISOk6Q",
       percent: "40",
       brand: "McDonald's",
       validTill: "December 2023",
@@ -115,7 +115,7 @@ const couponsMobileData = [
     {
       id: 4,
       url:
-        "https://www.freepnglogos.com/uploads/kfc-png-logo/camera-kfc-png-logo-0.png",
+        "https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/mcdonalds.png?alt=media&token=3ef261c0-0949-4aeb-b6a3-8349bf5e3623",
       percent: "40",
       brand: "KFC",
       validTill: "December 2023",
@@ -123,7 +123,7 @@ const couponsMobileData = [
     {
       id: 5,
       url:
-        "https://assets.indolj.io/images/1682661619-logo.webp",
+        "https://clipart-library.com/data_images/249057.jpg",
       percent: "40",
       brand: "Zameer Ansari",
       validTill: "December 2023",
@@ -139,7 +139,7 @@ const couponsMobileData = [
     {
       id: 7,
       url:
-        "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
+        "https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/mcdonalds.png?alt=media&token=3ef261c0-0949-4aeb-b6a3-8349bf5e3623",
       percent: "40",
       brand: "McDonald's",
       validTill: "December 2023",
@@ -241,22 +241,11 @@ function MainLandingPage() {
         
        <ResponsiveAppBar activePage="Home" />
       <CartItems/>
-   {/* <ControlledCarousel/> */}
    <CategoryBanner/>
  
-  
-   {/* <CouponCard
-            brandImg={"https://www.bata.co.za/file/BATA_logo_since1925.png"}
-            name={"kjgjgk"}
-            percent={"10"}
-            validity={"coupon.validity"}
-          />
-   */}
 
-   {/* <div className="mobiViewCategories"> */}
-   <MobileViewCategories/>
-   {/* </div> */}
-
+<div className="mobViewContentLandingPage1">
+<MobileViewCategories/>
    <Box >
    <MobileViewProductsDesign1 dataList={products} />
    </Box>
@@ -269,6 +258,7 @@ function MainLandingPage() {
    <Box >
    <ExploreOurProducts dataList={products} />
    </Box>
+</div>
 
  
    {/* <CarouselSlider22/> */}
@@ -287,7 +277,6 @@ function MainLandingPage() {
           
         </div>
         <div style={{height:'30px'}}></div> 
-       <MobileCoupon2/>
         <div className="webViewCategories">
         <div style={{height:'60px'}}></div>
         <CatName categoryHeading="Featured" productHeading="New Arrivals"/>
@@ -304,7 +293,7 @@ function MainLandingPage() {
 
         <CatName categoryHeading="Our Products" productHeading="Deals & Coupons"/>
         <div style={{height:'30px'}}></div>
-        {/* <CouponProviders/> */}
+        <CouponProviders/>
         
         </div>
         <div style={{height:'40px'}}></div>

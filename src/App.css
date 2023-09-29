@@ -280,8 +280,14 @@ body{
 .mobiViewCategories{
   display: none;
 }
+.mobViewContentLandingPage1{
+  display: none;
+}
 
 @media screen and (max-width: 660px) {
+  .mobViewContentLandingPage1{
+    display: block;
+  }
   .mobiViewCategories{
     display: flex;
   }

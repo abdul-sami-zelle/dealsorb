@@ -3,6 +3,7 @@ import { Carousel, Radio } from 'antd';
 import CouponCard from './coupon1'; // Make sure the file name matches the correct path
 import Box from '@mui/material/Box';
 import { couponeData1 } from './couponGrid'; // Import the coupon data array
+import MobileCoupon from './couponUi/mobileCoupon';
 
 
 
@@ -21,6 +22,7 @@ const App22 = () => {
           ml:"50px",
           padding:'10px'
           }}>
+            
             <CouponCard
               brandImg={coupon.brandImg}
               name={coupon.name}

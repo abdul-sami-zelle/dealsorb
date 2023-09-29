@@ -155,7 +155,7 @@ export const productData2 = [
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1200 },
-      items: 5,
+      items: 6,
       slidesToSlide: 2,
     },
     desktop: {

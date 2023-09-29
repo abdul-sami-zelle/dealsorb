@@ -6,8 +6,20 @@ export default function MobileCoupon(props){
     return (
         <>
         <div className="mainCouponMobileDiv">
-            <div className="leftCouponPart">
-                <img src={props.url} alt="" srcset="" />
+        <div
+            className="leftCouponPart"
+            style={{
+                backgroundImage: `url(${props.url})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: 'contain',
+                height: "90%",
+                width: "30%",
+                // backgroundColor: "red",
+                borderRadius: "10px",
+                margin: "5px"
+            }}
+        >
+                {/* <img src={props.url} alt="" srcset="" /> */}
             </div>
             <div className="rightCouponPart">
                 {/* <div className="verified">

@@ -1,9 +1,9 @@
 .mainCouponMobileDiv{
     position: absolute;
-    height: 110px;
+    height: 100px;
     width: 300px;
     /* background-image:linear-gradient(90deg, rgba(16,80,126,1) 5%, rgba(26,155,247,1) 46%, rgba(16,80,126,1) 97%); */
-    background-color: #666666;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.1);
     display: flex;

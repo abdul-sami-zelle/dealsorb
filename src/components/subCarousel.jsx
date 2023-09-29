@@ -8,7 +8,7 @@ import './subCarousel.css'
 
 function SubCarousel() {
   return (
-    <Carousel>
+    <Carousel className='mainSubCarousel'>
       <Carousel.Item>
         <div style={{height:'450px', width:'100%',borderRadius:'50%'}}>
         <img src={pic1} style={{borderRadius:'20px'}}  height="100%" width='100%' alt="" srcset="" />

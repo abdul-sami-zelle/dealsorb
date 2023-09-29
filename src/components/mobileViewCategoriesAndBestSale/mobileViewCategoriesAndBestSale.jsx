@@ -29,6 +29,9 @@ export default function MobileViewCategoriesAnBestSale({dataList}) {
             description={data.description}
             rating={data.rating}
             brandLogo={data.brandLogo}
+            arrayImages={data.arrayImages}
+            colors=""
+            sizes=""
           />
          
         </Grid>

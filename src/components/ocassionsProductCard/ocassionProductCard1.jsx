@@ -12,7 +12,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useData } from '../../context/myData';
 import { DataProvider } from '../../context/myData';
 
-export default function ProductCard1(props) {
+export default function OcassionProductCard(props) {
     const navigate = useNavigate();
     const { setProductData } = useData();
 
@@ -33,8 +33,8 @@ export default function ProductCard1(props) {
     return (
         <Box
             sx={{
-                height:{xl:'250px',lg: '280px',md:'250px',sm:'250px',xs:'220px'},
-                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'160px'},
+                height:{xl:'220px',lg: '220px',md:'210px',sm:'210px',xs:'220px'},
+                width: {xl:'180px',lg: '170px',md:'170px',sm:'170px',xs:'180px'},
                 borderRadius: '5px',
                 backgroundColor: '#F5F5F5',
                 position: 'relative',
@@ -46,8 +46,8 @@ export default function ProductCard1(props) {
         >  
             <Box
                 sx={{
-                    height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'165px'},
-                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'160px'},
+                    height:{xl:'160px',lg: '150px',md:'150px',sm:'150px',xs:'160px'},
+                    width: {xl:'180px',lg: '170px',md:'170px',sm:'170px',xs:'180px'},
                    
                     borderRadius: '5px',
                     
@@ -61,8 +61,8 @@ export default function ProductCard1(props) {
             >
                 <Box
                     sx={{
-                        height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'165px'},
-                        width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
+                        height:{xl:'160px',lg: '155px',md:'155px',sm:'155px',xs:'160px'},
+                        width: {xl:'180px',lg: '170px',md:'170px',sm:'170px',xs:'180px'},
                         backgroundColor: 'blue',
                         position: 'relative',
                         backgroundSize: 'cover',
@@ -91,7 +91,7 @@ export default function ProductCard1(props) {
                     backgroundColor:'white',
                 },
             }}>
-      <FavoriteIcon sx={{height:{xl:'15px',lg:'25px',md:'25px',sm:'22px',xs:'20px'}, width:{xl:'15px',lg:'25px',md:'25px',sm:'22px',xs:'20px'},}} />
+      <FavoriteIcon sx={{height:{xl:'15px',lg:'20px',md:'14px',sm:'14px',xs:'15px'}, width:{xl:'15px',lg:'20px',md:'14px',sm:'14px',xs:'15px'},}} />
     </IconButton>
     <IconButton sx={{
                 position: 'absolute',
@@ -105,7 +105,7 @@ export default function ProductCard1(props) {
                     backgroundColor:'white',
                 },
             }}>
-      <Looks sx={{height:{xl:'15px',lg:'25px',md:'25px',sm:'22px',xs:'20px'}, width:{xl:'15px',lg:'25px',md:'25px',sm:'22px',xs:'20px'},}} />
+      <Looks sx={{height:{xl:'15px',lg:'20px',md:'14px',sm:'14px',xs:'15px'}, width:{xl:'15px',lg:'20px',md:'14px',sm:'14px',xs:'15px'},}} />
     </IconButton >
     <Box sx={{
                 position: 'absolute',
@@ -133,14 +133,12 @@ export default function ProductCard1(props) {
            
     </Box>
   
-   <Box sx={{margin:{xl:'10px',lg:'10px',md:'10px',sm:'9px',xs:'6px'}}}>
-   <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'11px'}, marginBottom:{xl:'0px',lg:'0px',md:'0px',sm:'5px',xs:'3px'}, fontWeight: 'bold', color: '#4C9BF7' }}>
+   <Box sx={{margin:{xl:'8px',lg:'8px',md:'8px',sm:'9px',xs:'6px'}}}>
+   <Typography sx={{ fontSize: {xl:'12px',lg:'13px',md:'12px',sm:'12px',xs:'11px'}, marginBottom:{xl:'0px',lg:'0px',md:'0px',sm:'5px',xs:'3px'}, fontWeight: 'bold', color: '#4C9BF7' }}>
    {props.name}
                             </Typography>
                             
-                            <Typography sx={{ fontSize:{xl:'8px',lg:'12px',sm:'0px',xs:'0px'}, fontWeight: 'normal', color: 'black'}}>
-                            {props.description}
-                            </Typography>
+                         
                            <Box sx={{display:"flex",
                 alignItems: 'center',
                 justifyContent:'space-between',}}>
@@ -158,9 +156,9 @@ export default function ProductCard1(props) {
                           
                             <Button onClick={handleProductDetailsClick} sx={{
                                 paddingX:'0px',
-                                // paddingY:'0px',
-                                height: '25px',
-    width: '80px',
+                                marginTop:"5px",
+                                height: '20px',
+    width: '70px',
                                 fontSize: '10px',
                                 fontWeight: 'bold',
                                 color: 'black',

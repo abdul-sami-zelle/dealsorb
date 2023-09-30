@@ -19,7 +19,7 @@ const App22 = () => {
       <Carousel autoplay={true} dotPosition={"left"} dots={false}>
         {couponeData1.map((coupon) => (
           <Box key={coupon.id} sx={{
-          ml:"50px",
+      
           padding:'10px'
           }}>
             

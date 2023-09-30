@@ -39,6 +39,8 @@ import MobileCoupon from '../../components/couponUi/mobileCoupon';
 import MobileCouponSlider from '../../components/mobileCouponSlider/mobileCouponSlider';
 import Cube from '../../components/cubeSwiper/cube';
 import MobileCoupon2 from '../../components/couponUi/mobileCoupon2';
+import Ocassions from '../../components/ocassionsComponent';
+import MobileViewNewArrivals from '../../components/mobileViewNewArrivals/mobileViewNewArrivals';
 
 
 
@@ -307,7 +309,9 @@ function MainLandingPage() {
    <ExploreOurProducts dataList={products} />
    </Box>
 </div>
-
+<Box sx={{marginX:'15px'}}>
+<MobileViewNewArrivals/>
+</Box>
  
    {/* <CarouselSlider22/> */}
          {/* <MainCouponLandingPage/>  */}
@@ -322,29 +326,7 @@ function MainLandingPage() {
           <Carousel  responsive={responsive}>
             {product}
           </Carousel>
-          
-        </div>
-        <div style={{height:'30px'}}></div> 
-        <div className="webViewCategories">
-        <div style={{height:'60px'}}></div>
-        <CatName categoryHeading="Featured" productHeading="New Arrivals"/>
-        <div style={{height:'10px'}}></div>
-        <BasicGrid/>
-        <div style={{height:'60px'}}></div>
-       
-        <CatName categoryHeading="Categories" productHeading="Best Selling Products"/>
-        <div style={{height:'30px'}}></div>
-        <Carousel  responsive={responsive2}>
-          {product22}
-        </Carousel>
-        <div style={{height:'30px'}}></div>
-        <CouponProviders/>
-        
-        </div>
-        <div style={{height:'40px'}}></div>
-        <Banner1/>
-        <div className="webViewCategories">
-        <div style={{height:'60px'}}></div>
+          <div style={{height:'60px'}}></div>
         <Box sx={{display:'flex',alignItems:'',justifyContent:'space-between'}}>
          <CatName categoryHeading="This Month" productHeading="Clearance Sale"/>
          <Button sx={{height:'40px',backgroundColor:'#DB4444',paddingX:{lg:'50px',md:'40px',sm:'30px',xs:'20px'}}}>
@@ -356,12 +338,42 @@ function MainLandingPage() {
         <div style={{height:'30px'}}></div>
         <ClearanceList/>
         <div style={{height:'60px'}}></div>
+        <div style={{height:'30px'}}></div>
+          <CatName categoryHeading="Coupons" productHeading="Coupon Providers"/>
+          <div style={{height:'30px'}}></div>
+        <CouponProviders/>
+        </div>
+        <div style={{height:'30px'}}></div> 
+        <div className="webViewCategories">
+        <div style={{height:'60px'}}></div>
+        <CatName categoryHeading="Categories" productHeading="Best Selling Products"/>
+        <div style={{height:'30px'}}></div>
+        <Carousel  responsive={responsive2}>
+          {product22}
+        </Carousel>
+        <div style={{height:'60px'}}></div>
+        <CatName categoryHeading="Featured" productHeading="New Arrivals"/>
+        <div style={{height:'30px'}}></div>
+        <BasicGrid/>
+       
+        <div style={{height:'60px'}}></div>
         <CatName categoryHeading="Today's" productHeading="Summer Discount"/>
         <div style={{height:'30px'}}></div>
         <Carousel  responsive={discountProdctsResponsive}>
           {product23}
         </Carousel>
         <div style={{height:'60px'}}></div>
+        
+        <Ocassions/>
+        
+       
+        
+        </div>
+        <div style={{height:'40px'}}></div>
+        <Banner1/>
+        <div className="webViewCategories">
+       
+       
        
         </div>
         <div style={{height:'60px'}}></div>

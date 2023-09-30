@@ -305,13 +305,17 @@ function MainLandingPage() {
    <Box >
    <MobileViewCategoriesAnBestSale dataList={products} />
    </Box>
+   <Box sx={{marginX:'15px'}}>
+<MobileViewNewArrivals/>
+</Box>
    <Box >
    <ExploreOurProducts dataList={products} />
    </Box>
+   <Box>
+   <Cube/>
+   </Box>
 </div>
-<Box sx={{marginX:'15px'}}>
-<MobileViewNewArrivals/>
-</Box>
+
  
    {/* <CarouselSlider22/> */}
          {/* <MainCouponLandingPage/>  */}
@@ -399,7 +403,7 @@ function MainLandingPage() {
        
       
         </Box>
-        <div className="mobViewContentLandingPage1"> <Cube/></div>
+    
        
       
         <div style={{height:'30px'}}></div>

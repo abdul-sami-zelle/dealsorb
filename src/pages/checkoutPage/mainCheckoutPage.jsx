@@ -56,7 +56,7 @@ export default function MainCheckOutPage1() {
   const tabs = [
     {
       id: 1,
-      title: 'Your Shopping Cart',
+      title: 'Your Cart',
       content: 'See what\'s in your cart.',
       imageSrc: 'https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/carts.png?alt=media&token=8c63f282-75e2-4861-a2bd-614d21825946',
       activeImageSrc: 'https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/whiteCart.png?alt=media&token=120389bb-3022-4294-9484-0c8f15eb6670',
@@ -122,10 +122,10 @@ export default function MainCheckOutPage1() {
         <Grid items lg={12}  >
 
         </Grid>
-        <Grid items lg={1}>
+        <Grid items lg={1} md={1} sm={1} xs={1}>
 
         </Grid>
-        <Grid items lg={10}>
+        <Grid items lg={10} md={10} sm={10} xs={10}>
           <>
             <div className="checkoutContainer">
 
@@ -138,7 +138,8 @@ export default function MainCheckOutPage1() {
                   <div
                     key={tab.id}
                     // className={`tab ${activeTab === tab.id ? 'active' : ''}` }
-                    style={{ backgroundColor: activeTab === tab.id ? '#1A9BF7' : 'white' }}
+                    className='tabb22'
+                    style={{  backgroundColor: activeTab === tab.id ? '#1A9BF7' : 'white' }}
                     onClick={() => handleTabClick(tab.id)}
                   >
                     <div
@@ -473,14 +474,23 @@ export default function MainCheckOutPage1() {
                           </div>
                         </Button>
                                 </Grid>
-                                <Grid item lg={4.5}></Grid>
+                                <Grid item lg={1}></Grid>
                             </Grid>
                         </div>
                                                   : null}
 
 
-                  
+                  <div className="distance1">
+
+                  </div>
                   {activeTab === 3 ? <div className="">
+
+
+
+
+{/* this is rightmost section of summary */}
+
+
 
                   </div> : <div className="cartPricingSection2">
                     <div className="cartPricingSection2a">
@@ -591,7 +601,7 @@ export default function MainCheckOutPage1() {
 
           </>
         </Grid>
-        <Grid items lg={1}>
+        <Grid items lg={1} md={1} sm={1} xs={1}>
 
         </Grid>
       </Grid>

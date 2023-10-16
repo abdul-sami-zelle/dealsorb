@@ -20,7 +20,7 @@ export default function OcassionProductCard(props) {
         await setProductData({
             "id":props.id,
             "name":props.name,
-            "imageUrl":props.arrayImages[0],
+            "imageUrl":"https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
             "price":props.price,
             "arrayImages":props.arrayImages,
             "sizes":props.sizes,
@@ -67,8 +67,9 @@ export default function OcassionProductCard(props) {
                         position: 'relative',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        backgroundImage:
-                        `url('${props.url}')`,
+                        backgroundImage:"https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png"
+                        // `url('${props.url}')`
+                        ,
                         transition: 'transform 0.3s', // Add transition property for smooth zoom effect
                         '&:hover': {
                             transform: 'scale(1.1)', // Zoom in by 10% on hover

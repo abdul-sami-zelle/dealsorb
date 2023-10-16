@@ -368,8 +368,8 @@ function MainLandingPage() {
         </Carousel>
         <div style={{height:'60px'}}></div>
         
-        <Ocassions/>
-        
+        {/* <Ocassions/>
+         */}
        
         
         </div>

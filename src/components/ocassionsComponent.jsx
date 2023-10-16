@@ -3,8 +3,13 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import App22 from './picker1'
+import { TypeAnimation } from 'react-type-animation';
+import AnimatedText from './quote2'
+import SubCarousel from './subCarousel'
 import WebCube from './cubeSwiper/webViewCubeSwiper';
 import CatName from './catName';
+import Button from '@mui/material/Button';
+import ProductCard1 from './widgets/productCard';
 import OcassionProductCard from './ocassionsProductCard/ocassionProductcard1';
 
 

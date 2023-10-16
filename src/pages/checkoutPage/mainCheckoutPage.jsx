@@ -164,7 +164,7 @@ export default function MainCheckOutPage1() {
                           alt=""
                         />
                       </div>
-                      <div style={{ width: '10px' }}></div>
+                      <div className='distance2' style={{ width: '10px' }}></div>
                       <div
                         className={`${tab.class4}`}
                       >

@@ -625,6 +625,17 @@ legend{
         font-size: 14px;
         font-weight: 600;
     }
+    .summaryOrderConfirmSummaryIcon img{
+        height: 55px;
+        width: 55px;
+    }
+    .summaryOrderConfirmSummary h1{
+        font-size: 20px;
+        color: #1A9BF7;
+        font-weight: bold;
+        text-align: center;
+    }
+    
 }
 
 @media screen and (max-width: 1050px) {
@@ -650,6 +661,19 @@ legend{
         font-size: 13px;
         font-weight: 600;
     }
+    .summaryOrderConfirmSummaryIcon img{
+        height: 50px;
+        width: 50px;
+    }
+    .summaryOrderConfirmSummary h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .summaryOrderConfirmName h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
 }
 
 @media screen and (max-width: 1000px) {
@@ -661,6 +685,16 @@ legend{
         color: white;
         font-size: 13px;
         font-weight: 600;
+    }
+    .summaryOrderConfirmSummaryIcon img{
+        height: 45px;
+        width: 45px;
+    }
+    .summaryOrderConfirmSummary h1{
+        font-size: 20px;
+        color: #1A9BF7;
+        font-weight: 700;
+        text-align: center;
     }
 }
 
@@ -698,6 +732,20 @@ legend{
     .orderPlaced_content p{
         font-size: 10px;
     }
+    .summaryOrderConfirmSummaryIcon img{
+        height: 42px;
+        width: 42px;
+    }
+    .summaryOrderConfirmSummary h1{
+        font-size: 19px;
+        color: #1A9BF7;
+        font-weight: 700;
+        text-align: center;
+    }
+    .summaryOrderConfirmName h1{
+        font-size: 19px;
+        font-weight: bold;
+    }
 }
 
 
@@ -720,7 +768,14 @@ legend{
     .orderPlaced_content p{
         font-size: 10px;
     }
-    
+    .summaryOrderConfirmSummaryIcon img{
+        height: 40px;
+        width: 40px;
+    }
+    .summaryOrderConfirmName h1{
+        font-size: 19px;
+        font-weight: bold;
+    }
 }
 
 
@@ -751,7 +806,11 @@ legend{
     .orderPlaced_content p{
         font-size: 0px;
     }
+    .summaryOrderConfirmAddress h1{
+        font-size: 16px;
 
+        text-align: 600;   
+    }
     
 }
 
@@ -800,7 +859,39 @@ legend{
     .orderPlaced_content p{
         font-size: 0px;
     }
-    
+    .summaryOrderConfirmName h1{
+        font-size: 18px;
+        font-weight: normal;
+    }
+    .summaryOrderConfirmAddress h1{
+        font-size: 16px;
+
+        text-align: 600;   
+    }
+    .summaryOrderConfirmOtherDataH{
+        padding: 10px;
+    }
+    .summaryOrderConfirmOtherDataCenter{
+        border-left: 0px solid #808080;
+        border-right: 0px solid #808080;
+    }
+    .section1CI h1{
+        font-size: 15px;
+    }
+    .section1CI p{
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .section1CI p span{
+        font-size: 10px !important;
+        font-weight: 500;
+    }
+    legend{
+        font-size: 15px !important;
+    }
+    .section1SA h1{
+        font-size: 15px;
+    }
     
 }
 
@@ -810,8 +901,9 @@ legend{
         padding-left: 8px;
         padding-right: 8px;
         height: 45px;
-        width: 100px;
+        width: 110px;
     }
+
     .checkOut_details{
         padding-left: 8px;
         padding-right: 8px;
@@ -822,7 +914,7 @@ legend{
         padding-left: 8px;
         padding-right: 8px;
         height: 45px;
-        width: 100px;
+        width: 110px;
     }
     .selectorMainContainerCheckout img{
         height: 25px;

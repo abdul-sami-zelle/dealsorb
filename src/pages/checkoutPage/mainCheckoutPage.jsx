@@ -343,44 +343,44 @@ export default function MainCheckOutPage1() {
 
                             </div>
                             <Grid container spacing={2}>
-                              <Grid item lg={12}>
+                              <Grid item lg={12} sm={6} xs={12}>
                                 <div className="section2SA">
                                   <input type="text" class="signup-text-input" placeholder='Country/Region' />
                                 </div>
                               </Grid>
-                              <Grid item lg={6} >
+                              <Grid item lg={6} sm={6} xs={12}>
                                 <div className="section3SA">
                                   <input type="text" class="" placeholder='First Name' />
                                 </div>
                               </Grid>
-                              <Grid item lg={6} >
+                              <Grid item lg={6} sm={6} xs={12}>
                                 <div className="section3SA">
                                   <input type="text" class="" placeholder='Last Name' />
                                 </div>
                               </Grid>
-                              <Grid item lg={12}>
+                              <Grid item lg={12} sm={6} xs={12}>
                                 <div className="section4SA">
                                   <input type="text" class="signup-text-input" placeholder='Address' />
                                 </div>
                               </Grid>
-                              <Grid item lg={12}>
+                              <Grid item lg={12} sm={6} xs={12}>
                                 <div className="section5SA">
 
                                   <input type="text" class="signup-text-input" placeholder='Apt./Floor./Suite.' />
 
                                 </div>
                               </Grid>
-                              <Grid item lg={4}>
+                              <Grid item lg={4} sm={6} xs={12}>
                                 <div className="section6SA">
                                   <input type="text" class="" placeholder='City' />
                                 </div>
                               </Grid>
-                              <Grid item lg={4}>
+                              <Grid item lg={4} sm={6} xs={6}>
                                 <div className="section6SA">
                                   <input type="text" class="" placeholder='State' />
                                 </div>
                               </Grid>
-                              <Grid item lg={4}>
+                              <Grid item lg={4} sm={6} xs={6}>
                                 <div className="section6SA">
                                   <input type="text" class="" placeholder='Postal Code' />
                                 </div>
@@ -395,33 +395,33 @@ export default function MainCheckOutPage1() {
                         </div> : activeTab === 3 ? 
                         <div  className="summaryOrderConfirm">
                             <Grid container>
-                            <Grid item lg={12}>
+                            <Grid item lg={12} md={12} sm={12} xs={12}>
                                     <div className="summaryOrderConfirmSummaryIcon">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/summary.png?alt=media&token=ada1b865-82df-4c24-8c01-9fd87ec1fdb6" alt="" srcset="" />
                                     </div>
                                 </Grid>
-                            <Grid item lg={12}>
+                            <Grid item lg={12} md={12} sm={12} xs={12}>
                                     <div className="summaryOrderConfirmSummary">
                                        <h1>
                                        Summary
                                        </h1>
                                     </div>
                                 </Grid>
-                                <Grid item lg={12}>
+                                <Grid item lg={12} md={12} sm={12} xs={12}>
                                     <div className="summaryOrderConfirmName">
                                        <h1>
                                        Name Of the Order Placer
                                        </h1>
                                     </div>
                                 </Grid>
-                                <Grid item lg={12}>
+                                <Grid item lg={12} md={12} sm={12} xs={12}>
                                     <div className="summaryOrderConfirmAddress">
                                        <h1>
                                        Address of the order placer ufhfjfhjfjhf fyufuy buyfy b uvhj  hv jhvvjh jhv n
                                        </h1>
                                     </div>
                                 </Grid>
-                                <Grid item lg={4}>
+                                <Grid item lg={4} md={4} sm={4} xs={12}>
                                     <div className="summaryOrderConfirmOtherDataH">
                                        <h1>
                                        Total Items
@@ -431,7 +431,7 @@ export default function MainCheckOutPage1() {
                                        </h2>
                                     </div>
                                 </Grid>
-                                <Grid item lg={4}>
+                                <Grid item lg={4} md={4} sm={4} xs={12}>
                                     <div className="summaryOrderConfirmOtherDataH summaryOrderConfirmOtherDataCenter">
                                        <h1>
                                        Total Amount
@@ -441,7 +441,7 @@ export default function MainCheckOutPage1() {
                                        </h2>
                                     </div>
                                 </Grid>
-                                <Grid item lg={4}>
+                                <Grid item lg={4} md={4} sm={4} xs={12}>
                                     <div className="summaryOrderConfirmOtherDataH">
                                        <h1>
                                        Payment Method
@@ -451,8 +451,8 @@ export default function MainCheckOutPage1() {
                                        </h2>
                                     </div>
                                 </Grid>
-                                <Grid item lg={4.5}></Grid>
-                                <Grid item lg={3}>
+                                <Grid item lg={4.5} md={4.5} sm={4.5} xs={12}></Grid>
+                                <Grid item lg={3} md={3} sm={12} xs={12}>
                                 <Button
                           onClick={() => {}}
                           sx={{

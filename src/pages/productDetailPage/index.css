@@ -118,8 +118,8 @@
 }
 
 
-.imageContainer img{
-  width: auto;
+#imageContainer img{
+  width: 50%;
 }
 
 

@@ -590,7 +590,21 @@ legend{
 
 
 
+.tabs-wrapper.fixed {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    left: 0px;
 
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+    z-index: 1;
+  
+  }
+
+  .tabs-wrapper{
+    display: none !important;
+  }
+  
 
 
 
@@ -696,6 +710,16 @@ legend{
         font-weight: 700;
         text-align: center;
     }
+    .checkout_contentCartItem h1{
+        color: #1A9BF7;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .checkout_contentCartItem  h2{
+        color: black;
+        font-size: 11px;
+        font-weight: bold;
+    }
 }
 
 
@@ -746,6 +770,12 @@ legend{
         font-size: 19px;
         font-weight: bold;
     }
+    .tabs-wrapper{
+        display: block !important;
+    }
+    .desktopView{
+        display: none !important;
+    }
 }
 
 
@@ -775,6 +805,11 @@ legend{
     .summaryOrderConfirmName h1{
         font-size: 19px;
         font-weight: bold;
+    }
+    .imageBoundary{
+        padding: 10px;
+        border: 0px solid grey !important;
+        border-radius: 10px;
     }
 }
 
@@ -810,6 +845,16 @@ legend{
         font-size: 16px;
 
         text-align: 600;   
+    }
+    .checkout_contentCartItem h1{
+        color: #1A9BF7;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .checkout_contentCartItem  h2{
+        color: black;
+        font-size: 10px;
+        font-weight: bold;
     }
     
 }
@@ -934,5 +979,10 @@ legend{
     }
     .distance2{
         width: 5px !important;
+    }
+    .checkout_contentCartItem h1{
+        color: #1A9BF7;
+        font-size: 15px;
+        font-weight: 500;
     }
 }

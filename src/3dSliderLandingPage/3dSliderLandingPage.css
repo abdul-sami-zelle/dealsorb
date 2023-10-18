@@ -1,7 +1,7 @@
 .main3dCarouselBg{
   width: 100%;
   height: 530px;
-  background-image:linear-gradient(90deg, rgba(16,80,126,1) 5%, rgba(26,155,247,1) 46%, rgba(16,80,126,1) 97%);
+  background-image:linear-gradient(90deg, rgb(174, 16, 16) 5%, rgba(0,0,0,1) 46%, rgb(174, 16, 16) 97%);
   padding-top: 20px;
 }   
  

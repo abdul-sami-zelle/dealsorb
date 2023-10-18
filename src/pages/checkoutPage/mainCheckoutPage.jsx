@@ -42,6 +42,23 @@ import ResponsiveAppBar from '../../components/bar2';
 
 
 export default function MainCheckOutPage1() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isTabsFixed, setIsTabsFixed] = useState(false);
+
+  const indexOfLastItem = currentPage * 1;
+  const indexOfFirstItem = indexOfLastItem - 9;
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const navbarHeight = 0;
+    const sliderHeight = 60;
+
+    if (scrollPosition > 100) {
+      setIsTabsFixed(true);
+    } else {
+      setIsTabsFixed(false);
+    }
+  };
   const [activeStep, setActiveStep] = React.useState(0);
   const dispatch = useDispatch();
 
@@ -112,16 +129,18 @@ export default function MainCheckOutPage1() {
   useEffect(() => {
     dispatch(getCartTotal());
   }, [cart]);
-
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
 
   return (
     <div className="main">
       <ResponsiveAppBar/>
       <Grid container>
-        <Grid items lg={12}  >
-
-        </Grid>
         <Grid items lg={1} md={1} sm={1} xs={1}>
 
         </Grid>
@@ -131,9 +150,7 @@ export default function MainCheckOutPage1() {
 
 
 
-
-
-              <div className="selectorMainContainerCheckout">
+<div className="selectorMainContainerCheckout desktopView">
                 {tabs.map((tab) => (
                   <div
                     key={tab.id}
@@ -178,6 +195,58 @@ export default function MainCheckOutPage1() {
                 ))}
 
               </div>
+            <div className={`tabs-wrapper ${isTabsFixed ? "fixed" : ""}`}>
+             <Grid >
+                 <Grid>
+                   <div className="selectorMainContainerCheckout">
+                {tabs.map((tab) => (
+                  <div
+                    key={tab.id}
+                    // className={`tab ${activeTab === tab.id ? 'active' : ''}` }
+                    className='tabb22'
+                    style={{  backgroundColor: activeTab === tab.id ? '#1A9BF7' : 'white' }}
+                    onClick={() => handleTabClick(tab.id)}
+                  >
+                    <div
+                      className={`${tab.class1}`}
+                    >
+                      <div
+
+                        className={`${tab.class2}`}
+                        style={{ display: activeTab === tab.id ? 'none' : 'block' }}
+                      >
+                        <img
+                          src={tab.imageSrc}
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        className={`${tab.class3}`}
+                        style={{ display: activeTab === tab.id ? 'block' : 'none' }}
+                      >
+                        <img
+                          src={tab.activeImageSrc}
+                          alt=""
+                        />
+                      </div>
+                      <div className='distance2' style={{ width: '10px' }}></div>
+                      <div
+                        className={`${tab.class4}`}
+                      >
+                        <h1 style={{ color: activeTab === tab.id ? 'white' : 'black' }}>
+                          {tab.title}
+                        </h1>
+                        <p style={{ color: activeTab === tab.id ? 'white' : 'black' }}>{tab.content}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+
+              </div>
+                 </Grid>
+             </Grid>
+            </div>
+              
               <div>
                 <div style={{ height: '30px' }}></div>
                 <div className="cartSection2" style={{marginBottom:'30px'}}>
@@ -215,18 +284,18 @@ export default function MainCheckOutPage1() {
                                     </h2>
                                     <span>
                                     <h2>
-                                      Quantity: {data.quantity} item(s)
+                                      Qty: {data.quantity} item(s)
                                       {/* {data.quantity} x Rs.{data.price} = Rs.{data.quantity * data.price} */}
                                     </h2>
                                     </span>
                                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                      <Box sx={{ backgroundColor: "#DB4444", height: '30px', width: '30px', borderRadius: '5px 0px 0px 5px', borderLeft: '1px solid #DB4444', borderTop: '1px solid #DB4444', borderBottom: '1px solid #DB4444', borderRight: '0px solid #DB4444', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                                      <Box sx={{ backgroundColor: "#DB4444", height: {lg:'30px',md:'30px',sm:'25px',xs:'25px'}, width: {lg:'30px',md:'30px',sm:'25px',xs:'25px'}, borderRadius: '5px 0px 0px 5px', borderLeft: '1px solid #DB4444', borderTop: '1px solid #DB4444', borderBottom: '1px solid #DB4444', borderRight: '0px solid #DB4444', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                                         onClick={() =>
                                           dispatch(increaseItemQuantity(data.id))}>
                                         <AddIcon sx={{ color: 'white' }} />
                                       </Box>
 
-                                      <Box sx={{ height: '30px', width: '30px', borderRadius: '0px', borderTop: '2px solid #DB4444', borderBottom: '2px solid #DB4444', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                      <Box sx={{ height: {lg:'30px',md:'30px',sm:'25px',xs:'25px'}, width: {lg:'30px',md:'30px',sm:'25px',xs:'25px'}, borderRadius: '0px', borderTop: '2px solid #DB4444', borderBottom: '2px solid #DB4444', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
                                         <Typography sx={{ fontWeight: 'bold', fontSize: '15px', color: 'black', cursor: 'pointer' }}>
                                           {data.quantity}
@@ -234,11 +303,11 @@ export default function MainCheckOutPage1() {
 
                                       </Box>
 
-                                      {data.quantity > 1 ? <Box sx={{ backgroundColor: "#DB4444", height: '30px', width: '30px', borderRadius: '0px 5px 5px 0px', borderLeft: '0px solid #DB4444', borderTop: '1px solid #DB4444', borderBottom: '1px solid #DB4444', borderRight: '1px solid #DB4444', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                                      {data.quantity > 1 ? <Box sx={{ backgroundColor: "#DB4444", height: {lg:'30px',md:'30px',sm:'25px',xs:'25px'}, width:{lg:'30px',md:'30px',sm:'25px',xs:'25px'}, borderRadius: '0px 5px 5px 0px', borderLeft: '0px solid #DB4444', borderTop: '1px solid #DB4444', borderBottom: '1px solid #DB4444', borderRight: '1px solid #DB4444', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                                         onClick={() =>
                                           dispatch(decreaseItemQuantity(data.id))}>
                                         <RemoveIcon sx={{ color: 'white' }} />
-                                      </Box> : <Box sx={{ backgroundColor: "#DB4444", height: '30px', width: '30px', borderRadius: '0px 5px 5px 0px', borderLeft: '0px solid #DB4444', borderTop: '1px solid #DB4444', borderBottom: '1px solid #DB4444', borderRight: '1px solid #DB4444', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                                      </Box> : <Box sx={{ backgroundColor: "#DB4444", height: {lg:'30px',md:'30px',sm:'25px',xs:'25px'}, width: {lg:'30px',md:'30px',sm:'25px',xs:'25px'}, borderRadius: '0px 5px 5px 0px', borderLeft: '0px solid #DB4444', borderTop: '1px solid #DB4444', borderBottom: '1px solid #DB4444', borderRight: '1px solid #DB4444', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                                         onClick={() => dispatch(removeItem(data.id))}>
                                         <RemoveIcon sx={{ color: 'white' }} />
                                       </Box>}

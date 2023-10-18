@@ -232,7 +232,7 @@ const ImageSwitcher = ({productData }) => {
   return (
    
      <Grid container spacing={1}>   {/*  main grid of page */}
-        <Grid item lg={6.5} md={6.5} sm={12} xs={12} sx={{}} >
+        <Grid item lg={6.5} md={6.5} sm={12} xs={12} >
         <Typography sx={{ fontWeight: 'bolder', fontSize: '22px', color: 'black' }}>
                 Havic HV G-92 Gamepad
               </Typography>

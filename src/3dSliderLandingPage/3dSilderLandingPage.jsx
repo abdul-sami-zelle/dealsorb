@@ -40,8 +40,7 @@ const couponsData = [
         description:"Affordable Essentials for Every Home. Grocery Haven is your go-to destination for quality groceries at reasonable prices. We provide a wide selection of fresh produce, pantry staples, and household necessities...",
         brandLogo:"https://img.freepik.com/free-photo/variety-organic-vegetables-supermarket_53876-138173.jpg?w=1060&t=st=1695361232~exp=1695361832~hmac=fd0cb4cf183a5205ebe5fb9f9cd48f7d73ce070275cf83066dbe560d324e9e75",
         tagLine:"Dealsorb offers an extensive selection of modern"
-      },
-      
+      },   
 ];
 
 function CategoryBanner() {

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useEffect, useState } from 'react'
 import CatName from '../../components/catName'
 import { Provider } from 'react-redux';
 import ImageSwitcher from '../../pages/productDetails'
@@ -18,6 +18,10 @@ export default function ShowableProductDetails(props) {
   const parsedProductArray = productName;
     const colorList = ['#FF5733', '#33FFA6', '#3366FF', '#FF33E9'];
     const variations = ['xs', 'sm', 'md', 'lg', 'xl'];
+    useEffect(() => {
+      // Scroll to the top of the page on component mount
+      window.scrollTo(0, 0);  
+    }, []);
 
     return(
       <Box sx={{backgroundColor:'white '}}>

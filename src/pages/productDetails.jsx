@@ -259,7 +259,7 @@ const ImageSwitcher = ({productData }) => {
               </Box>
             <Grid container justifyContent="center" alignItems="center" sx={{marginY:'30px'}}>
               
-              <Grid item lg={2} md={2} sm={2} xs={12} sx={{}}>
+              <Grid item lg={2} md={2} sm={12} xs={12} sx={{}}>
                   
                   <div className="App">
                     <button

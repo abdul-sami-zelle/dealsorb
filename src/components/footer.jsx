@@ -12,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import './foooter.css'
 import SearchIcon from '@mui/icons-material/Search';
 import DirectionsIcon from '@mui/icons-material/Directions';
-
+import logo from '../assets/logo.png'
 
 export default function Footer() {
     const mainStyle0 = {
@@ -82,7 +82,7 @@ export default function Footer() {
                         
 
                     >
-                        <img src='https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/logo.png?alt=media&token=c1702995-c7d6-43cc-a9e7-632cc8717922' width={150} alt="" />
+                        <img src={logo} width={150} alt="" />
                     </Box>
                     <Box
                         component="a"

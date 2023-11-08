@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import App22 from './picker1'
 import WebCube from './cubeSwiper/webViewCubeSwiper';
 import CatName from './catName';
-// import OcassionProductCard from './ocassionsProductCard/ocassionProductcard1';
+import OcassionProductCard from './ocassionsProductCard/ocassionProductcard1';
 
 
 
@@ -144,11 +144,11 @@ export default function Ocassions() {
               </Grid>
               <Grid lg={10}>
               <Grid container rowSpacing={{lg:1.5, xs: 1, sm: 2, md: 1 }} columnSpacing={{lg:0, xs: 1, sm: 2, md: 1.5 }}>
-      {/* {products.map((item, index) => (
+      {products.map((item, index) => (
         <Grid item key={index} xs={6} sm={4} md={6} lg={6}>
           <OcassionProductCard
             name={item.name}
-            url={item.imageurl}
+            url={item.photo}
             price={item.price}
             description={item.description}
             rating={item.rating}
@@ -158,7 +158,7 @@ export default function Ocassions() {
             sizes=""
           />
         </Grid>
-      ))} */}
+      ))}
     </Grid>
               </Grid>
 

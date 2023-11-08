@@ -41,6 +41,8 @@ import Cube from '../../components/cubeSwiper/cube';
 import MobileCoupon2 from '../../components/couponUi/mobileCoupon2';
 import Ocassions from '../../components/ocassionsComponent';
 import MobileViewNewArrivals from '../../components/mobileViewNewArrivals/mobileViewNewArrivals';
+import { useDispatch } from 'react-redux';
+import { toggleVisibility } from '../../stateManagement/slices/cartVisibilitySlice';
 
 
 
@@ -257,7 +259,7 @@ function MainLandingPage() {
         description={item.description}
       />
     ));
-    const isVisible = useSelector((state) => state.visibility);
+   
 
 
 
@@ -285,6 +287,16 @@ function MainLandingPage() {
         discount={item.discount}
       />
     ));
+
+    const dispatch = useDispatch();
+    const isVisible = useSelector((state) => state); // Assuming your visibilitySlice is the root reducer
+  
+    const handleButtonClick = () => {
+      const visibilityState = useSelector((state) => state.visibility);
+
+      console.log('Visibility State:', visibilityState);
+    };
+    
      
     return (
       <Box >
@@ -323,7 +335,7 @@ function MainLandingPage() {
        
         <Box sx={{marginX:'30px'}}>
           
-        <div className="webViewCategories">
+        <div onClick={handleButtonClick} className="webViewCategories">
           <div style={{height:'30px'}}></div>
           <CatName categoryHeading="Categories" productHeading="Popular Categories"/>
           <div style={{height:'30px'}}></div>

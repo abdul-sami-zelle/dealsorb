@@ -84,8 +84,8 @@
   .image {
     display: block;
     object-fit:fill;
-    height: 120px; 
-    width: 120px;
+    height: 80px; 
+    width: 80px;
     margin: auto;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 5px;
@@ -119,7 +119,8 @@
 
 
 #imageContainer img{
-  width: 50%;
+  width: 100%;
+  height: 500px;
 }
 
 
@@ -141,7 +142,7 @@
   background-color: #c3c3c3;
   border-radius: 6px;
   height: 100px;
-  width: 30px;
+  width: 25px;
 }
 .images-containerMobileView{
   display: flex;
@@ -158,18 +159,54 @@
 
 
 
-/* @media screen and (max-width: 1200px) {
-  .mobileViewSlider{
-    display: flex;
+@media screen and (max-width: 1200px) {
+  .nav-btn{
+    height: 30px;
+    width: 90px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .nav-btn{
+    height: 28px;
+    width: 80px;
+  }
+  #imageContainer img{
+    width: 100%;
+    height: 450px;
   }
   .images-container{
-    display: none;
+    max-height: 390px;
   }
-  .nav-btn{
-    display: none;
+  .App{
+    margin-right: 20px;
   }
-  
-} */
+}
+@media screen and (max-width: 1000px) {
+  #imageContainer img{
+    width: 98%;
+    height: 420px;
+  }  
+  .images-container{
+    max-height: 364px;
+  }
+  .App{
+    margin-right: 20px;
+  }
+
+}
+@media screen and (max-width: 950px) {
+  #imageContainer img{
+    width: 96%;
+    height: 400px;
+  }  
+  .images-container{
+    max-height: 340px;
+  }
+  .App{
+    margin-right: 20px;
+  }
+
+}
 #bigImage{
   display: block;
   object-fit:fill;
@@ -179,10 +216,10 @@
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 900px) {
   .mobileViewSlider{
     display: flex;
+    margin-bottom: 30px !important;
   }
   .images-container{
     display: none;
@@ -191,9 +228,18 @@
     display: none;
   }
   .images-containerMobileView{
-    max-width:400px;
+    width:800px !important;
+    
+  }
+  #imageContainer img{
+    width: 100%;
+    height: 500px;
   }
   
+}
+
+@media screen and (max-width: 660px) {
+
 }
 @media screen and (max-width: 600px) {
   .images-containerMobileView{
@@ -209,6 +255,7 @@
   .images-containerMobileView{
     max-width:250px;
   }
+  
   
 }
 

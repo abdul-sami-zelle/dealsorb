@@ -2,7 +2,7 @@ export const discountProdcts = [
     {
       id: 1,
       imageurl:
-        "https://dealsorb.com/wp-content/uploads/2022/02/71jFHRn1kL._AC_SL1500_-1.jpg",
+        "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_1.jpg",
       name: "Furhaven Orthopedic",
       price: "19.99",
       description: "Some text about the product..",
@@ -12,7 +12,7 @@ export const discountProdcts = [
     {
       id: 2,
       imageurl:
-        "https://dealsorb.com/wp-content/uploads/2022/03/Graco-TurboBooster-Highback-Booster-Seat.png",
+        "https://www.idealancy.pk/images/product_gallery/1646313161_4_patition_jar_1.jpg",
       name: "WATER BOTTLES",
       price: "21.99",
       description: "Some text about the product..",
@@ -22,7 +22,7 @@ export const discountProdcts = [
     {
       id: 3,
       imageurl:
-        "https://dealsorb.com/wp-content/uploads/2022/03/Fire-TV-Stick-Lite-with-latest-Alexa-Voice-Remote-Lite-no-TV-controls-HD-streaming-device.png",
+        "https://www.idealancy.pk/images/product_gallery/1699090156_Potato_Masher_1.jpg",
       name: "KITCHEN ACCESSORIES",
       price: "99.99",
       description: "Some text about the product..",
@@ -32,7 +32,7 @@ export const discountProdcts = [
     {
       id: 4,
       imageurl:
-        "https://dealsorb.com/wp-content/uploads/2022/02/awesome-t-shirt-designs-41b.jpg",
+        "https://www.idealancy.pk/images/product_gallery/1699090156_Potato_Masher_1.jpg",
       name: "HOME IMPROVEMENT",
       price: 5,
       description: "Some text about the product..",
@@ -42,7 +42,7 @@ export const discountProdcts = [
     {
       id: 5,
       imageurl:
-        "https://dealsorb.com/wp-content/uploads/2022/03/Triple-Zip-Small-Crossbody-Bag.png",
+        "https://www.idealancy.pk/images/product_gallery/1699090156_Potato_Masher_1.jpg",
       name: "MOBILE ACCESSORIES",
       price: "38.99",
       description: "Some text about the product..",

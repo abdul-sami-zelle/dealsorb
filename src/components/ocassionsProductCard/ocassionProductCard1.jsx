@@ -67,13 +67,11 @@ export default function OcassionProductCard(props) {
                         position: 'relative',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        backgroundImage:"https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png"
-                        // `url('${props.url}')`
-                        ,
-                        transition: 'transform 0.3s', // Add transition property for smooth zoom effect
+                        backgroundImage:`url('${props.url}')`,
+                        transition: 'transform 0.3s',
                         '&:hover': {
-                            transform: 'scale(1.1)', // Zoom in by 10% on hover
-                            transformOrigin: 'center', // Keep the zoom centered within the box
+                            transform: 'scale(1.1)',
+                            transformOrigin: 'center',
                         },
                     }}
                 >

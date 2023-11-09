@@ -51,24 +51,23 @@ const products = [
   {
     id: 1,
     photo:
-      "https://www.idealancy.pk/images/product_gallery/md_1695211691_wollar_storage_bag_7.jpg",
+      "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_1.jpg",
     name: "Furhaven Orthopedic",
     price: "19.99",
     description: "Some text about the product..",
-    rating: "5.0",
-    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
-    arrayImages: [
-      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+    rating:"5.0",
+    brandLogo:"https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
+    arrayImages:[
+      "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_1.jpg",
+      "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_2.jpg",
+      "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_3.jpg",
+      "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_4.jpg",
+      "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_5.jpg",
+      "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_6.jpg",
+  
     ],
-    colors: "",
-    sizes: ""
+    colors:"",
+    sizes:""
   },
   {
     id: 2,

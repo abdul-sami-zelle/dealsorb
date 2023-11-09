@@ -4,9 +4,9 @@ import ResponsiveAppBar from '../../components/bar2'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CategoryDesign2 from '../../components/Product';
-import { productData,responsive } from '../../components/data';
-import { productData2,responsive2 } from '../../components/trendyProductData';
-import { discountProdcts,discountProdctsResponsive } from '../../components/productData2';
+import { productData, responsive } from '../../components/data';
+import { productData2, responsive2 } from '../../components/trendyProductData';
+import { discountProdcts, discountProdctsResponsive } from '../../components/productData2';
 import CatName from '../../components/catName';
 import BasicGrid from '../../components/grid1';
 import ProductCard1 from '../../components/widgets/productCard';
@@ -43,389 +43,395 @@ import Ocassions from '../../components/ocassionsComponent';
 import MobileViewNewArrivals from '../../components/mobileViewNewArrivals/mobileViewNewArrivals';
 import { useDispatch } from 'react-redux';
 import { toggleVisibility } from '../../stateManagement/slices/cartVisibilitySlice';
-
+import SEO from '../../SEO/mainSEO';
 
 
 
 const products = [
   {
-      id: 1,
-      photo:
-        "https://www.idealancy.pk/images/product_gallery/md_1695211691_wollar_storage_bag_7.jpg",
-      name: "Furhaven Orthopedic",
-      price: "19.99",
-      description: "Some text about the product..",
-      rating:"5.0",
-      brandLogo:"https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
-      arrayImages:[
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      ],
-      colors:"",
-      sizes:""
-    },
-    {
-      id: 2,
-      photo:
-        "https://www.idealancy.pk/images/product_gallery/md_1695119619_egg_pen_holder_1.jpg",
-      name: "WATER BOTTLES",
-      price: "21.99",
-      description: "Some text about the product..",
-      rating:"5.0",
-      brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
-      arrayImages:[
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      ],
-      colors:"",
-      sizes:""
-    },
-    {
-      id: 3,
-      photo:
-        "https://www.idealancy.pk/images/product_gallery/md_1695037198_sink_faucet_1.jpg",
-      name: "KITCHEN ACCESSORIES",
-      price: "99.99",
-      description: "Some text about the product..",
-      rating:"5.0",
-      brandLogo:"https://companieslogo.com/img/orig/600690.SS_BIG-07f22d57.png?t=1664511268",
-      arrayImages:[
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      ],
-      colors:"",
-      sizes:""
-    },
-    {
-      id: 4,
-      photo:
-        "https://www.idealancy.pk/images/product_gallery/md_1695113061_picnic_mat_1.jpg",
-      name: "HOME IMPROVEMENT",
-      price: "14.99",
-      description: "Some text about the product..",
-      rating:"5.0",
-      brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
-      arrayImages:[
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      ],
-      colors:"",
-      sizes:""
-    },
+    id: 1,
+    photo:
+      "https://www.idealancy.pk/images/product_gallery/md_1695211691_wollar_storage_bag_7.jpg",
+    name: "Furhaven Orthopedic",
+    price: "19.99",
+    description: "Some text about the product..",
+    rating: "5.0",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
+    arrayImages: [
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+    ],
+    colors: "",
+    sizes: ""
+  },
+  {
+    id: 2,
+    photo:
+      "https://www.idealancy.pk/images/product_gallery/md_1695119619_egg_pen_holder_1.jpg",
+    name: "WATER BOTTLES",
+    price: "21.99",
+    description: "Some text about the product..",
+    rating: "5.0",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
+    arrayImages: [
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+    ],
+    colors: "",
+    sizes: ""
+  },
+  {
+    id: 3,
+    photo:
+      "https://www.idealancy.pk/images/product_gallery/md_1695037198_sink_faucet_1.jpg",
+    name: "KITCHEN ACCESSORIES",
+    price: "99.99",
+    description: "Some text about the product..",
+    rating: "5.0",
+    brandLogo: "https://companieslogo.com/img/orig/600690.SS_BIG-07f22d57.png?t=1664511268",
+    arrayImages: [
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+    ],
+    colors: "",
+    sizes: ""
+  },
+  {
+    id: 4,
+    photo:
+      "https://www.idealancy.pk/images/product_gallery/md_1695113061_picnic_mat_1.jpg",
+    name: "HOME IMPROVEMENT",
+    price: "14.99",
+    description: "Some text about the product..",
+    rating: "5.0",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
+    arrayImages: [
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+    ],
+    colors: "",
+    sizes: ""
+  },
 ];
 
 
 const couponsMobileData = [
   {
-      id: 1,
-      url:
-        "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
-      percent: "20",
-      brand: "Bata Footwear",
-      validTill: "October 2023",
-    },
-    {
-      id: 2,
-      url:
-        "https://icms-image.slatic.net/images/ims-web/fb7adc81-c369-4fe8-b62e-7595b09c7741.png",
-      percent: "30",
-      brand: "Servis Footwear",
-      validTill: "November 2023",
-    },
-    {
-      id: 3,
-      url:
-        "https://play-lh.googleusercontent.com/NCra9cWctHUO_Ti5abE3xkGol2QaYfPTmjauc6CL2szSX3A8tAPNKZBRZoptISOk6Q",
-      percent: "40",
-      brand: "McDonald's",
-      validTill: "December 2023",
-    },
-    {
-      id: 4,
-      url:
-        "https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/mcdonalds.png?alt=media&token=3ef261c0-0949-4aeb-b6a3-8349bf5e3623",
-      percent: "40",
-      brand: "KFC",
-      validTill: "December 2023",
-    },
-    {
-      id: 5,
-      url:
-        "https://clipart-library.com/data_images/249057.jpg",
-      percent: "40",
-      brand: "Zameer Ansari",
-      validTill: "December 2023",
-    },
-    {
-      id: 6,
-      url:
-        "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
-      percent: "40",
-      brand: "McDonald's",
-      validTill: "December 2023",
-    },
-    {
-      id: 7,
-      url:
-        "https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/mcdonalds.png?alt=media&token=3ef261c0-0949-4aeb-b6a3-8349bf5e3623",
-      percent: "40",
-      brand: "McDonald's",
-      validTill: "December 2023",
-    },
-    {
-      id: 8,
-      url:
-        "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
-      percent: "40",
-      brand: "McDonald's",
-      validTill: "December 2023",
-    },
-  ]
+    id: 1,
+    url:
+      "https://e7.pngegg.com/pngimages/459/171/png-clipart-amazon-com-aliexpress-app-store-shopping-app-android-text-logo-thumbnail.png",
+    percent: "20",
+    brand: "Bata Footwear",
+    validTill: "October 2023",
+  },
+  {
+    id: 2,
+    url:
+      "https://icms-image.slatic.net/images/ims-web/fb7adc81-c369-4fe8-b62e-7595b09c7741.png",
+    percent: "30",
+    brand: "Servis Footwear",
+    validTill: "November 2023",
+  },
+  {
+    id: 3,
+    url:
+      "https://play-lh.googleusercontent.com/NCra9cWctHUO_Ti5abE3xkGol2QaYfPTmjauc6CL2szSX3A8tAPNKZBRZoptISOk6Q",
+    percent: "40",
+    brand: "McDonald's",
+    validTill: "December 2023",
+  },
+  {
+    id: 4,
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/mcdonalds.png?alt=media&token=3ef261c0-0949-4aeb-b6a3-8349bf5e3623",
+    percent: "40",
+    brand: "KFC",
+    validTill: "December 2023",
+  },
+  {
+    id: 5,
+    url:
+      "https://clipart-library.com/data_images/249057.jpg",
+    percent: "40",
+    brand: "Zameer Ansari",
+    validTill: "December 2023",
+  },
+  {
+    id: 6,
+    url:
+      "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
+    percent: "40",
+    brand: "McDonald's",
+    validTill: "December 2023",
+  },
+  {
+    id: 7,
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/mcdonalds.png?alt=media&token=3ef261c0-0949-4aeb-b6a3-8349bf5e3623",
+    percent: "40",
+    brand: "McDonald's",
+    validTill: "December 2023",
+  },
+  {
+    id: 8,
+    url:
+      "https://www.freepnglogos.com/uploads/mcdonalds-png-logo/mcdonalds-png-logo-simple-m-1.png",
+    percent: "40",
+    brand: "McDonald's",
+    validTill: "December 2023",
+  },
+]
 
 
 
 
 function MainLandingPage() {
-    const [count, setCount] = useState(0)
-  
-
-
-    const [categoriesAll, setCategories] = useState([]);
-
-    useEffect(() => {
-      // Fetch data from your API endpoint
-      fetch('http://localhost:8080/api/v1/product-category/get-all-category')
-        .then((response) => response.json())
-        .then((data) => {
-          // Set the store data in state
-          setCategories(data.category);
-        })
-        .catch((error) => {
-          console.error('Error fetching data:', error);
-        });
-    }, []);
+  const [count, setCount] = useState(0)
 
 
 
-    const [bestSelling, setBestSelling] = useState([]);
+  const [categoriesAll, setCategories] = useState([]);
 
-    useEffect(() => {
-      // Fetch data from your API endpoint
-      fetch('http://localhost:8080/api/v1/simple-product/get-all-products')
-        .then((response) => response.json())
-        .then((data) => {
-          // Set the store data in state
-          setBestSelling(data.product);
-        })
-        .catch((error) => {
-          console.error('Error fetching data:', error);
-        });
-    }, []);
-
-
+  useEffect(() => {
+    // Fetch data from your API endpoint
+    fetch('http://localhost:8080/api/v1/product-category/get-all-category')
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the store data in state
+        setCategories(data.category);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
 
 
 
+  const [bestSelling, setBestSelling] = useState([]);
 
-    const product = categoriesAll.map((item) => (
-      <CategoryDesign2
-        name={item.name}
-        url={item.url}
-        price=""
-        description={item.description}
-      />
-    ));
-   
+  useEffect(() => {
+    // Fetch data from your API endpoint
+    fetch('http://localhost:8080/api/v1/simple-product/get-all-products')
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the store data in state
+        setBestSelling(data.product);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
 
 
 
-    const product22 = bestSelling.map((item) => (
-      <ProductCard1
-        id={item._id}
-        name={item.name}
-        url={item.photo}
-        price={item.simpleProductData.salePrice}
-        description={item.description}
-        rating="2.6"
-        brandLogo=""
-        arrayImages={item.photos}
-        colors=""
-        sizes=""
-      />
-    ));
-    const product23 = discountProdcts.map((item) => (
-      <DiscountCard1
-        name={item.name}
-        url={item.imageurl}
-        // price={item.price}
-        // description={item.description}
-        rating={item.rating}
-        discount={item.discount}
-      />
-    ));
 
-    const dispatch = useDispatch();
-    const isVisible = useSelector((state) => state); // Assuming your visibilitySlice is the root reducer
-  
-    const handleButtonClick = () => {
-      const visibilityState = useSelector((state) => state.visibility);
 
-      console.log('Visibility State:', visibilityState);
-    };
-    
-     
-    return (
-      <Box >
-        
-       <ResponsiveAppBar activePage="Home" />
-      <CartItems/>
-   <CategoryBanner/>
- 
 
-<div className="mobViewContentLandingPage1">
-<MobileViewCategories/>
-   <Box >
-   <MobileViewProductsDesign1 dataList={products} />
-   </Box>
-   <Box>
-   <MobileCouponSlider couponDataMobile={couponsMobileData}/>
-   </Box>
-   <Box >
-   <MobileViewCategoriesAnBestSale dataList={products} />
-   </Box>
-   <Box sx={{marginX:'15px'}}>
-<MobileViewNewArrivals/>
-</Box>
-   <Box >
-   <ExploreOurProducts dataList={products} />
-   </Box>
-   <Box>
-   <Cube/>
-   </Box>
-</div>
+  const product = categoriesAll.map((item) => (
+    <CategoryDesign2
+      name={item.name}
+      url={item.url}
+      price=""
+      description={item.description}
+    />
+  ));
 
- 
-   {/* <CarouselSlider22/> */}
-         {/* <MainCouponLandingPage/>  */}
-        {/* <MainStorePage/> */}
-       
-        <Box sx={{marginX:'30px'}}>
-          
+
+
+
+  const product22 = bestSelling.map((item) => (
+    <ProductCard1
+      id={item._id}
+      name={item.name}
+      url={item.photo}
+      price={item.simpleProductData.salePrice}
+      description={item.description}
+      rating="2.6"
+      brandLogo=""
+      arrayImages={item.photos}
+      colors=""
+      sizes=""
+    />
+  ));
+  const product23 = discountProdcts.map((item) => (
+    <DiscountCard1
+      name={item.name}
+      url={item.imageurl}
+      // price={item.price}
+      // description={item.description}
+      rating={item.rating}
+      discount={item.discount}
+    />
+  ));
+
+  const dispatch = useDispatch();
+  const isVisible = useSelector((state) => state); // Assuming your visibilitySlice is the root reducer
+
+  const handleButtonClick = () => {
+    const visibilityState = useSelector((state) => state.visibility);
+
+    console.log('Visibility State:', visibilityState);
+  };
+
+
+  return (
+    <Box >
+
+      {/* SEARCH ENGINE OPTIMIZATION */}
+      <SEO
+        title='DealsOrb'
+        description='Beginner friendly page for learning React Helmet.'
+        name='Dealsorb'
+        type='article' />
+      {/* SEARCH ENGINE OPTIMIZATION TAG ENDS HERE*/}
+      <ResponsiveAppBar activePage="Home" />
+      <CartItems />
+      <CategoryBanner />
+
+
+      <div className="mobViewContentLandingPage1">
+        <MobileViewCategories />
+        <Box >
+          <MobileViewProductsDesign1 dataList={products} />
+        </Box>
+        <Box>
+          <MobileCouponSlider couponDataMobile={couponsMobileData} />
+        </Box>
+        <Box >
+          <MobileViewCategoriesAnBestSale dataList={products} />
+        </Box>
+        <Box sx={{ marginX: '15px' }}>
+          <MobileViewNewArrivals />
+        </Box>
+        <Box >
+          <ExploreOurProducts dataList={products} />
+        </Box>
+        <Box>
+          <Cube />
+        </Box>
+      </div>
+
+
+      {/* <CarouselSlider22/> */}
+      {/* <MainCouponLandingPage/>  */}
+      {/* <MainStorePage/> */}
+
+      <Box sx={{ marginX: '30px' }}>
+
         <div onClick={handleButtonClick} className="webViewCategories">
-          <div style={{height:'30px'}}></div>
-          <CatName categoryHeading="Categories" productHeading="Popular Categories"/>
-          <div style={{height:'30px'}}></div>
-          <Carousel  responsive={responsive}>
+          <div style={{ height: '30px' }}></div>
+          <CatName categoryHeading="Categories" productHeading="Popular Categories" />
+          <div style={{ height: '30px' }}></div>
+          <Carousel responsive={responsive}>
             {product}
           </Carousel>
-          <div style={{height:'60px'}}></div>
-        <Box sx={{display:'flex',alignItems:'',justifyContent:'space-between'}}>
-         <CatName categoryHeading="This Month" productHeading="Clearance Sale"/>
-         <Button sx={{height:'40px',backgroundColor:'#DB4444',paddingX:{lg:'50px',md:'40px',sm:'30px',xs:'20px'}}}>
-          <Box sx={{color:'white',fontWeight:'bold'}}>
-           See All
+          <div style={{ height: '60px' }}></div>
+          <Box sx={{ display: 'flex', alignItems: '', justifyContent: 'space-between' }}>
+            <CatName categoryHeading="This Month" productHeading="Clearance Sale" />
+            <Button sx={{ height: '40px', backgroundColor: '#DB4444', paddingX: { lg: '50px', md: '40px', sm: '30px', xs: '20px' } }}>
+              <Box sx={{ color: 'white', fontWeight: 'bold' }}>
+                See All
+              </Box>
+            </Button>
           </Box>
-          </Button>
-        </Box>
-        <div style={{height:'30px'}}></div>
-        <ClearanceList/>
-        <div style={{height:'60px'}}></div>
-        <div style={{height:'30px'}}></div>
-          <CatName categoryHeading="Coupons" productHeading="Coupon Providers"/>
-          <div style={{height:'30px'}}></div>
-        <CouponProviders/>
+          <div style={{ height: '30px' }}></div>
+          <ClearanceList />
+          <div style={{ height: '60px' }}></div>
+          <div style={{ height: '30px' }}></div>
+          <CatName categoryHeading="Coupons" productHeading="Coupon Providers" />
+          <div style={{ height: '30px' }}></div>
+          <CouponProviders />
         </div>
-        <div style={{height:'30px'}}></div> 
+        <div style={{ height: '30px' }}></div>
         <div className="webViewCategories">
-        <div style={{height:'60px'}}></div>
-        <CatName categoryHeading="Categories" productHeading="Best Selling Products"/>
-        <div style={{height:'30px'}}></div>
-        <Carousel  responsive={responsive2}>
-          {product22}
-        </Carousel>
-        <div style={{height:'60px'}}></div>
-        <CatName categoryHeading="Featured" productHeading="New Arrivals"/>
-        <div style={{height:'30px'}}></div>
-        <BasicGrid/>
-       
-        <div style={{height:'60px'}}></div>
-        <CatName categoryHeading="Today's" productHeading="Summer Discount"/>
-        <div style={{height:'30px'}}></div>
-        <Carousel  responsive={discountProdctsResponsive}>
-          {product23}
-        </Carousel>
-        <div style={{height:'60px'}}></div>
-        
-        <Ocassions/>
-        
-       
-        
+          <div style={{ height: '60px' }}></div>
+          <CatName categoryHeading="Categories" productHeading="Best Selling Products" />
+          <div style={{ height: '30px' }}></div>
+          <Carousel responsive={responsive2}>
+            {product22}
+          </Carousel>
+          <div style={{ height: '60px' }}></div>
+          <CatName categoryHeading="Featured" productHeading="New Arrivals" />
+          <div style={{ height: '30px' }}></div>
+          <BasicGrid />
+
+          <div style={{ height: '60px' }}></div>
+          <CatName categoryHeading="Today's" productHeading="Summer Discount" />
+          <div style={{ height: '30px' }}></div>
+          <Carousel responsive={discountProdctsResponsive}>
+            {product23}
+          </Carousel>
+          <div style={{ height: '60px' }}></div>
+
+          <Ocassions />
+
+
+
         </div>
-        <div style={{height:'40px'}}></div>
-        <Banner1/>
+        <div style={{ height: '40px' }}></div>
+        <Banner1 />
         <div className="webViewCategories">
-       
-       
-       
+
+
+
         </div>
-        <div style={{height:'60px'}}></div>
+        <div style={{ height: '60px' }}></div>
         <Grid container >
           <Grid item lg={1}>
-            
+
           </Grid>
           <Grid item lg={10}>
-            <Benefits/>
+            <Benefits />
           </Grid>
           <Grid item lg={1}>
-            
+
           </Grid>
-        </Grid> 
-       
-       <Box>
-      
-       </Box>
-       <div style={{height:'30px'}}></div> 
-     
-     
-  {/* <ShowableProductDetails/> */}
-       
-      
+        </Grid>
+
+        <Box>
+
         </Box>
-    
-       
-      
-        <div style={{height:'30px'}}></div>
-        <Footer/>
-        <FloatingButton/>
-        <WhatsAppFloatingButton/>
+        <div style={{ height: '30px' }}></div>
+
+
+        {/* <ShowableProductDetails/> */}
+
+
       </Box>
-    )
-  }
-  export default MainLandingPage
-  
-  
-  
+
+
+
+      <div style={{ height: '30px' }}></div>
+      <Footer />
+      <FloatingButton />
+      <WhatsAppFloatingButton />
+    </Box>
+  )
+}
+export default MainLandingPage
+
+

@@ -5,6 +5,7 @@ import { DataProvider } from './context/myData';
 import CustomizedSteppers from './pages/checkoutPage/mainCheckoutPage';
 import Routing from '../src/Routes/routing'
 import SidebarPopup from './testing2/sideBar';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 const images = [
@@ -24,18 +25,15 @@ const images = [
   "https://dealsorb.com/wp-content/uploads/2022/02/71jFHRn1kL._AC_SL1500_-1.jpg",
 ];
 function App() {
-  
+
   return (
-      <>
-  
- 
-  <DataProvider>
-  <Routing/>
-  </DataProvider>
-      
+    <HelmetProvider>
+      <DataProvider>
+        <Routing />
+      </DataProvider>
       {/* <ShowableProductDetails images={images}/> */}
       {/* <BasicAccordion/> */}
-      </>
+    </HelmetProvider>
   )
 }
 export default App

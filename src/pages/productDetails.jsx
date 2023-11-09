@@ -32,6 +32,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { addToCart } from '../stateManagement/slices/cartSlice';
 import { Link, useNavigate } from 'react-router-dom';
+import SEO from '../SEO/mainSEO';
 
 
 
@@ -230,7 +231,12 @@ const ImageSwitcher = ({productData }) => {
   };
 
   return (
-   
+   <div>
+     <SEO
+    title={productData['name']}
+    description='Beginner friendly page for learning React Helmet.'
+    name='Dealsorb'
+    type='article' />
      <Grid container spacing={1}>   {/*  main grid of page */}
         <Grid item lg={6.5} md={6.5} sm={12} xs={12} >
         <Typography sx={{ fontWeight: 'bolder', fontSize: '22px', color: 'black' }}>
@@ -643,6 +649,7 @@ const ImageSwitcher = ({productData }) => {
 
         </Grid>
       </Grid>
+   </div>
   
   );
 };

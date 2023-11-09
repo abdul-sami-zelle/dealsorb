@@ -11,6 +11,7 @@ import { useData } from '../../context/myData';
 import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Footer from '../../components/footer'
+import SEO from '../../SEO/mainSEO';
 
 export default function ShowableProductDetails(props) {
   const { productData } = useData();
@@ -25,6 +26,7 @@ export default function ShowableProductDetails(props) {
 
     return(
       <Box sx={{backgroundColor:'white '}}>
+        
      <Grid container>
       <Grid item lg={12} md={12} sm={12} xs={12}>
           <ResponsiveAppBar activePage={'Deal & Coupons'} />

@@ -526,7 +526,7 @@ function OcassionalFeaturedProducts() {
                                         {selectedOccasion && (
            <Grid container spacing={0} rowSpacing={3}>
             {selectedOccasion.products.map((item) => (
-             <Grid item key={item.id} xl={3} xs={12} sm={6} md={4} lg={4}>
+             <Grid item key={item.id} xl={3} xs={12} sm={6} md={3} lg={3}>
              <ProductCard1  
                  name={item.name}
                  url={item.imageurl}

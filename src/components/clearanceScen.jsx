@@ -1,6 +1,8 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import ProductCard1 from './widgets/productCard'; // Import your ProductCard1 component
+import './clearanceScen.css'
+
 
 const products = [
   {
@@ -138,9 +140,11 @@ const products = [
 
 const ClearanceList = () => {
   return (
-    <Grid container spacing={2}  sx={{ marginX: '10px' }}>
+    <>
+    <div className='clearanceLarge'>
+    <Grid container  rowSpacing={2} sx={{ marginX: '10px' }}>
       {products.map((item, index) => (
-        <Grid item key={index} xs={6} sm={3} md={2} lg={2}>
+        <Grid item key={index} xs={6} sm={3} md={2.4} lg={2} xl={2}>
           <ProductCard1
             name={item.name}
             url={item.photo}
@@ -155,6 +159,27 @@ const ClearanceList = () => {
         </Grid>
       ))}
     </Grid>
+    </div>
+    <div className='clearanceMedium'>
+    <Grid container  rowSpacing={2} columnSpacing={0}  sx={{ marginX: '10px' }}>
+      {products.map((item, index) => (
+        <Grid item key={index} xs={6} sm={4} md={3} lg={2} xl={2}>
+          <ProductCard1
+            name={item.name}
+            url={item.photo}
+            price={item.price}
+            description={item.description}
+            rating={item.rating}
+            brandLogo={item.brandLogo}
+            arrayImages={item.arrayImages}
+            colors=""
+            sizes=""
+          />
+        </Grid>
+      ))}
+    </Grid>
+    </div>
+    </>
   );
 };
 

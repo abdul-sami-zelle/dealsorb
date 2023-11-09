@@ -25,3 +25,27 @@
     font-size: 10px !important;
     font-weight: bold;
 }
+
+.cart-container{
+    background-color: blueviolet;
+}
+
+@media screen and (max-width: 1450px) {
+    .btnsCart{
+        flex-direction: column !important;
+    }
+    .VCbtn{
+        width: 250px !important;
+        height: 50px !important;
+        margin-top: 15px !important;
+        font-size: 16px !important;
+    }
+    .CSbtn{
+        width: 250px !important;
+        height: 50px !important;
+        font-size: 16px !important;
+    }
+    .subTotalh1{
+        margin-top: 15px !important;
+    }
+}

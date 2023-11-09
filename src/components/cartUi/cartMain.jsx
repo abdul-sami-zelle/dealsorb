@@ -43,9 +43,29 @@ function CartItems() {
   const changeRoute2 = () => {
     navigate("/check-out");
   }
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+
+  // Update the screen height whenever the window is resized
+  const updateScreenHeight = () => {
+    setScreenHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    // Add a listener for the "resize" event
+    window.addEventListener('resize', updateScreenHeight);
+
+    // Clean up the listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', updateScreenHeight);
+    };
+  }, []);
     return(
-        <>
-    <div className='cart-container'>
+        <div className='cart-container'>
+        
+    <div style={{display:'flex'}}>
+        <div className={`cartt0 ${isVisible ? 'visible' : ''}`} onClick={handleButtonClick}>
+
+        </div>
         <div className={`cartt ${isVisible ? 'visible' : ''}`}>
 
         <div style={{width:'100%' ,height:'12%',backgroundColor:'white',display:'flex',flexDirection:'column',padding:'10px'}}>
@@ -130,15 +150,15 @@ function CartItems() {
         <CartProductView/> 
         <CartProductView/>  */}
     </div>
- <div style={{width:'100%' ,height:'15%',display:'flex',alignItems:"center",justifyContent:'center',flexDirection:'column'}}>
-    <h1 style={{color:'black',fontSize:'16px',fontWeight:'600',textAlign:'start',marginTop:'5px'}}>
+ <div  style={{width:'100%' ,height:'15%',display:'flex',alignItems:"center",justifyContent:'center',flexDirection:'column'}}>
+    <h1 className='subTotalh1' style={{color:'black',fontSize:'16px',fontWeight:'600',textAlign:'start',marginTop:'5px'}}>
         Sub Total : Rs.{totalPrice}
     </h1>
     <div style={{height:'10px'}}></div>
             
-            <div style={{display:'flex',alignItems:"center",justifyContent:'center',flexDirection:'column'}}>
-            <div style={{display:'flex',alignItems:'center',justifyContent:'space-around'}}>
-            <Button sx={{
+
+            <div className='btnsCart' style={{display:'flex',alignItems:'center',justifyContent:'space-around'}}>
+            <Button className='CSbtn' sx={{
             width:'170px',
             height:'35px',
             fontSize: '12px',
@@ -155,13 +175,14 @@ function CartItems() {
             },
           }} variant="outlined">
          
-            View Cart
+           Continue Shopping
             {/* <div style={{width:'5px'}}></div>
             <img src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/viewCart.png?alt=media&token=b196a479-e558-470b-8bba-6688bd5c4492" height='20px' width='20px' alt="" srcset="" /> */}
             </Button>
     
             <div >
             <Button  
+            className='VCbtn'
             onClick={()=>{
               changeRoute2()
             }}
@@ -192,30 +213,7 @@ function CartItems() {
             
             </div>
 
-            <div style={{height:'10px'}}></div>
-
-            <Button sx={{
-            width:'300px',
-            height:'35px',
-            fontSize: '12px',
-            fontWeight: 'bold',
-            color: '#DB4444',
-            border: '2px solid #FFF',
-            borderRadius:'5px',
-            backgroundColor:"#FFF",
-            marginX:'5px',
-            '&:hover': {
-              backgroundColor: 'white', // Set the hover color here
-              color: '#DB4444',
-              border: '2px solid #FFF',
-            },
-          }} variant="outlined">
-         
-            Continue Shopping
-            <div style={{width:'5px'}}></div>
-            <img src="https://firebasestorage.googleapis.com/v0/b/zelleclients.appspot.com/o/continueshopping.png?alt=media&token=7955ee54-0735-469a-9df5-7f192c119f26" height='20px' width='20px' alt="" srcset="" />
-            </Button>
-            </div>
+            
  </div>
         
          
@@ -229,19 +227,95 @@ function CartItems() {
           .cartt {
             position: fixed;
             top: 0;
-            right: ${isVisible ? '' : '-400px'};
+            right: ${isVisible ? '' : '-25%'};
             height: 100%;
-            width: 400px;
+            width: 25%;
             background-color: #fff;
             box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
             overflow-y: auto;
             z-index: 9999;
-            transition: right 0.3s ease-in-out;
+            transition: right 0.5s ease-in-out;
           }
+          .cartt0 {
+            position: fixed;
+            top: 0;
+            right: ${isVisible ? '' : '-75%'};
+            height: 100%;
+            width: 75%;
+            background-color: red;
+            opacity:40%;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            z-index: 9999;
+            transition: right 0.5s ease-in-out;
+          }
+          @media screen and (max-width: 1450px) {
+            .cartt {
+              right: ${isVisible ? '' : '-30%'};
+              width: 30%;
+            }
+            .cartt0 {
+              right: ${isVisible ? '' : '-70%'};
+              width: 70%;
+            }
+        }
+        @media screen and (max-width: 1150px) {
+          .cartt {
+            right: ${isVisible ? '' : '-35%'};
+            width: 35%;
+          }
+          .cartt0 {
+            right: ${isVisible ? '' : '-65%'};
+            width: 65%;
+          }
+      }
+      @media screen and (max-width: 850px) {
+        .cartt {
+          right: ${isVisible ? '' : '-45%'};
+          width: 45%;
+        }
+        .cartt0 {
+          right: ${isVisible ? '' : '-55%'};
+          width: 55%;
+        }
+    }
+    @media screen and (max-width: 650px) {
+      .cartt {
+        right: ${isVisible ? '' : '-55%'};
+        width: 55%;
+      }
+      .cartt0 {
+        right: ${isVisible ? '' : '-45%'};
+        width: 45%;
+      }
+  }
+  @media screen and (max-width: 550px) {
+    .cartt {
+      right: ${isVisible ? '' : '-65%'};
+      width: 65%;
+    }
+    .cartt0 {
+      right: ${isVisible ? '' : '-35%'};
+      width: 35%;
+    }
+}
+@media screen and (max-width: 500px) {
+  .cartt {
+    right: ${isVisible ? '' : '-100%'};
+    width: 100%;
+  }
+  .cartt0 {
+    right: ${isVisible ? '' : '-0%'};
+    width: 0%;
+  }
+}
+
+
+
         `}
       </style>
     </div>
-        </>
+        </div>
     )
 }
 

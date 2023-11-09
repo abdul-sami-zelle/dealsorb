@@ -33,8 +33,8 @@ export default function ProductCard1(props) {
     return (
         <Box
             sx={{
-                height:{xl:'250px',lg: '280px',md:'250px',sm:'250px',xs:'220px'},
-                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'160px'},
+                height:{xl:'250px',lg: '260px',md:'250px',sm:'250px',xs:'220px'},
+                width: {xl:'200px',lg: '190px',md:'200px',sm:'200px',xs:'160px'},
                 borderRadius: '5px',
                 backgroundColor: '#F5F5F5',
                 position: 'relative',
@@ -46,8 +46,8 @@ export default function ProductCard1(props) {
         >  
             <Box
                 sx={{
-                    height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'165px'},
-                width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'160px'},
+                    height:{xl:'180px',lg: '180px',md:'180px',sm:'180px',xs:'165px'},
+                width: {xl:'200px',lg: '190px',md:'200px',sm:'200px',xs:'160px'},
                    
                     borderRadius: '5px',
                     
@@ -61,8 +61,8 @@ export default function ProductCard1(props) {
             >
                 <Box
                     sx={{
-                        height:{xl:'180px',lg: '200px',md:'180px',sm:'180px',xs:'165px'},
-                        width: {xl:'200px',lg: '210px',md:'200px',sm:'200px',xs:'170px'},
+                        height:{xl:'180px',lg: '180px',md:'180px',sm:'180px',xs:'165px'},
+                        width: {xl:'200px',lg: '190px',md:'200px',sm:'200px',xs:'170px'},
                         backgroundColor: 'blue',
                         position: 'relative',
                         backgroundSize: 'cover',
@@ -84,8 +84,8 @@ export default function ProductCard1(props) {
                 paddingX:{xl:'5px',lg:'5px',md:'5px',sm:'3px',xs:'2px'},
                 paddingY:{xl:'5px',lg:'5px',md:'5px',sm:'3px',xs:'2px'},
                 backgroundColor:'white',
-                right:{xl:'12px',lg:'20px',md:'12px',sm:'12px',xs:'8px'},
-                bottom:{xl:'21%',lg:'22%',md:'21%',sm:'21%',xs:'24%'},
+                right:{xl:'12px',lg:'10px',md:'12px',sm:'12px',xs:'8px'},
+                bottom:{xl:'21%',lg:'27%',md:'21%',sm:'21%',xs:'24%'},
                 boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px',
                 '&:hover': {
                     backgroundColor:'white',

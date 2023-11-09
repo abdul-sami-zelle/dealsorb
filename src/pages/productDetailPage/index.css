@@ -238,23 +238,24 @@
   
 }
 
-@media screen and (max-width: 660px) {
 
-}
 @media screen and (max-width: 600px) {
   .images-containerMobileView{
     max-width:350px;
   }
-  
+  .App{
+    margin-right: 0px;
+  }
 }
 @media screen and (max-width: 400px) {
-  #bigImage{
-    height: 350px;
-    width: 100%;
+  #imageContainer img{
+    width: 90%;
+    height: 500px;
   }
   .images-containerMobileView{
-    max-width:250px;
+    max-width:200px;
   }
+
   
   
 }

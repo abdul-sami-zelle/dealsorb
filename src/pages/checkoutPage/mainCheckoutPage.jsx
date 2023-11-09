@@ -136,7 +136,10 @@ export default function MainCheckOutPage1() {
     };
   }, []);
 
-
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo(0, 0);  
+  }, []);
   return (
     <div className="main">
       <ResponsiveAppBar/>

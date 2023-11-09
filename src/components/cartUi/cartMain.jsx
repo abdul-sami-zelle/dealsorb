@@ -68,7 +68,16 @@ function CartItems() {
         </div>
         <div className={`cartt ${isVisible ? 'visible' : ''}`}>
 
-        <div style={{width:'100%' ,height:'12%',backgroundColor:'white',display:'flex',flexDirection:'column',padding:'10px'}}>
+        <div 
+        className='sideCartUiSection1'
+        style={{
+          width:'100%',
+          height:'12%',
+          backgroundColor:'white',
+          display:'flex',
+          flexDirection:'column',
+          padding:'10px'
+          }}>
             <Box onClick={handleButtonClick}>
                 <CloseRounded/>
             </Box>
@@ -86,7 +95,20 @@ function CartItems() {
         </div>
         </div>
         </div>
-    <div style={{width:'100%' ,height:'70%',backgroundColor:'',overflowX: 'hidden', overflowY: 'scroll',borderTop:'1px solid grey',borderBottom:'1px solid grey',display:cart.length===0?'flex':'',alignItems:'center',justifyContent:'center'}}>
+    <div
+     className='sideCartUiSection2'
+     style={{
+      width:'100%',
+      height:'65%',
+      backgroundColor:'',
+      overflowX: 'hidden',
+      overflowY: 'scroll',
+      borderTop:'1px solid grey',
+      borderBottom:'1px solid grey',
+      display:cart.length===0?'flex':'',alignItems:'center',
+      justifyContent:'center'
+    }}
+     >
     <style>
     {`
       div::-webkit-scrollbar {
@@ -150,7 +172,16 @@ function CartItems() {
         <CartProductView/> 
         <CartProductView/>  */}
     </div>
- <div  style={{width:'100%' ,height:'15%',display:'flex',alignItems:"center",justifyContent:'center',flexDirection:'column'}}>
+ <div className='sideCartUiSection3'
+  style={{
+    width:'100%',
+    height:'20%',
+    display:'flex',
+    alignItems:"center",
+    justifyContent:'center',
+    flexDirection:'column'
+  }}
+  >
     <h1 className='subTotalh1' style={{color:'black',fontSize:'16px',fontWeight:'600',textAlign:'start',marginTop:'5px'}}>
         Sub Total : Rs.{totalPrice}
     </h1>

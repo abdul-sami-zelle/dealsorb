@@ -239,7 +239,7 @@ const ImageSwitcher = ({ productData }) => {
       <Grid container spacing={1}>   {/*  main grid of page */}
         <Grid item lg={6.5} md={6.5} sm={12} xs={12} >
           <h1 className='ProductMainName' >
-            Havic HV G-92 Gamepad
+          {productData['name']}
           </h1>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Box sx={{ display: 'flex', alignItems: 'center', marginY: '0px' }}>

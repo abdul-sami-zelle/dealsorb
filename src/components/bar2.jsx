@@ -17,7 +17,9 @@ import CustomizedInputBase from './searcBar1'
 import ImageBanner from './banner'
 import { Link } from "react-router-dom";
 import { toggleVisibility } from "../stateManagement/slices/cartVisibilitySlice";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { setHoveredWidget, resetHoveredWidget, selectHoveredWidget } from "../stateManagement/slices/navbarHoverSlice"
+import { useState } from 'react';
 
 const pages = ["Home","Categories", "All Stores","Stores","Deals & Coupons"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -57,6 +59,16 @@ function ResponsiveAppBar({ activePage }) {
   const handleButtonClick = () => {
     dispatch(toggleVisibility());
   };
+  const hoveredWidget = useSelector(selectHoveredWidget);
+
+  const changeColor = (id) => {
+    dispatch(setHoveredWidget(id));
+  };
+
+  const resetColor = () => {
+    dispatch(resetHoveredWidget());
+  };
+
   return (
    
     <Box sx={{right:'0',left:'0',width: '100%',}}>
@@ -117,6 +129,7 @@ function ResponsiveAppBar({ activePage }) {
             >
               {pages.map((page) => (
                <Button
+               
                key={page}
                onClick={handleCloseNavMenu}
                component={Link} // Use the Link component for routing
@@ -154,9 +167,13 @@ function ResponsiveAppBar({ activePage }) {
           >
             <img src={logo} width={100} alt=""/>
           </Box>
+ 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Box sx={{
+              <Box
+               onMouseOver={() => changeColor(1)} 
+               onMouseOut={resetColor}
+               sx={{
                 borderBottom: activePage === page ? '2px Solid primary.main' : '2px Solid white',
                 transition: 'background-color 0.1s', // Add a transition for background-color
                 '&:hover': {
@@ -215,7 +232,21 @@ function ResponsiveAppBar({ activePage }) {
             </Menu>
           </Box>
         </Toolbar>
+  
       </Container>
+      <div
+  onMouseOver={() => changeColor(1)}
+  onMouseOut={() => resetColor('redDiv')} // Pass an identifier for the red color div
+  style={{
+    height: '150px',
+    width: '100%',
+    backgroundColor: 'red',
+    position: 'absolute',
+    marginTop: '60px',
+    display: hoveredWidget === 1 ? 'block' : 'none',
+    transition: 'display 0.3s ease-in-out',
+  }}
+></div>
     </AppBar>
    </Box>
    

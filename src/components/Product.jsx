@@ -69,7 +69,7 @@ export default function CategoryDesign2(props) {
                 </Typography>
               </Box>
               <Typography sx={{ fontSize: '10px', color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
-                10
+                {props.product_no}
               </Typography>
             </Box>
             <Box sx={{
@@ -87,8 +87,8 @@ export default function CategoryDesign2(props) {
                   Category Rating
                 </Typography>
               </Box>
-              <Typography sx={{ fontSize: '10px', color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
-                10
+              <Typography sx={{ fontSize: '10px', color: 'white', textAlign: 'center', fontWeight: 'bold' , marginLeft:'5px' }}>
+              {props.rating}
               </Typography>
             </Box>
             

@@ -217,7 +217,7 @@ function MainLandingPage() {
 
   useEffect(() => {
     // Fetch data from your API endpoint
-    fetch('http://localhost:8080/api/v1/product-category/get-all-category')
+    fetch('https://coupon-backend-tau.vercel.app/api/v1/product-category/get-all-category')
       .then((response) => response.json())
       .then((data) => {
         // Set the store data in state
@@ -234,7 +234,7 @@ function MainLandingPage() {
 
   useEffect(() => {
     // Fetch data from your API endpoint
-    fetch('http://localhost:8080/api/v1/simple-product/get-all-products')
+    fetch('https://coupon-backend-tau.vercel.app/api/v1/simple-product/get-all-products')
       .then((response) => response.json())
       .then((data) => {
         // Set the store data in state
@@ -256,6 +256,8 @@ function MainLandingPage() {
       url={item.url}
       price=""
       description={item.description}
+      product_no={item.product_no}
+      rating = {item.rating}
     />
   ));
 

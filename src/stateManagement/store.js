@@ -3,7 +3,8 @@ import imageReducer from './slices/imageSlice';
 import todoReducer from './slices/todo'
 import cartVisibilitySlice from './slices/cartVisibilitySlice';
 import cartReducer from './slices/cartSlice';
-import storeReducer from './slices/storeSlice'
+import storeReducer from './slices/storeSlice';
+import hoverReducer from './slices/navbarHoverSlice'
 
 const store = configureStore({
   reducer: {
@@ -11,7 +12,8 @@ const store = configureStore({
     todo:todoReducer,
     visibility:cartVisibilitySlice,
     allCart: cartReducer,
-    stores:storeReducer
+    stores:storeReducer,
+    hover:hoverReducer
   },
 });
 

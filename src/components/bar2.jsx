@@ -66,7 +66,7 @@ function ResponsiveAppBar({ activePage }) {
   };
 
   const resetColor = () => {
-    dispatch(resetHoveredWidget());
+    dispatch(resetHoveredWidget);
   };
 
   return (
@@ -76,7 +76,7 @@ function ResponsiveAppBar({ activePage }) {
     <Typography textAlign="center" sx={{color:"white",fontSize:{xs: 0,md:10,lg:15}}}>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</Typography>
     <Typography  textAlign="center" sx={{color:"white",fontSize:{xs: 0,md:10,lg:15}}}>Shop Now</Typography>
     </Box>
-     <AppBar position="sticky" color="">
+     <AppBar position="" color="">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           
@@ -169,10 +169,10 @@ function ResponsiveAppBar({ activePage }) {
           </Box>
  
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {pages.map((page,index) => (
               <Box
-               onMouseOver={() => changeColor(1)} 
-               onMouseOut={resetColor}
+               onMouseOver={() => changeColor(index)} 
+              
                sx={{
                 borderBottom: activePage === page ? '2px Solid primary.main' : '2px Solid white',
                 transition: 'background-color 0.1s', // Add a transition for background-color
@@ -201,7 +201,7 @@ function ResponsiveAppBar({ activePage }) {
           </Box>
 
           <Box sx={{ mr: 2 ,display: { xs: "none", md: "flex" },}}> <CustomizedInputBase  /></Box>
-          <Box sx={{ mr: 2 ,display: { xs: "none", md: "flex" },}}><Button  onClick={handleButtonClick}>Login</Button></Box>
+          <Box sx={{ mr: 2 ,display: { xs: "none", md: "flex" },}}><Button onMouseOver={resetColor()}   onClick={handleButtonClick}>Login</Button></Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -234,19 +234,48 @@ function ResponsiveAppBar({ activePage }) {
         </Toolbar>
   
       </Container>
-      <div
-  onMouseOver={() => changeColor(1)}
-  onMouseOut={() => resetColor('redDiv')} // Pass an identifier for the red color div
+      {/* <div
+
+  // Pass an identifier for the red color div
   style={{
     height: '150px',
     width: '100%',
-    backgroundColor: 'red',
+    backgroundColor: 'purple',
     position: 'absolute',
     marginTop: '60px',
     display: hoveredWidget === 1 ? 'block' : 'none',
     transition: 'display 0.3s ease-in-out',
   }}
+  
 ></div>
+<div
+
+  // Pass an identifier for the red color div
+  style={{
+    height: '150px',
+    width: '100%',
+    backgroundColor: 'blue',
+    position: 'absolute',
+    marginTop: '60px',
+    display: hoveredWidget === 2 ? 'block' : 'none',
+    transition: 'display 0.3s ease-in-out',
+  }}
+  
+></div>
+<div
+
+  // Pass an identifier for the red color div
+  style={{
+    height: '150px',
+    width: '100%',
+    backgroundColor: 'green',
+    position: 'absolute',
+    marginTop: '60px',
+    display: hoveredWidget === 3 ? 'block' : 'none',
+    transition: 'display 0.3s ease-in-out',
+  }}
+  
+></div> */}
     </AppBar>
    </Box>
    

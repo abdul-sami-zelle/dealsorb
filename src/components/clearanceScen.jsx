@@ -136,6 +136,7 @@ const products = [
     colors:"",
     sizes:""
   },
+  
 ];
 
 const ClearanceList = () => {

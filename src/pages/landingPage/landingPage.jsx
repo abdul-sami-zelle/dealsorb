@@ -41,9 +41,13 @@ import Cube from '../../components/cubeSwiper/cube';
 import MobileCoupon2 from '../../components/couponUi/mobileCoupon2';
 import Ocassions from '../../components/ocassionsComponent';
 import MobileViewNewArrivals from '../../components/mobileViewNewArrivals/mobileViewNewArrivals';
-import { useDispatch } from 'react-redux';
-import { toggleVisibility } from '../../stateManagement/slices/cartVisibilitySlice';
+import { useDispatch} from 'react-redux';
+import { setHoveredWidget, resetHoveredWidget, selectHoveredWidget } from '../../stateManagement/slices/navbarHoverSlice';
 import SEO from '../../SEO/mainSEO';
+import AllCategories from '../../components/AllCategories/allCategories';
+import CategoryBanner11 from '../../3dSl2/3dSl2';
+import CouponCategories from '../../components/couponsCategories/couponsCategories';
+import LatestProducts from '../../components/latestProducts/latestProducts';
 
 
 
@@ -315,6 +319,16 @@ function MainLandingPage() {
     };
   }, []);
 
+  const hoveredWidget = useSelector(selectHoveredWidget);
+
+  const changeColor = (id) => {
+    dispatch(setHoveredWidget(id));
+  };
+
+  const resetColor = () => {
+    dispatch(resetHoveredWidget);
+  };
+
 
   return (
     <div className='mainClass1'>
@@ -331,8 +345,9 @@ function MainLandingPage() {
 {/* SEARCH ENGINE OPTIMIZATION TAG ENDS HERE*/}
 <ResponsiveAppBar activePage="Home" />
 <CartItems />
-<CategoryBanner />
-
+{/* <AllCategories/> */}
+{/* <CategoryBanner /> */}
+<CategoryBanner11/>
 
 <div className="mobViewContentLandingPage1">
   <MobileViewCategories />
@@ -371,6 +386,10 @@ function MainLandingPage() {
       {product}
     </Carousel>
     <div style={{ height: '60px' }}></div>
+    <CatName categoryHeading="Categories" productHeading="Popular Categories" />
+    <div style={{ height: '30px' }}></div>
+    <LatestProducts/>
+    <div style={{ height: '30px' }}></div>
     <Box sx={{ display: 'flex', alignItems: '', justifyContent: 'space-between' }}>
       <CatName categoryHeading="This Month" productHeading="Clearance Sale" />
       <Button sx={{ height: '40px', backgroundColor: '#DB4444', paddingX: { lg: '50px', md: '40px', sm: '30px', xs: '20px' } }}>

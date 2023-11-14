@@ -12,8 +12,8 @@ export default function CategoryDesign2(props) {
   return (
     <Box className='mainCategoryContainer'
       sx={{
-        height: '250px',
-        width: '200px',
+        height: '210px',
+        width: '160px',
         backgroundColor: 'red',
         backgroundImage: `url('${props.url}')`,
         backgroundSize: 'cover',
@@ -27,8 +27,8 @@ export default function CategoryDesign2(props) {
     >
       <Box className='hoveredCategorySubContainer'
         sx={{
-          height: '50px',
-          width: '180px',
+          height: '30px',
+          width: '140px',
           backgroundColor: 'rgba(0, 0, 0, 0.7)',
           borderRadius: '7px',
           transition: '0.5s',
@@ -41,7 +41,7 @@ export default function CategoryDesign2(props) {
 
           '&:hover': {
             height: '100px', // Change height on hover
-            width: '180px',  // Change width on hover
+            width: '140px',  // Change width on hover
           },
         }}
         onMouseEnter={() => setIsHovered(true)}

@@ -18,6 +18,7 @@ import bell from '../assets/bell.png'
 import deal from '../assets/deal.png'
 import discount from '../assets/discount.png'
 import event from '../assets/event.png'
+import eventO from '../assets/eventO.png'
 import gifts from '../assets/gifts.png'
 import CustomizedInputBase from './searcBar1'
 import ImageBanner from './banner'
@@ -27,7 +28,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setHoveredWidget, resetHoveredWidget, selectHoveredWidget } from "../stateManagement/slices/navbarHoverSlice"
 import FadeIn from "../components/animations1"
 import { css, keyframes } from '@emotion/react'
-
+import EventNotification from './eventsNotificationUi/eventNotificationUi';
 import { animated, useSpring } from 'react-spring';
 
 
@@ -49,18 +50,26 @@ const bounce = keyframes`
   }
 `
 
-const pages = ["Home","Categories", "All Stores","Stores","Deals & Coupons"];
+const pages = ["Home", "Categories", "All Stores", "Stores", "Deals & Coupons"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const tabToRoute = {
   "Home": "",
-  "Categories":'categories',
-  "Stores":'all-stores',
+  "Categories": 'categories',
+  "Stores": 'all-stores',
   "All Stores": "coupon-store",
   "Deals & Coupons": "coupon-deals",
 };
 
+const products = [{
 
-function ResponsiveAppBar({ activePage ,rotation = 10, timing = 2000,}) {
+},{
+  
+},{
+  
+}]
+
+
+function ResponsiveAppBar({ activePage, rotation = 10, timing = 2000, }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [isBooped, setIsBooped] = React.useState(false);
@@ -81,7 +90,7 @@ function ResponsiveAppBar({ activePage ,rotation = 10, timing = 2000,}) {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-    
+
   };
   const dispatch = useDispatch();
 
@@ -110,22 +119,22 @@ function ResponsiveAppBar({ activePage ,rotation = 10, timing = 2000,}) {
   const trigger = () => {
     // Unchanged
   };
+  const [hoveredValue, changeHoveredValue] = useState(null);
 
-  
 
   return (
-   
-    <Box sx={{right:'0',left:'0',width: '100%',}}>
-    <Box sx={{position:"static",backgroundColor:'black',height:{ xs: 0,md:35,lg:48},display: { xs: "none",md:"flex",lg:"flex"},alignItems:"center",justifyContent:"center"}}> 
-    <Typography textAlign="center" sx={{color:"white",fontSize:{xs: 0,md:10,lg:15}}}>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</Typography>
-    <Typography  textAlign="center" sx={{color:"white",fontSize:{xs: 0,md:10,lg:15}}}>Shop Now</Typography>
-    </Box>
-     <AppBar position="" sx={{height:"100px",display:"flex",justifyContent:"center"}} color="">
-  
+
+    <Box sx={{ right: '0', left: '0', width: '100%', }}>
+      <Box sx={{ position: "static", backgroundColor: 'black', height: { xs: 0, md: 35, lg: 48 }, display: { xs: "none", md: "flex", lg: "flex" }, alignItems: "center", justifyContent: "center" }}>
+        <Typography textAlign="center" sx={{ color: "white", fontSize: { xs: 0, md: 10, lg: 15 } }}>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</Typography>
+        <Typography textAlign="center" sx={{ color: "white", fontSize: { xs: 0, md: 10, lg: 15 } }}>Shop Now</Typography>
+      </Box>
+      <AppBar position="" sx={{ height: "100px", display: "flex", justifyContent: "center" }} color="">
+
         <Toolbar disableGutters>
-          
-       
-           <Box
+
+
+          <Box
             variant="h6"
             noWrap
             component="a"
@@ -138,13 +147,13 @@ function ResponsiveAppBar({ activePage ,rotation = 10, timing = 2000,}) {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
-              width:'10%',
-              textAlign:'center',
-              display:"flex",
-              justifyContent:"center"
+              width: '10%',
+              textAlign: 'center',
+              display: "flex",
+              justifyContent: "center"
             }}
           >
-            <img src={logo} width={100} alt=""/>
+            <img src={logo} width={100} alt="" />
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -177,27 +186,27 @@ function ResponsiveAppBar({ activePage ,rotation = 10, timing = 2000,}) {
               }}
             >
               {pages.map((page) => (
-               <Button
-               
-               key={page}
-               onClick={handleCloseNavMenu}
-               component={Link} // Use the Link component for routing
-               to={`/${tabToRoute[page]}`} // Use the mapped route name
-               sx={{
-                 my: { md: 0 },
-                 fontSize: { md: 12, lg: 14 },
-                 color: activePage === page ? "primary.main" : "black",
-                 
-                 display: "block",
-                 fontWeight:'bold'
-               }}
-             >
-               {page}
-             </Button>
+                <Button
+
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  component={Link} // Use the Link component for routing
+                  to={`/${tabToRoute[page]}`} // Use the mapped route name
+                  sx={{
+                    my: { md: 0 },
+                    fontSize: { md: 12, lg: 14 },
+                    color: activePage === page ? "primary.main" : "black",
+
+                    display: "block",
+                    fontWeight: 'bold'
+                  }}
+                >
+                  {page}
+                </Button>
               ))}
             </Menu>
           </Box>
-          
+
           <Box
             variant="h5"
             noWrap
@@ -214,179 +223,213 @@ function ResponsiveAppBar({ activePage ,rotation = 10, timing = 2000,}) {
               textDecoration: "none",
             }}
           >
-            <img src={logo} width={100} alt=""/>
-          </Box>
- 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" },flexDirection:"column", width:{xl:'60%',lg:'60%',md:'30%',} }}>
-          <Box sx={{ mr: 2 ,display: { xs: "none", md: "flex"},marginTop:'10px'}}> <CustomizedInputBase  /></Box>
-          
-          <Box sx={{ mr: 2 ,display: { xs: "none", md: "flex" },marginTop:'10px'}} >
-          {pages.map((page,index) => (
-              <Box
-               onMouseOver={() => changeColor(index)} 
-              
-               sx={{
-                borderBottom: activePage === page ? '2px Solid primary.main' : '2px Solid white',
-                transition: 'background-color 0.1s', // Add a transition for background-color
-                '&:hover': {
-                  borderBottom: '2px Solid black', // Change the background color on hover
-                },
-              }}>
-                  <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  component={Link} // Use the Link component for routing
-                  to={`/${tabToRoute[page]}`} // Use the mapped route name
-                  sx={{
-                    my: { md: 0 },
-                    fontSize: { md: 10, lg: 12 },
-                    color: activePage === page ? "primary.main" : "black",
-                    
-                    display: "block",
-                    fontWeight:'bolder'
-                  }}
-                >
-                  {page}
-                </Button>
-              </Box>
-            ))}
-          </Box>
+            <img src={logo} width={100} alt="" />
           </Box>
 
-                <Box sx={{ width:{xl:'30%',lg:'30%',md:'35%',},display:"flex",
-              justifyContent:"center"}}>
-                <Box sx={{ mr: 2 ,display: { xs: "none", md: "flex" },width:{xl:'80%',lg:'300px',md:'260px',sm:'210px'}}}> 
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, flexDirection: "column", width: { xl: '60%', lg: '60%', md: '30%', } }}>
+            <Box sx={{ mr: 2, display: { xs: "none", md: "flex" }, marginTop: '10px' }}> <CustomizedInputBase /></Box>
+
+            <Box sx={{ mr: 2, display: { xs: "none", md: "flex" }, marginTop: '10px' }} >
+              {pages.map((page, index) => (
+                <Box
+                  onMouseOver={() => changeColor(index)}
+
+                  sx={{
+                    borderBottom: activePage === page ? '2px Solid primary.main' : '2px Solid white',
+                    transition: 'background-color 0.1s', // Add a transition for background-color
+                    '&:hover': {
+                      borderBottom: '2px Solid black', // Change the background color on hover
+                    },
+                  }}>
+                  <Button
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    component={Link} // Use the Link component for routing
+                    to={`/${tabToRoute[page]}`} // Use the mapped route name
+                    sx={{
+                      my: { md: 0 },
+                      fontSize: { md: 10, lg: 12 },
+                      color: activePage === page ? "primary.main" : "black",
+
+                      display: "block",
+                      fontWeight: 'bolder'
+                    }}
+                  >
+                    {page}
+                  </Button>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+
+          <Box sx={{
+            width: { xl: '30%', lg: '30%', md: '35%', }, display: "flex",
+            justifyContent: "center"
+          }}>
+            <Box sx={{ mr: 2, display: { xs: "none", md: "flex" }, width: { xl: '80%', lg: '300px', md: '260px', sm: '210px' } }}>
               <Box sx={{
-                width:'100%',
-                display:'flex',
-                alignItems:'center',
-                justifyContent:'space-between'
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between'
               }}>
-                
+
                 <Box sx={{
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  flexDirection:'column',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
                 }} >
                   <animated.span onMouseEnter={trigger} style={style}>
-                     <Box sx={{
-                  height:'45px',
-                  width:'45px',
-                  borderRadius:'45px',
-                  backgroundColor:"primary.main",
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  boxShadow:'rgba(100, 100, 111,0.4) 0px 7px 29px 0px',
-                  
-                }}>
-  
-    <img src={bell}  width={22} height={22} alt=""/>
-                </Box>
-                </animated.span>
-                <h1 style={{fontSize:'12px',fontWeight:'bolder',marginTop:'5px'}}>Alerts</h1>
-                </Box>
-                <Box sx={{
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  flexDirection:'column',
-                }} >
-                <Box sx={{
-                  height:'45px',
-                  width:'45px',
-                  borderRadius:'45px',
-                  backgroundColor:'purple',
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  
-                  boxShadow:'rgba(100, 100, 111,0.4) 0px 7px 29px 0px'
-                }}>
-<img src={gifts} width={22} height={22} alt=""/>
+                    <Box sx={{
+                      height: '45px',
+                      width: '45px',
+                      borderRadius: '45px',
+                      backgroundColor: "primary.main",
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: 'rgba(100, 100, 111,0.4) 0px 7px 29px 0px',
 
-                </Box>
-                <h1 style={{fontSize:'12px',fontWeight:'bolder',marginTop:'5px'}}>Deals</h1>
+                    }}>
+
+                      <img src={bell} width={22} height={22} alt="" />
+                    </Box>
+                  </animated.span>
+                  <h1 style={{ fontSize: '12px', fontWeight: 'bolder', marginTop: '5px' }}>Alerts</h1>
                 </Box>
                 <Box sx={{
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  flexDirection:'column',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                }} >
+                  <Box sx={{
+                    height: '45px',
+                    width: '45px',
+                    borderRadius: '45px',
+                    backgroundColor: 'purple',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+
+                    boxShadow: 'rgba(100, 100, 111,0.4) 0px 7px 29px 0px'
+                  }}>
+                    <img src={gifts} width={22} height={22} alt="" />
+
+                  </Box>
+                  <h1 style={{ fontSize: '12px', fontWeight: 'bolder', marginTop: '5px' }}>Deals</h1>
+                </Box>
+                <Box sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
                 }}>
                   <Box sx={{
-                  height:'45px',
-                  width:'45px',
-                  borderRadius:'45px',
-                  backgroundColor:'#FFBF00',
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  boxShadow:'rgba(100, 100, 111,0.4) 0px 7px 29px 0px'
+                    height: '45px',
+                    width: '45px',
+                    borderRadius: '45px',
+                    backgroundColor: '#FFBF00',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: 'rgba(100, 100, 111,0.4) 0px 7px 29px 0px'
+                  }}>
+                    <img src={deal} width={22} height={22} alt="" />
+                  </Box>
+                  <h1 style={{ fontSize: '12px', fontWeight: 'bolder', marginTop: '5px' }}>Coupons</h1>
+                </Box>
+                <Box onMouseOut={() => {
+                    changeHoveredValue(null)
+                }} onMouseOver={() => {
+                    changeHoveredValue(3)
+                    console.log(hoveredValue);
+                }} sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                  position: 'relative'
                 }}>
-<img src={deal}  width={22} height={22} alt=""/>
-                </Box>
-                <h1 style={{fontSize:'12px',fontWeight:'bolder',marginTop:'5px'}}>Coupons</h1>
+                  <Box  sx={{
+                    height: '45px',
+                    width: '45px',
+                    borderRadius: '45px',
+                    backgroundColor: 'orange',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: 'rgba(100, 100, 111,0.4) 0px 7px 29px 0px'
+                  }}>
+                    <img src={event} width={24} height={24} alt="" />
+                  </Box>
+                  <h1 style={{ fontSize: '12px', fontWeight: 'bolder', marginTop: '5px' }}>Events</h1>
+                  <Box sx={{
+                    display:hoveredValue===3?'block':'none',
+                    height:products.length===1?'180px':products.length===2?'260px':'300px',
+                    maxHeight:'300px',
+                    width:'300px',
+                    position:'absolute',
+                    top:'65px',
+                    right:"-10px",
+                    backgroundColor:'white',
+                    borderRadius:'10px',
+                    transition:'display 2s ease-out',
+                    boxShadow:'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+                    padding:'5px',
+                    // display:'flex',
+                    // flexDirection:'column',
+                    zIndex:'12000',
+                    overflowY:'scroll'
+                  }}>
+                  
+                    <EventNotification dataList={products}/>
+                    
+                    {/* <EventNotification/>
+                    <EventNotification/>
+                    <EventNotification/>
+                    <EventNotification/> */}
+                  </Box>
                 </Box>
                 <Box sx={{
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  flexDirection:'column',
-                }}> 
-                <Box sx={{
-                  height:'45px',
-                  width:'45px',
-                  borderRadius:'45px',
-                  backgroundColor:'orange',
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  boxShadow:'rgba(100, 100, 111,0.4) 0px 7px 29px 0px'
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
                 }}>
-<img src={event} width={24} height={24} alt=""/>
-                </Box>
-                <h1 style={{fontSize:'12px',fontWeight:'bolder',marginTop:'5px'}}>Events</h1>
-                </Box>
-                <Box sx={{
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  flexDirection:'column',
-                }}> 
-                <Box sx={{
-                  height:'45px',
-                  width:'45px',
-                  borderRadius:'45px',
-                  backgroundColor:'black',
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  boxShadow:'rgba(100, 100, 111,0.4) 0px 7px 29px 0px'
-                }}>
-                  <img style={{
-                    animation:`${bounce} 1s ease infinite`
-                  }} src={user} width={22} height={22} alt=""/>
-                </Box>
-                <h1 style={{fontSize:'12px',fontWeight:'bolder',marginTop:'5px'}}>Sign up</h1>
+                  <Box sx={{
+                    height: '45px',
+                    width: '45px',
+                    borderRadius: '45px',
+                    backgroundColor: 'black',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: 'rgba(100, 100, 111,0.4) 0px 7px 29px 0px'
+                  }}>
+                    <img style={{
+                      animation: `${bounce} 1s ease infinite`
+                    }} src={user} width={22} height={22} alt="" />
+                  </Box>
+                  <h1 style={{ fontSize: '12px', fontWeight: 'bolder', marginTop: '5px' }}>Sign up</h1>
                 </Box>
 
-               
+
               </Box>
 
+            </Box>
           </Box>
-                </Box>
-       
 
-       
+
+
         </Toolbar>
-  
 
-    
-    </AppBar>
-   </Box>
-   
+
+
+      </AppBar>
+    </Box>
+
   );
 }
 export default ResponsiveAppBar;

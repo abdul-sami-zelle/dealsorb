@@ -11,6 +11,20 @@ import toys from '../../assets/toys.png'
 import water from '../../assets/waterbottle.png'
 
 export default function CouponCategories(){
+    const [couponCat, setCouponCat] = useState([]);
+
+    useEffect(() => {
+      // Fetch data from your API endpoint
+      fetch('https://coupon-backend-tau.vercel.app/api/v1/category/get-all')
+        .then((response) => response.json())
+        .then((data) => {
+          // Set the store data in state
+          setCouponCat(data.categories);
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    }, []);
     return (
         <div>
             
@@ -26,21 +40,13 @@ export default function CouponCategories(){
                 </h1>
             </div>
         <div style={{height:'20px'}}></div>
-         <div className="divv1">
-         <CouponUI url={mat} percent={"10"} brand={"brand"} validTill={"validTill"} />
-         </div>
-         <div className="divv1">
-         <CouponUI url={baking} percent={"10"} brand={"brand"} validTill={"validTill"} />
-         </div>
-         <div className="divv1">
-         <CouponUI url={cleaning} percent={"10"} brand={"brand"} validTill={"validTill"} />
-         </div>
-         <div className="divv1">
-         <CouponUI url={kitchen} percent={"10"} brand={"brand"} validTill={"validTill"} />
-         </div>
-         <div className="divv1">
-         <CouponUI url={shirts} percent={"10"} brand={"brand"} validTill={"validTill"} />
-         </div>
+        {couponCat.map((item) => (
+             <div className="divv1">
+             <CouponUI url={item.image}  brand={item.category}  />
+             </div>
+        ))}
+        
+       
 
         </div>
         </div>

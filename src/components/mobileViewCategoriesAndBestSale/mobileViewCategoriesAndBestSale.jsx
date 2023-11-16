@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import CatName from '../catName';
 import ProductCard1 from '../widgets/productCard';
+import SimpleProductCard from '../simpleProductCards/simplePrductCards';
 
 
 export default function MobileViewCategoriesAnBestSale({dataList}) {
@@ -22,7 +23,7 @@ export default function MobileViewCategoriesAnBestSale({dataList}) {
          <Grid container  spacing={1} rowSpacing={1.5}>
       {dataList.map((data, index) => (
         <Grid item key={index} xs={6} sm={4} md={2} lg={1.7}>
-            <ProductCard1
+            <SimpleProductCard
             name={data.name}
             url={data.photo}
             price={data.price}

@@ -21,19 +21,19 @@ export default function CouponUI(props){
         >
                 <img src={props.url} alt="" srcset="" />
             </div>
-            <div className="rightCouponPart">
+            <div className="rightCouponPartUI">
                 {/* <div className="verified">
                     <img src="https://cdn-icons-png.flaticon.com/512/7595/7595571.png" alt="" srcset="" />
                 </div> */}
-                <h1>
+                {/* <h1>
                     {props.percent}% Off
-                </h1>
+                </h1> */}
                 <h2>
                     {props.brand}
                 </h2>
-                <h3>
+                {/* <h3>
                     valid unitill {props.validTill}
-                </h3>
+                </h3> */}
             </div>
             <div className="topCircleMobileUI">
 

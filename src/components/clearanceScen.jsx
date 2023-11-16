@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import ProductCard1 from './widgets/productCard'; // Import your ProductCard1 component
 import './clearanceScen.css'
+import SimpleProductCard from './simpleProductCards/simplePrductCards';
 
 
 const products = [
@@ -11,7 +12,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_1.jpg",
     name: "Furhaven Orthopedic",
     price: "19.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating:"5.0",
     brandLogo:"https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
     arrayImages:[
@@ -32,7 +33,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/md_1695119619_egg_pen_holder_1.jpg",
     name: "WATER BOTTLES",
     price: "21.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating:"5.0",
     brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
     arrayImages:[
@@ -54,7 +55,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/md_1695037198_sink_faucet_1.jpg",
     name: "KITCHEN ACCESSORIES",
     price: "99.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating:"5.0",
     brandLogo:"https://companieslogo.com/img/orig/600690.SS_BIG-07f22d57.png?t=1664511268",
     arrayImages:[
@@ -76,7 +77,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/md_1695113061_picnic_mat_1.jpg",
     name: "HOME IMPROVEMENT",
     price: "14.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating:"5.0",
     brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
     arrayImages:[
@@ -98,7 +99,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/md_1695113061_picnic_mat_1.jpg",
     name: "HOME IMPROVEMENT",
     price: "14.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating:"5.0",
     brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
     arrayImages:[
@@ -120,7 +121,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/md_1695113061_picnic_mat_1.jpg",
     name: "HOME IMPROVEMENT",
     price: "14.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating:"5.0",
     brandLogo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
     arrayImages:[
@@ -146,7 +147,7 @@ const ClearanceList = () => {
     <Grid container  rowSpacing={2} sx={{ marginX: '10px' }}>
       {products.map((item, index) => (
         <Grid item key={index} xs={6} sm={3} md={2.4} lg={2} xl={2}>
-          <ProductCard1
+          <SimpleProductCard
             name={item.name}
             url={item.photo}
             price={item.price}
@@ -165,7 +166,7 @@ const ClearanceList = () => {
     <Grid container  rowSpacing={2} columnSpacing={0}  sx={{ marginX: '10px' }}>
       {products.map((item, index) => (
         <Grid item key={index} xs={6} sm={4} md={3} lg={2} xl={2}>
-          <ProductCard1
+          <SimpleProductCard
             name={item.name}
             url={item.photo}
             price={item.price}

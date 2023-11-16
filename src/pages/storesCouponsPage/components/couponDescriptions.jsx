@@ -10,23 +10,40 @@ import Box from '@mui/material/Box';
 
 
 
-export default function CouponDescriptionStores({offer,title, description,code}) {
+export default function CouponDescriptionStores({offer,title, description,code,descriptionHeading,promoCode,discountValue,applicableFor,couponValidity}) {
    const [isDivVisible, setIsDivVisible] = useState(false);
+   const [isRedirect, setIsRedirect] = useState(false);
+   const [newTab, setNewTab] = useState(null);
 
-  function handleCopyButtonClick(){
-    console.log('Button clicked'); 
+
+   function Redirect() {
+    setIsRedirect(true);
+   }
+   const handleCopyButtonClick = () => {
     setIsDivVisible(!isDivVisible);
 
-    // Open the link in a new window after 5 seconds
-    setTimeout(() => {
-      // Replace 'https://enviovista.com/' with the actual URL you want to open in a new window
-      const linkUrl = 'https://enviovista.com/';
-      
-      // Open the link in a new window
-      window.open(linkUrl, '_blank');
-    }, 5000); // 5000 milliseconds = 5 seconds
+    // If newTab is not set, open a new tab with a specific URL
+    if (!newTab) {
+      const tab = window.open('https://example.com', '_blank');
+      if (tab) {
+        setNewTab(tab);
+      } else {
+        // Handle if the browser blocked the popup
+        console.error('Popup blocked. Please allow popups for this site.');
+      }
+    }
   };
-      
+
+//   const handleCopyButtonInsidePopupClick = () => {
+//     // Update the URL of the new tab when the button is clicked inside the Popup
+//     if (newTab) {
+//       newTab.location.href = 'https://newurl.com';
+//     }
+//   };
+
+  
+
+
     return(
         <div className='couponCardStorePageMain'>
            <div className="couponCardStorePage">
@@ -88,7 +105,7 @@ export default function CouponDescriptionStores({offer,title, description,code})
                     fontsize: '11px',
                     fontweight: '700',
                     borderRadius:'0.5px'
-                    }}>Copy</Button>
+                    }}>Copyyy</Button>
                     }
 				modal nested>
 				{
@@ -100,7 +117,7 @@ export default function CouponDescriptionStores({offer,title, description,code})
                                     <p> Ali Express is offering you this coupon. Get and Enjoy...</p>
                                </div>
                                <IconButton onClick={() => {
-                                handleCopyButtonClick()
+                                // handleCopyButtonClick()
                                }} color="primary" sx={{ height: '30px', width: '30px' }}>
                                   <Close />
                                 </IconButton>
@@ -258,7 +275,8 @@ export default function CouponDescriptionStores({offer,title, description,code})
            {!isDivVisible &&
            <div className="couponDescription">
                 <div className="couponMainHeading">
-                Activate the latest Noon coupon code 2023 and get Up to 50 Dirham Cashback On All Orders at Noon.com
+                {/* Activate the latest Noon coupon code 2023 and get Up to 50 Dirham Cashback On All Orders at Noon.com */}
+                {descriptionHeading}
                 </div>
                 <div style={{height:'10px'}}></div>
                 <div className="descriptionSectionCoupon">
@@ -284,16 +302,16 @@ export default function CouponDescriptionStores({offer,title, description,code})
                     <div style={{width:'20px'}}></div>
                     <div className="values">
                     <h1>
-                            Promo Code
+                            {promoCode}
                         </h1>
                         <h1>
-                        Discount Value
+                        {discountValue}
                         </h1>
                         <h1>
-                        Applicable For
+                        {applicableFor}
                         </h1>
                          <h1>
-                         Coupon Validity	
+                         {couponValidity}	
                          </h1>
                     </div>
                 </div>

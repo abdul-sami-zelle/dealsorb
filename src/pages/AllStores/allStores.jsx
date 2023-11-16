@@ -9,7 +9,7 @@ export default function AllStores() {
 
   useEffect(() => {
     // Fetch data from your API endpoint
-    fetch('http://localhost:8080/api/v1/store/get-all')
+    fetch('https://coupon-backend-tau.vercel.app/api/v1/store/get-all')
       .then((response) => response.json())
       .then((data) => {
         // Set the store data in state

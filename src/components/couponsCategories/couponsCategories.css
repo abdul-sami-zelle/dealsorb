@@ -61,8 +61,11 @@ border-radius: 11px 11px 5px 5px;
     justify-content: center;
 }
 .leftCouponPartUI img{
-    height: 80px !important;
-    width: 80px !important;
+    margin-top: 5px;
+    margin-left: -2px;
+    height: 60px !important;
+    width: 60px !important;
+    border-radius: 10px;
     
 }
 .rightCouponPartUI{
@@ -87,14 +90,8 @@ border-radius: 11px 11px 5px 5px;
     top: 5px;
     right: 5px;
 }
-.rightCouponPartUI h1{
-    font-size: 10px;
-    color: black;
-    font-weight: 600;
-    margin: 0px;
-}
 .rightCouponPartUI h2{
-    font-size: 16px;
+    font-size: 14px;
     color: black;
     font-weight: 500;
     margin: 0px;

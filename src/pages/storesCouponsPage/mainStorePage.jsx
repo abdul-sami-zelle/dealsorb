@@ -134,6 +134,21 @@ const couponData = [
       },
   ];
 export default function MainStorePage() {
+    const [storesBenefits, setStoresBenefits] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from your API endpoint
+    fetch('https://coupon-backend-tau.vercel.app/api/v1/coupon/get-all')
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the store data in state
+        setStoresBenefits(data.coupons);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
     return (
         <Grid container >
             <Grid item xs={12} sm={12} md={12} xl={12} lg={12}>
@@ -152,7 +167,7 @@ export default function MainStorePage() {
                             </div>
                             <div style={{ height: '15px' }}></div>
                             <div>
-                            {couponData.map((coupon, index) => (
+                            {storesBenefits.map((coupon, index) => (
                                 <>
                                <div style={{height:'10px'}}> </div>
                                
@@ -160,7 +175,12 @@ export default function MainStorePage() {
                                 offer={coupon.offer}
                                 title={coupon.title}
                                 description={coupon.description}
-                                code={coupon.code}
+                                code={coupon.couponCode}
+                                descriptionHeading={coupon.longDescription}
+                                promoCode={coupon.promoCode}
+discountValue={coupon.discountValue}
+applicableFor={coupon.applicableFor}
+couponValidity={coupon.endDate}
                                 />
                                 <div style={{height:'10px'}}> </div>
                                 </>

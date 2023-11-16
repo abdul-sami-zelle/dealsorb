@@ -27,7 +27,7 @@ export default function CategoryDesign2(props) {
     >
       <Box className='hoveredCategorySubContainer'
         sx={{
-          height: '30px',
+          height: '40px',
           width: '140px',
           backgroundColor: 'rgba(0, 0, 0, 0.7)',
           borderRadius: '7px',
@@ -40,7 +40,7 @@ export default function CategoryDesign2(props) {
           alignItems:'center',
 
           '&:hover': {
-            height: '100px', // Change height on hover
+            height: '120px', // Change height on hover
             width: '140px',  // Change width on hover
           },
         }}
@@ -58,6 +58,7 @@ export default function CategoryDesign2(props) {
               flexDirection:'row',
               maxWidth:'100%',
               justifyContent:'space-between'
+              
             }}>
               <Box sx={{
                 display: 'flex',

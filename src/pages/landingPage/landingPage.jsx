@@ -41,13 +41,14 @@ import Cube from '../../components/cubeSwiper/cube';
 import MobileCoupon2 from '../../components/couponUi/mobileCoupon2';
 import Ocassions from '../../components/ocassionsComponent';
 import MobileViewNewArrivals from '../../components/mobileViewNewArrivals/mobileViewNewArrivals';
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setHoveredWidget, resetHoveredWidget, selectHoveredWidget } from '../../stateManagement/slices/navbarHoverSlice';
 import SEO from '../../SEO/mainSEO';
 import AllCategories from '../../components/AllCategories/allCategories';
 import CategoryBanner11 from '../../3dSl2/3dSl2';
 import CouponCategories from '../../components/couponsCategories/couponsCategories';
 import LatestProducts from '../../components/latestProducts/latestProducts';
+import SimpleProductCard from '../../components/simpleProductCards/simplePrductCards';
 
 
 
@@ -58,20 +59,20 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_1.jpg",
     name: "Furhaven Orthopedic",
     price: "19.99",
-    description: "Some text about the product..",
-    rating:"5.0",
-    brandLogo:"https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
-    arrayImages:[
+    description: "<p>Some text about the product..</p>",
+    rating: "5.0",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
+    arrayImages: [
       "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_1.jpg",
       "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_2.jpg",
       "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_3.jpg",
       "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_4.jpg",
       "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_5.jpg",
       "https://www.idealancy.pk/images/product_gallery/1672906597_oil_fliter_jug_6.jpg",
-  
+
     ],
-    colors:"",
-    sizes:""
+    colors: "",
+    sizes: ""
   },
   {
     id: 2,
@@ -79,7 +80,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/md_1695119619_egg_pen_holder_1.jpg",
     name: "WATER BOTTLES",
     price: "21.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating: "5.0",
     brandLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
     arrayImages: [
@@ -101,7 +102,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/md_1695037198_sink_faucet_1.jpg",
     name: "KITCHEN ACCESSORIES",
     price: "99.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating: "5.0",
     brandLogo: "https://companieslogo.com/img/orig/600690.SS_BIG-07f22d57.png?t=1664511268",
     arrayImages: [
@@ -123,7 +124,7 @@ const products = [
       "https://www.idealancy.pk/images/product_gallery/md_1695113061_picnic_mat_1.jpg",
     name: "HOME IMPROVEMENT",
     price: "14.99",
-    description: "Some text about the product..",
+    description: "<p>Some text about the product..</p>",
     rating: "5.0",
     brandLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
     arrayImages: [
@@ -225,7 +226,7 @@ function MainLandingPage() {
       .then((response) => response.json())
       .then((data) => {
         // Set the store data in state
-        setCategories(data.category);
+        setCategories(data.popularCategories);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -250,8 +251,20 @@ function MainLandingPage() {
   }, []);
 
 
+  const [lastestProducts, setlastestProducts] = useState([]);
 
-
+  useEffect(() => {
+    // Fetch data from your API endpoint
+    fetch('https://coupon-backend-tau.vercel.app/api/v1/simple-product/get-all-products')
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the store data in state
+        setlastestProducts(data.latestProduct);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
 
 
   const product = categoriesAll.map((item) => (
@@ -261,7 +274,7 @@ function MainLandingPage() {
       price=""
       description={item.description}
       product_no={item.product_no}
-      rating = {item.rating}
+      rating={item.rating}
     />
   ));
 
@@ -269,7 +282,7 @@ function MainLandingPage() {
 
 
   const product22 = bestSelling.map((item) => (
-    <ProductCard1
+    <SimpleProductCard
       id={item._id}
       name={item.name}
       url={item.photo}
@@ -336,140 +349,139 @@ function MainLandingPage() {
       </div> */}
       <Box>
 
-{/* SEARCH ENGINE OPTIMIZATION */}
-<SEO
-  title='DealsOrb'
-  description='Beginner friendly page for learning React Helmet.'
-  name='Dealsorb'
-  type='article' />
-{/* SEARCH ENGINE OPTIMIZATION TAG ENDS HERE*/}
-<ResponsiveAppBar activePage="Home" />
-<CartItems />
-{/* <AllCategories/> */}
-{/* <CategoryBanner /> */}
-<CategoryBanner11/>
+        {/* SEARCH ENGINE OPTIMIZATION */}
+        <SEO
+          title='DealsOrb'
+          description='Beginner friendly page for learning React Helmet.'
+          name='Dealsorb'
+          type='article' />
+        {/* SEARCH ENGINE OPTIMIZATION TAG ENDS HERE*/}
+        <ResponsiveAppBar activePage="Home" />
+        <CartItems />
+        {/* <AllCategories/> */}
+        {/* <CategoryBanner /> */}
+        <CategoryBanner11 />
+        <div className="mobViewContentLandingPage1">
+          <MobileViewCategories />
+          <Box >
+            <MobileViewProductsDesign1 dataList={products} />
+          </Box>
+          <Box>
+            <MobileCouponSlider couponDataMobile={couponsMobileData} />
+          </Box>
+          <Box >
+            <MobileViewCategoriesAnBestSale dataList={products} />
+          </Box>
+          <Box sx={{ marginX: '15px' }}>
+            <MobileViewNewArrivals />
+          </Box>
+          <Box >
+            <ExploreOurProducts dataList={products} />
+          </Box>
+          <Box>
+            <Cube />
+          </Box>
+        </div>
 
-<div className="mobViewContentLandingPage1">
-  <MobileViewCategories />
-  <Box >
-    <MobileViewProductsDesign1 dataList={products} />
-  </Box>
-  <Box>
-    <MobileCouponSlider couponDataMobile={couponsMobileData} />
-  </Box>
-  <Box >
-    <MobileViewCategoriesAnBestSale dataList={products} />
-  </Box>
-  <Box sx={{ marginX: '15px' }}>
-    <MobileViewNewArrivals />
-  </Box>
-  <Box >
-    <ExploreOurProducts dataList={products} />
-  </Box>
-  <Box>
-    <Cube />
-  </Box>
-</div>
+
+        {/* <CarouselSlider22/> */}
+        {/* <MainCouponLandingPage/>  */}
+        {/* <MainStorePage/> */}
+
+        <Box sx={{ marginX: '30px' }}>
+
+          <div onClick={handleButtonClick} className="webViewCategories">
+            <div style={{ height: '30px' }}></div>
+            <CatName categoryHeading="Categories" productHeading="Popular Categories" />
+            <div style={{ height: '30px' }}></div>
+            <Carousel responsive={responsive}>
+              {product}
+            </Carousel>
+            <div style={{ height: '60px' }}></div>
+            <CatName categoryHeading="Products" productHeading="Latest Products" />
+            <div style={{ height: '30px' }}></div>
+            <LatestProducts latest_products={lastestProducts} />
+            <div style={{ height: '30px' }}></div>
+            <Box sx={{ display: 'flex', alignItems: '', justifyContent: 'space-between' }}>
+              <CatName categoryHeading="This Month" productHeading="Clearance Sale" />
+              <Button sx={{ height: '40px', backgroundColor: '#DB4444', paddingX: { lg: '50px', md: '40px', sm: '30px', xs: '20px' } }}>
+                <Box sx={{ color: 'white', fontWeight: 'bold' }}>
+                  See All
+                </Box>
+              </Button>
+            </Box>
+            <div style={{ height: '30px' }}></div>
+            <ClearanceList />
+            <div style={{ height: '60px' }}></div>
+            <div style={{ height: '30px' }}></div>
+            <CatName categoryHeading="Coupons" productHeading="Coupon Providers" />
+            <div style={{ height: '30px' }}></div>
+            <CouponProviders />
+          </div>
+          <div style={{ height: '30px' }}></div>
+          <div className="webViewCategories">
+            <div style={{ height: '60px' }}></div>
+            <CatName categoryHeading="Categories" productHeading="Best Selling Products" />
+            <div style={{ height: '30px' }}></div>
+            <Carousel responsive={responsive2}>
+              {product22}
+            </Carousel>
+            <div style={{ height: '60px' }}></div>
+            <CatName categoryHeading="Featured" productHeading="New Arrivals" />
+            <div style={{ height: '30px' }}></div>
+            <BasicGrid />
+
+            <div style={{ height: '60px' }}></div>
+            <CatName categoryHeading="Today's" productHeading="Summer Discount" />
+            <div style={{ height: '30px' }}></div>
+            <Carousel responsive={discountProdctsResponsive}>
+              {product23}
+            </Carousel>
+            <div style={{ height: '60px' }}></div>
+
+            <Ocassions />
 
 
-{/* <CarouselSlider22/> */}
-{/* <MainCouponLandingPage/>  */}
-{/* <MainStorePage/> */}
 
-<Box sx={{ marginX: '30px' }}>
+          </div>
+          <div style={{ height: '40px' }}></div>
+          <Banner1 />
+          <div className="webViewCategories">
 
-  <div onClick={handleButtonClick} className="webViewCategories">
-    <div style={{ height: '30px' }}></div>
-    <CatName categoryHeading="Categories" productHeading="Popular Categories" />
-    <div style={{ height: '30px' }}></div>
-    <Carousel responsive={responsive}>
-      {product}
-    </Carousel>
-    <div style={{ height: '60px' }}></div>
-    <CatName categoryHeading="Categories" productHeading="Popular Categories" />
-    <div style={{ height: '30px' }}></div>
-    <LatestProducts/>
-    <div style={{ height: '30px' }}></div>
-    <Box sx={{ display: 'flex', alignItems: '', justifyContent: 'space-between' }}>
-      <CatName categoryHeading="This Month" productHeading="Clearance Sale" />
-      <Button sx={{ height: '40px', backgroundColor: '#DB4444', paddingX: { lg: '50px', md: '40px', sm: '30px', xs: '20px' } }}>
-        <Box sx={{ color: 'white', fontWeight: 'bold' }}>
-          See All
+
+
+          </div>
+          <div style={{ height: '60px' }}></div>
+          <Grid container >
+            <Grid item lg={1}>
+
+            </Grid>
+            <Grid item lg={10}>
+              <Benefits />
+            </Grid>
+            <Grid item lg={1}>
+
+            </Grid>
+          </Grid>
+
+          <Box>
+
+          </Box>
+          <div style={{ height: '30px' }}></div>
+
+
+          {/* <ShowableProductDetails/> */}
+
+
         </Box>
-      </Button>
-    </Box>
-    <div style={{ height: '30px' }}></div>
-    <ClearanceList />
-    <div style={{ height: '60px' }}></div>
-    <div style={{ height: '30px' }}></div>
-    <CatName categoryHeading="Coupons" productHeading="Coupon Providers" />
-    <div style={{ height: '30px' }}></div>
-    <CouponProviders />
-  </div>
-  <div style={{ height: '30px' }}></div>
-  <div className="webViewCategories">
-    <div style={{ height: '60px' }}></div>
-    <CatName categoryHeading="Categories" productHeading="Best Selling Products" />
-    <div style={{ height: '30px' }}></div>
-    <Carousel responsive={responsive2}>
-      {product22}
-    </Carousel>
-    <div style={{ height: '60px' }}></div>
-    <CatName categoryHeading="Featured" productHeading="New Arrivals" />
-    <div style={{ height: '30px' }}></div>
-    <BasicGrid />
-
-    <div style={{ height: '60px' }}></div>
-    <CatName categoryHeading="Today's" productHeading="Summer Discount" />
-    <div style={{ height: '30px' }}></div>
-    <Carousel responsive={discountProdctsResponsive}>
-      {product23}
-    </Carousel>
-    <div style={{ height: '60px' }}></div>
-
-    <Ocassions />
 
 
 
-  </div>
-  <div style={{ height: '40px' }}></div>
-  <Banner1 />
-  <div className="webViewCategories">
-
-
-
-  </div>
-  <div style={{ height: '60px' }}></div>
-  <Grid container >
-    <Grid item lg={1}>
-
-    </Grid>
-    <Grid item lg={10}>
-      <Benefits />
-    </Grid>
-    <Grid item lg={1}>
-
-    </Grid>
-  </Grid>
-
-  <Box>
-
-  </Box>
-  <div style={{ height: '30px' }}></div>
-
-
-  {/* <ShowableProductDetails/> */}
-
-
-</Box>
-
-
-
-<div style={{ height: '30px' }}></div>
-<Footer />
-<FloatingButton />
-<WhatsAppFloatingButton />
-</Box>
+        <div style={{ height: '30px' }}></div>
+        <Footer />
+        <FloatingButton />
+        <WhatsAppFloatingButton />
+      </Box>
     </div>
   )
 }

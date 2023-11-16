@@ -137,9 +137,9 @@ export default function ProductCard1(props) {
    <Typography sx={{ fontSize: {xl:'13px',lg:'15px',md:'13px',sm:'13px',xs:'11px'}, marginBottom:{xl:'0px',lg:'0px',md:'0px',sm:'5px',xs:'3px'}, fontWeight: 'bold', color: '#4C9BF7' }}>
    {props.name}
                             </Typography>
+                           
+                            <Typography sx={{ fontSize:{xl:'8px',lg:'12px',sm:'0px',xs:'0px'}, fontWeight: 'normal', color: 'black',marginBottom:'-15px'}} dangerouslySetInnerHTML={{ __html: props.description }}>
                             
-                            <Typography sx={{ fontSize:{xl:'8px',lg:'12px',sm:'0px',xs:'0px'}, fontWeight: 'normal', color: 'black'}}>
-                            {props.description}
                             </Typography>
                            <Box sx={{display:"flex",
                 alignItems: 'center',

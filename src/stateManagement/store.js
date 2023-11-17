@@ -5,6 +5,7 @@ import cartVisibilitySlice from './slices/cartVisibilitySlice';
 import cartReducer from './slices/cartSlice';
 import storeReducer from './slices/storeSlice';
 import hoverReducer from './slices/navbarHoverSlice'
+import displayPopupCouponReducer from './slices/displayPopupCouponSlice';
 
 const store = configureStore({
   reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
     visibility:cartVisibilitySlice,
     allCart: cartReducer,
     stores:storeReducer,
-    hover:hoverReducer
+    hover:hoverReducer,
+    displayPopupCoupon1: displayPopupCouponReducer,
   },
 });
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './allCategories.css'
 import Grid from '@mui/material/Grid';
-
+import {useNavigate } from 'react-router-dom';
 
 
 const categories = [
@@ -147,7 +147,7 @@ const categories = [
 function AllCategories() {
     const [hoveredValue, changeHoveredValue] = useState(null);
     const [categoriesAll, setCategories] = useState([]);
-
+    const navigate = useNavigate();
     useEffect(() => {
       // Fetch data from your API endpoint
       fetch('https://coupon-backend-tau.vercel.app/api/v1/product-category/get-all-category')
@@ -160,6 +160,12 @@ function AllCategories() {
           console.error('Error fetching data:', error);
         });
     }, []);
+  
+    
+    const handleNavigate = (categoryValue) => {
+        // Navigate to the desired route with the category parameter
+        navigate(`/categories/${categoryValue}`);
+      };
     return (
         <div className="mainDivCategories">
             <div className="categoriesHeader">
@@ -171,8 +177,11 @@ function AllCategories() {
                    Product Categories
                 </h1>
             </div>
+           
             {categoriesAll.map((category) => (
-                <div style={{ display: 'flex' }} onMouseOut={() => {
+                <div style={{ display: 'flex' }}
+                onClick={() => handleNavigate(category.name)}
+                 onMouseOut={() => {
                     changeHoveredValue(null)
                 }} onMouseOver={() => {
                     changeHoveredValue(category.customId)

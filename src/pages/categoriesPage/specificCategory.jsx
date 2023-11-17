@@ -25,6 +25,7 @@ import 'react-dropdown/style.css';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import SimpleProductCard from "../../components/simpleProductCards/simplePrductCards";
+import { useParams } from 'react-router-dom';
 
 
 const options = [
@@ -256,10 +257,14 @@ const data = [
 
 function SpecificCategories() {
     const [specificCat, setSpecificCat] = useState([]);
-
+    const { category } = useParams();
+    useEffect(() => {
+      // Scroll to the top of the page on component mount
+      window.scrollTo(0, 0);  
+    }, []);
     useEffect(() => {
       // Fetch data from your API endpoint
-      fetch('https://coupon-backend-tau.vercel.app/api/v1/simple-product/get-product/curtains')
+      fetch(`https://coupon-backend-tau.vercel.app/api/v1/simple-product/get-product/${category}`)
         .then((response) => response.json())
         .then((data) => {
           // Set the store data in state

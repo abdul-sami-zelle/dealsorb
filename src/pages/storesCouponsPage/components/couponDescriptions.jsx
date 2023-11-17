@@ -105,7 +105,7 @@ export default function CouponDescriptionStores({offer,title, description,code,d
                     fontsize: '11px',
                     fontweight: '700',
                     borderRadius:'0.5px'
-                    }}>Copyyy</Button>
+                    }}>Copy</Button>
                     }
 				modal nested>
 				{

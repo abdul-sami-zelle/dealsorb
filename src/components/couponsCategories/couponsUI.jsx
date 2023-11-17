@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './couponsCategories.css';
+import CouponUI2 from './couponsUi2';
+
 
 
 export default function CouponUI(props){
     return (
         <>
         <div className="mainCouponUI">
+            
         <div
             className="leftCouponPartUI"
             style={{

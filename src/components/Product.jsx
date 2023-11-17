@@ -5,10 +5,15 @@ import Box from '@mui/material/Box';
 import Typography from "@mui/material/Typography";
 import Button from '@mui/material/Button';
 import './categoryDesign2.css'
+import {useNavigate } from 'react-router-dom';
 
 export default function CategoryDesign2(props) {
   const [isHovered, setIsHovered] = useState(false);
-
+  const navigate = useNavigate();
+const handleNavigate = (categoryValue) => {
+        // Navigate to the desired route with the category parameter
+        navigate(`/categories/${categoryValue}`);
+      };
   return (
     <Box className='mainCategoryContainer'
       sx={{
@@ -94,7 +99,7 @@ export default function CategoryDesign2(props) {
             </Box>
             
 
-            <Button sx={{height:'25px',backgroundColor:'#DB4444',paddingX:'20px' ,marginY:'10px', '&:hover': {
+            <Button onClick={() => handleNavigate(props.name)} sx={{height:'25px',backgroundColor:'#DB4444',paddingX:'20px' ,marginY:'10px', '&:hover': {
            backgroundColor:'black',
           
           },}}>

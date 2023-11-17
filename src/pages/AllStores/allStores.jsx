@@ -3,8 +3,14 @@ import Grid from '@mui/material/Grid';
 import '../couponsPage/index.css'
 import ResponsiveAppBar from '../../components/bar2';
 import Footer from '../../components/footer';
+import {useNavigate } from 'react-router-dom';
 
 export default function AllStores() {
+  const navigate = useNavigate();
+  const handleNavigate = (categoryValue) => {
+    // Navigate to the desired route with the category parameter
+    navigate(`/coupon-store/${categoryValue}`);
+  };
   const [stores, setStores] = useState([]);
 
   useEffect(() => {
@@ -38,16 +44,18 @@ export default function AllStores() {
                     </Grid>
                     <Grid item lg={12}>
                     <div className="allCouponDealsHeading">
-                            All Coupons and deals for Saudi Arabia stores
+                            All Coupons and deals for Pakistan
                             </div>
                         <Grid container spacing={1.4}  sx={{ marginTop: '10px',marginBottom: '40px'  }}>
                             
                             {stores.map((item, index) => (
                                 <Grid item key={index} xs={6} sm={3} md={2} lg={1.7}>
-                                    <div className='mainShopCard'>
+                                    <div onClick={()=>{
+                                      handleNavigate(item.storeName);
+                                    }} className='mainShopCard'>
                                         <div className='shopCard'>
                                             <div className='brandLogo'>
-                                                <img src={item.logoUrl} alt="" srcset="" />
+                                                <img src={item.imgUrl} alt="" srcset="" />
                                              </div>
                                             <div className="offer">
                                                  <p>10% off</p>

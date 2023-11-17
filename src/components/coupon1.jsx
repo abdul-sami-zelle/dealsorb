@@ -2,6 +2,8 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDisplayPopupCoupon } from '../stateManagement/slices/displayPopupCouponSlice';
 
 
 const Card = styled('div')({
@@ -44,7 +46,8 @@ const Vertical = styled('div')({
 
 const Content = styled('div')({
   position: 'absolute',
-  right: '10%',
+  right: '20%',
+  top:'15%',
   '& h1': {
     fontSize: '18px',
     // marginLeft: '-20px',
@@ -70,14 +73,32 @@ const Content = styled('div')({
 
 
 
+const useDisplayPopupCoupon = () => {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.displayPopupCoupon);
 
+  const setDisplayPopupCouponState = (newState) => {
+    dispatch(setDisplayPopupCoupon(newState));
+  };
+
+  return [state, setDisplayPopupCouponState];
+};
 
 export default function CouponCard(props){
+  const [state, setDisplayPopupCouponState] = useDisplayPopupCoupon();
 
+  const openPopup = () => {
+    setDisplayPopupCouponState({ isOpen: true, couponCode: 'XYZ123' });
+  };
+
+  const closePopup = () => {
+    setDisplayPopupCouponState({ isOpen: false, couponCode: null });
+  };
 
   return (
     
       <Card>
+        
         <Main>
           <CoImg>
             <img 

@@ -9,10 +9,14 @@ import shirts from '../../assets/shirts.png'
 import menacc from '../../assets/menacc.png'
 import toys from '../../assets/toys.png'
 import water from '../../assets/waterbottle.png'
+import CouponUI2 from './couponsUi2';
+import {useNavigate } from 'react-router-dom';
+import { CategoryCouponData } from '../../context/categoryCouponData';
 
 export default function CouponCategories(){
     const [couponCat, setCouponCat] = useState([]);
-
+    const navigate = useNavigate();
+    // const { setCatCouponData } = CategoryCouponData();
     useEffect(() => {
       // Fetch data from your API endpoint
       fetch('https://coupon-backend-tau.vercel.app/api/v1/category/get-all')
@@ -25,11 +29,17 @@ export default function CouponCategories(){
           console.error('Error fetching data:', error);
         });
     }, []);
+
+
+    const handleNavigate = (categoryValue) => {
+      // Navigate to the desired route with the category parameter
+      navigate(`/coupon-category-wise/${categoryValue}`);
+    };
     return (
-        <div>
+      
             
             <div className='mainCouponCate'>
-         
+       
          <div className="categoriesHeaderCoupon">
                 <div className="leftPadd">
 
@@ -39,17 +49,25 @@ export default function CouponCategories(){
                    Coupon Categories
                 </h1>
             </div>
-        <div style={{height:'20px'}}></div>
+        <div style={{height:'10px'}}></div>
+        <div className="divv1">
+      
         {couponCat.map((item) => (
-             <div className="divv1">
-             <CouponUI url={item.image}  brand={item.category}  />
-             </div>
-        ))}
+            <div 
+            onClick={() => handleNavigate(item.category)}
+            ><CouponUI2 url={item.image} brand={item.category} off={"30"} /></div>
+            
         
+        
+      ))}
+        </div>
+        <div style={{height:'10px'}}></div>
+
+
        
 
         </div>
-        </div>
+     
       
         )
     }

@@ -21,6 +21,7 @@ import FAQS  from './components/faqs';
 import SimilarStores from './components/similarStores';
 import ResponsiveAppBar from '../../components/bar2';
 import Footer from '../../components/footer';
+import { useParams } from 'react-router-dom';
 
 const couponsData = [
     {
@@ -135,10 +136,10 @@ const couponData = [
   ];
 export default function MainStorePage() {
     const [storesBenefits, setStoresBenefits] = useState([]);
-
+    const { category } = useParams();
   useEffect(() => {
     // Fetch data from your API endpoint
-    fetch('https://coupon-backend-tau.vercel.app/api/v1/coupon/get-all')
+    fetch(`https://coupon-backend-tau.vercel.app/api/v1/coupon/get-coupons-storeName/${category}`)
       .then((response) => response.json())
       .then((data) => {
         // Set the store data in state
@@ -163,7 +164,7 @@ export default function MainStorePage() {
                         <div>
                         <div style={{ height: '15px' }}></div>
                             <div className="storeNameHeading">
-                                Noon UAE store's Coupons and Promo Codes
+                                {category} UAE store's Coupons and Promo Codes
                             </div>
                             <div style={{ height: '15px' }}></div>
                             <div>
